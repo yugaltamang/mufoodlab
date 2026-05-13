@@ -51,117 +51,87 @@ function Index() {
         </a>
       </header>
 
-      {/* ============== HERO — MODE-card grid ============== */}
+      {/* ============== HERO — single unified card ============== */}
       <section id="program" className="border-b border-ink" style={{ background: "var(--navy)" }}>
-        <div className="mx-auto max-w-[1400px] grid grid-cols-1 gap-6 p-6 md:grid-cols-2 md:gap-8 md:p-10">
-          {/* Card 1 — Premium Product */}
+        <div className="mx-auto max-w-[1400px] p-6 md:p-10">
           <ModeCard>
-            <ModeChrome />
-            <div className="grid grid-cols-2 gap-4 px-6 pt-14 md:px-8 md:pt-16">
-              <div className="relative aspect-[4/5] overflow-hidden border border-ink bg-secondary">
-                <img src={heroFounder} alt="Food founder leaping outside cloud kitchen" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h1 className="font-display text-[34px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[44px]">
-                  PREMIUM<br/>
-                  <span style={{ color: "var(--blue)" }}>FOUNDERS</span>
-                </h1>
-                <p className="mt-4 text-[13px] leading-relaxed text-ink/75">
-                  An end-to-end incubator for India's next generation of food brands — kitchen, staff, FSSAI, supply chain and aggregator onboarding included.
-                </p>
-              </div>
-            </div>
-            <ModeFooter code="MU FL · 0001" />
-          </ModeCard>
-
-          {/* Card 2 — The Wait Is Over */}
-          <ModeCard>
-            <div className="absolute left-0 top-0 z-10 flex h-32 w-12 items-center justify-center bg-ink text-paper">
+            {/* Top vertical "Apply Now" rail */}
+            <div className="absolute left-0 top-0 z-10 hidden h-40 w-12 items-center justify-center bg-ink text-paper md:flex">
               <span className="-rotate-90 whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.22em]">Apply Now</span>
             </div>
-            <ModeChrome series="COHORT 01" />
-            <div className="px-6 pb-4 pt-14 md:px-8 md:pt-16">
-              <div className="relative ml-12 aspect-[16/10] overflow-hidden border border-ink">
-                <img src={heroWok} alt="Chef tossing food in flaming wok" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
-              </div>
-              <div className="mt-5 grid grid-cols-2 items-end gap-6">
-                <a
-                  href={APPLY_URL}
-                  className="inline-flex items-center justify-center gap-3 border border-ink px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper transition hover:opacity-90"
-                  style={{ background: "var(--blue)" }}
-                >
-                  <span className="grid size-5 place-items-center bg-paper text-ink">→</span>
-                  Apply
-                </a>
-                <h2 className="font-display text-[30px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[40px]">
-                  THE WAIT<br/>IS <span style={{ color: "var(--blue)" }}>OVER</span>
-                </h2>
-              </div>
-            </div>
-            <ModeFooter />
-          </ModeCard>
 
-          {/* Card 3 — Summer Collection / Cohort intake */}
-          <ModeCard>
-            <ModeChrome series="2025" />
-            <div className="grid grid-cols-2 gap-4 px-6 pb-4 pt-14 md:px-8 md:pt-16">
-              <div className="flex flex-col">
-                <div className="meta uppercase tracking-[0.18em] text-ink/60">Cohort 01</div>
-                <h2 className="mt-2 font-display text-[28px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[36px]" style={{ color: "var(--blue)" }}>
-                  COHORT<br/>INTAKE<br/>OPEN
-                </h2>
-                <div className="my-5 h-[3px] w-16" style={{ background: "var(--green)" }} />
-                <div className="meta uppercase tracking-[0.18em] text-ink/80">
-                  Use code:<br/>
-                  <span className="text-ink">FOODLAB25</span>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3">
-                <div className="relative aspect-[4/3] overflow-hidden border border-ink">
-                  <img src={heroChef} alt="Confident chef-entrepreneur in modern kitchen" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
-                </div>
-                <a
-                  href={APPLY_URL}
-                  className="inline-flex items-center justify-between gap-3 border border-ink bg-ink px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper"
-                >
-                  Apply Now
-                  <span className="grid size-5 place-items-center text-ink" style={{ background: "var(--blue)", color: "white" }}>→</span>
-                </a>
-              </div>
-            </div>
-            <ModeFooter code="MU FL · INTAKE 25" />
-          </ModeCard>
+            <ModeChrome series="COHORT 01 · 2025" />
 
-          {/* Card 4 — Clearance / Manifesto */}
-          <ModeCard>
-            <div className="flex items-start justify-between px-6 pt-5 md:px-8">
-              <h2 className="font-display text-[26px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[34px]">
-                <span style={{ color: "var(--blue)" }}>BUILT FOR</span><br/>DELIVERY 2025
-              </h2>
-              <div className="relative">
-                <div className="grid size-16 place-items-center rounded-full text-center text-[10px] font-bold uppercase leading-tight text-paper md:size-20" style={{ background: "var(--blue)" }}>
-                  ₹0<br/>SETUP
+            <div className="grid grid-cols-1 gap-8 px-6 pb-8 pt-16 md:grid-cols-12 md:gap-10 md:px-12 md:pb-10 md:pt-20 md:pl-20">
+              {/* LEFT — copy + CTA */}
+              <div className="md:col-span-6 flex flex-col">
+                <div className="meta uppercase tracking-[0.18em] text-ink/60">Masters' Union · Food Lab</div>
+                <h1 className="mt-4 font-display font-bold leading-[0.9] tracking-[-0.04em] text-[56px] md:text-[96px]">
+                  PREMIUM<br/>
+                  <span style={{ color: "var(--blue)" }}>FOUNDERS.</span><br/>
+                  BUILT FOR<br/>
+                  DELIVERY.
+                </h1>
+
+                <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink/75">
+                  An end-to-end incubator for India's next generation of food brands — kitchen, staff, FSSAI, supply chain and aggregator onboarding included.
+                </p>
+
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <a
+                    href={APPLY_URL}
+                    className="inline-flex items-center gap-3 border border-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper transition hover:opacity-90"
+                    style={{ background: "var(--blue)" }}
+                  >
+                    <span className="grid size-5 place-items-center bg-paper text-ink">→</span>
+                    Apply for Cohort 01
+                  </a>
+                  <div className="meta uppercase tracking-[0.18em] text-ink/70">
+                    Use code: <span className="text-ink">FOODLAB25</span>
+                  </div>
+                </div>
+
+                <div className="mt-10 flex items-end justify-between gap-6 border-t border-ink/15 pt-5">
+                  <div>
+                    <div className="font-display text-[18px] font-bold tracking-tight">FOOD&nbsp;LAB</div>
+                    <div className="meta uppercase tracking-[0.18em] text-ink/60">foodlab.mastersunion.org</div>
+                  </div>
+                  <div className="grid size-16 place-items-center rounded-full text-center text-[10px] font-bold uppercase leading-tight text-paper" style={{ background: "var(--blue)" }}>
+                    ₹0<br/>SETUP
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT — single hero image */}
+              <div className="md:col-span-6">
+                <div className="relative aspect-[4/5] overflow-hidden border border-ink bg-secondary">
+                  <img
+                    src={heroFounder}
+                    alt="Premium food founder ready to launch a delivery-first brand"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="eager"
+                    width={1024}
+                    height={1280}
+                  />
+                  <div className="absolute left-0 top-0 m-3 inline-flex items-center gap-2 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+                    <span className="size-1.5 rounded-full" style={{ background: "var(--blue)" }} />
+                    Cohort Intake Open
+                  </div>
+                  <div className="absolute bottom-0 right-0 m-3 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+                    MU FL · 0001
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="mt-5 px-6 md:px-8">
-              <div className="relative aspect-[16/8] overflow-hidden border border-ink">
-                <img src={essential02} alt="Kitchen brigade at work" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
-              </div>
-            </div>
-            <div className="mt-5 flex items-end justify-between px-6 pb-4 md:px-8">
-              <div>
-                <div className="font-display text-[20px] font-bold tracking-tight">FOOD&nbsp;LAB</div>
-                <div className="meta uppercase tracking-[0.18em] text-ink/60">
-                  foodlab.mastersunion.org
-                </div>
-              </div>
-              <div className="barcode h-10 w-32" aria-hidden />
-            </div>
-            <ModeFooter code="56 424 569 648154" hideTopRule />
+
+            <ModeFooter code="MU FL · INTAKE 25 · 56 424 569 648154" />
           </ModeCard>
         </div>
       </section>
+
+      {/* unused hero assets retained for other sections */}
+      {false && <img src={heroChef} alt="" />}
+      {false && <img src={heroWok} alt="" />}
 
       {/* ============== INTRO STRIP ============== */}
       <section className="mx-auto max-w-[1400px] grid grid-cols-1 gap-10 border-b border-ink px-6 py-12 md:grid-cols-12 md:px-10 md:py-16">
