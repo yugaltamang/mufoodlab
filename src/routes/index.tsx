@@ -39,53 +39,134 @@ function Index() {
         </a>
       </header>
 
-      {/* ============== POSTER TRIPTYCH HERO ============== */}
-      <section id="program" className="mx-auto grid max-w-[1400px] grid-cols-1 gap-px border-b border-ink bg-ink md:grid-cols-3">
-        <Poster
-          dateLabel={`Mon 06 Oct\n2025 / 18:00`}
-          topRight="‘The next generation of Indian food brands.’\n(Cohort 01)"
-          eye="01"
-          img="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80"
-          alt="Founder portrait — Indian food entrepreneur"
-          headline={<>Food<br/>Lab.</>}
-          highlights={[
-            { color: "var(--yellow)", className: "left-[18%] top-[44%] w-[64%] h-[10%]" },
-            { color: "var(--yellow)", className: "left-[6%] top-[58%] w-[40%] h-[6%]" },
-          ]}
-          subline="Bold cohort\nfor founders\nin 9 verticals"
-          bottomLeft="Food Lab"
-          bottomRight={"+91 124 0000 000\nfoodlab.mastersunion.org"}
-        />
-        <Poster
-          dateLabel={`Wed 22 Oct\n2025 / 21:00`}
-          topRight="‘India is just scratching the surface.’\n(Market Brief)"
-          eye="02"
-          img="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?auto=format&fit=crop&w=1200&q=80"
-          alt="Chef in kitchen with steam"
-          headline={<>Built for<br/>delivery<br/>India.</>}
-          highlights={[
-            { color: "var(--pink)", className: "left-[10%] top-[36%] w-[70%] h-[12%]" },
-            { color: "var(--pink)", className: "left-[28%] top-[52%] w-[44%] h-[7%]" },
-          ]}
-          subline="Cloud kitchens\n+ FMCG\n+ Beverages"
-          bottomLeft="Food Lab"
-          bottomRight={"Apply by 31 Oct\nfoodlab@mastersunion.org"}
-        />
-        <Poster
-          dateLabel={`Sat 01 Nov\n2025 / 16:30`}
-          topRight="‘Real kitchens. Real customers. Real founders.’\n(Cohort manifesto)"
-          eye="03"
-          img="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80"
-          alt="Chef plating food"
-          headline={<>Kitchen<br/>theatre.</>}
-          highlights={[
-            { color: "var(--green)", className: "left-[36%] top-[16%] w-[42%] h-[12%]" },
-            { color: "var(--green)", className: "left-[18%] top-[26%] w-[34%] h-[6%]" },
-          ]}
-          subline="60 days\n8 essentials\n1 launch"
-          bottomLeft="Food Lab"
-          bottomRight={"New Delhi · NCR\nMasters' Union campus"}
-        />
+      {/* ============== BENTO HERO (Unit8-inspired) ============== */}
+      <section id="program" className="mx-auto max-w-[1400px] border-b border-ink">
+        <div className="grid grid-cols-2 gap-3 p-3 md:grid-cols-4 md:gap-4 md:p-4">
+          {/* Tile 1 — Wide black headline (2 cols) */}
+          <Tile className="md:col-span-2 md:row-span-1 aspect-[2/1] bg-ink text-paper">
+            <TileHeader brand="Food Lab." tag="cohort 01" dark />
+            <TileCircle dark />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <div className="meta uppercase tracking-[0.14em] text-paper/70">
+                Applications open · ranked among India's top incubators (CIO Apps 2025).
+              </div>
+              <h1 className="mt-3 font-display text-[34px] font-bold leading-[0.95] md:text-[52px]">
+                Spoiler alert!<br/>We're cooking.
+              </h1>
+            </div>
+          </Tile>
+
+          {/* Tile 2 — Big yellow logo block */}
+          <Tile className="aspect-square text-ink" style={{ background: "var(--yellow)" }}>
+            <TileHeader brand="Food Lab." tag="™" />
+            <TileCircle />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <div className="font-display text-[18vw] font-bold leading-[0.85] md:text-[88px]">
+                Food<br/>Lab<sub className="align-baseline text-[0.35em] font-medium">8</sub>
+              </div>
+              <div className="mt-3 meta uppercase tracking-[0.14em]">
+                Cohort 01<br/>2025 — 2026, ₹0 setup
+              </div>
+            </div>
+          </Tile>
+
+          {/* Tile 3 — Code/data dark accent */}
+          <Tile className="aspect-square bg-ink text-paper">
+            <TileHeader brand="Food Lab." tag="brief" dark />
+            <TileCircle dark />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <h2 className="font-display text-[28px] font-bold leading-[0.95] md:text-[34px]">
+                Meet the next gen of Indian food founders.
+              </h2>
+              <div className="mt-4 meta uppercase tracking-[0.14em] text-paper/60">
+                Intake Oct '25, New Delhi
+              </div>
+            </div>
+            <pre aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden p-4 font-mono text-[10px] leading-[1.3] text-paper/15">
+{`const cohort = await foodLab.open({
+  city: "Delhi NCR",
+  seats: 12,
+  verticals: ["cloud","FMCG","RTE"],
+});
+cohort.on("apply", (f) => f.cook());`}
+            </pre>
+          </Tile>
+
+          {/* Tile 4 — Photo + light card combo (2 cols) */}
+          <Tile className="md:col-span-2 aspect-[2/1] grid grid-cols-2 gap-0 bg-paper text-ink overflow-hidden p-0">
+            <div className="relative p-6 md:p-8">
+              <h2 className="font-display text-[28px] font-bold leading-[0.95] md:text-[40px]">
+                Journey is<br/>the reward.
+              </h2>
+              <p className="mt-4 max-w-[28ch] text-[13px] leading-relaxed text-ink/75">
+                Food Lab is more than a programme. It's a 60-day journey: real
+                kitchens, real customers, honest feedback, structured tastings —
+                and a clear path to becoming a founder.
+              </p>
+              <div className="absolute inset-x-6 bottom-5 md:inset-x-8 meta uppercase tracking-[0.14em] text-ink/60">
+                01 / 04 — The promise
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80"
+                alt="Food founder at the kitchen pass"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="eager"
+              />
+              <span className="absolute right-4 top-4 grid size-6 place-items-center rounded-full border border-paper bg-paper/20 text-[10px] font-bold text-paper">02</span>
+            </div>
+          </Tile>
+
+          {/* Tile 5 — Blue manifesto block (2 cols) */}
+          <Tile className="md:col-span-2 aspect-[2/1] text-paper" style={{ background: "var(--magenta)" }}>
+            <TileHeader brand="Food Lab." tag="manifesto" dark />
+            <TileCircle dark />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <h2 className="font-display text-[34px] font-bold leading-[0.95] md:text-[52px]">
+                Customer comes first.<br/>Always.
+              </h2>
+              <p className="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-paper/85">
+                Typical incubators sell you a deck. We hand you a kitchen, staff,
+                FSSAI, supply chain and aggregator onboarding — and ship your
+                first plate by week eight.
+              </p>
+            </div>
+          </Tile>
+
+          {/* Tile 6 — Photo: kitchen team */}
+          <Tile className="aspect-square bg-paper overflow-hidden p-0">
+            <img
+              src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?auto=format&fit=crop&w=1200&q=80"
+              alt="Kitchen brigade"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+            <span className="absolute right-4 top-4 grid size-6 place-items-center rounded-full border border-paper bg-paper/20 text-[10px] font-bold text-paper">03</span>
+            <div className="absolute inset-x-6 bottom-6 text-paper">
+              <div className="meta uppercase tracking-[0.14em] text-paper/80">From the brigade</div>
+              <div className="mt-2 font-display text-[22px] font-bold leading-[0.95]">
+                Built by operators, not slides.
+              </div>
+            </div>
+          </Tile>
+
+          {/* Tile 7 — Light tile, headline */}
+          <Tile className="aspect-square bg-secondary text-ink">
+            <TileHeader brand="Food Lab." tag="outcome" />
+            <TileCircle />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <h2 className="font-display text-[28px] font-bold leading-[0.95] md:text-[40px]">
+                We are the fortunate ones.
+              </h2>
+              <p className="mt-3 text-[13px] leading-relaxed text-ink/75">
+                India's food delivery market is just scratching the surface — 4%
+                of the population orders online vs 40–50% in the US and China.
+              </p>
+            </div>
+          </Tile>
+        </div>
       </section>
 
       {/* ============== INTRO STRIP ============== */}
@@ -456,6 +537,47 @@ function Stat({ n, kpi, label, caption, hi }: { n: string; kpi: string; label: s
 }
 
 /* ===================== LINE ITEM ===================== */
+/* ===================== TILE (bento) ===================== */
+function Tile({
+  className = "",
+  style,
+  children,
+}: {
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={`relative overflow-hidden border border-ink p-6 md:p-8 ${className}`} style={style}>
+      {children}
+    </div>
+  );
+}
+
+function TileHeader({ brand, tag, dark }: { brand: string; tag?: string; dark?: boolean }) {
+  return (
+    <div className={`absolute inset-x-6 top-5 md:inset-x-8 flex items-start justify-between ${dark ? "text-paper" : "text-ink"}`}>
+      <span className="font-display text-[15px] font-bold tracking-tight">{brand}</span>
+      {tag && <span className="meta uppercase tracking-[0.14em] opacity-70">{tag}</span>}
+    </div>
+  );
+}
+
+function TileCircle({ dark }: { dark?: boolean }) {
+  const stroke = dark ? "rgba(255,255,255,0.45)" : "rgba(20,20,20,0.45)";
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 200 200"
+      className="pointer-events-none absolute -right-12 -top-12 size-[60%] opacity-80"
+    >
+      {[80, 65, 50, 35].map((r) => (
+        <circle key={r} cx="100" cy="100" r={r} fill="none" stroke={stroke} strokeWidth="1" />
+      ))}
+    </svg>
+  );
+}
+
 function LineItem({ n, item, amount }: { n: string; item: string; amount: string }) {
   return (
     <li className="flex items-baseline justify-between gap-4 border-b border-ink/15 pb-2">
