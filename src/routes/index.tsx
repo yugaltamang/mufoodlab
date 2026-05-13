@@ -1,5 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import essential01 from "@/assets/essential-01-kitchen.jpg";
+import essential02 from "@/assets/essential-02-staff.jpg";
+import essential03 from "@/assets/essential-03-consultant.jpg";
+import essential04 from "@/assets/essential-04-fssai.jpg";
+import essential05 from "@/assets/essential-05-supply.jpg";
+import essential06 from "@/assets/essential-06-aggregator.jpg";
+import essential07 from "@/assets/essential-07-mentor.jpg";
+import essential08 from "@/assets/essential-08-tasting.jpg";
+
 export const Route = createFileRoute("/")({
   component: Index,
 });
@@ -7,14 +16,14 @@ export const Route = createFileRoute("/")({
 const APPLY_URL = "https://tally.so/r/441zRr";
 
 const ESSENTIALS = [
-  ["01", "Fully equipped kitchen facility", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/ydv6co3v_kitchen-facility.png"],
-  ["02", "Professional kitchen staff", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/j6dqwb91_kitchen-staff.png"],
-  ["03", "Food consultant & culinary expertise", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/cfj2rs06_food-consultant.png"],
-  ["04", "FSSAI licensing & compliance", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/sm32ldou_fssai-compliance.png"],
-  ["05", "Procurement & supply chain", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/qffn8ok7_supply-chain.png"],
-  ["06", "Aggregator onboarding (Zomato, Swiggy)", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/mqai8hq4_aggregator.png"],
-  ["07", "Mentorship from food operators", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/v4p2zo96_mentorship.png"],
-  ["08", "Structured feedback & blind tastings", "https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/13r4h227_feedback-tastings.png"],
+  ["01", "Fully equipped kitchen facility", essential01, "Stainless steel, copper, induction — production-ready from day one."],
+  ["02", "Professional kitchen staff", essential02, "Chefs, commis and stewards on payroll, trained to your menu."],
+  ["03", "Food consultant & culinary expertise", essential03, "Recipe development with operators who've launched real menus."],
+  ["04", "FSSAI licensing & compliance", essential04, "Licenses, audits and food-safety SOPs — handled end-to-end."],
+  ["05", "Procurement & supply chain", essential05, "Pre-vetted vendors, daily produce, bulk pricing baked in."],
+  ["06", "Aggregator onboarding (Zomato, Swiggy)", essential06, "Listings, photography and storefronts live in week one."],
+  ["07", "Mentorship from food operators", essential07, "1:1 with founders who've built and scaled F&amp;B brands."],
+  ["08", "Structured feedback & blind tastings", essential08, "Weekly tastings, scorecards and customer panels."],
 ] as const;
 
 function Index() {
