@@ -30,37 +30,40 @@
   --color-magenta: var(--magenta);
   --color-ink: var(--ink);
   --color-paper: var(--paper);
+  --color-rule: var(--rule);
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.25rem;
 
-  /* Editorial Teatro palette */
-  --yellow: oklch(0.93 0.19 100);     /* electric yellow page */
-  --pink:   oklch(0.88 0.07 350);     /* soft pink card */
-  --green:  oklch(0.42 0.10 160);     /* deep emerald card */
-  --magenta:oklch(0.78 0.18 340);     /* hot magenta accent */
-  --ink:    oklch(0.14 0 0);          /* near-black */
-  --paper:  oklch(0.985 0.005 95);    /* off-white */
+  /* Muziekgebouw poster palette: white paper, neon highlight blocks */
+  --paper:   oklch(0.985 0 0);             /* off-white background */
+  --ink:     oklch(0.16 0 0);              /* near-black */
+  --rule:    oklch(0.16 0 0 / 18%);        /* hairline grid */
+  --yellow:  oklch(0.93 0.20 102);         /* highlighter yellow */
+  --pink:    oklch(0.72 0.28 350);         /* hot magenta-pink */
+  --green:   oklch(0.78 0.21 152);         /* highlighter green */
+  --magenta: oklch(0.65 0.28 340);
+  --teal:    oklch(0.80 0.13 200);
 
-  --background: var(--yellow);
+  --background: var(--paper);
   --foreground: var(--ink);
   --card: var(--paper);
   --card-foreground: var(--ink);
   --primary: var(--ink);
   --primary-foreground: var(--paper);
-  --secondary: var(--pink);
+  --secondary: oklch(0.96 0 0);
   --secondary-foreground: var(--ink);
-  --muted: oklch(0.96 0.01 95);
-  --muted-foreground: oklch(0.4 0.02 95);
-  --accent: var(--magenta);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.4 0 0);
+  --accent: var(--yellow);
   --accent-foreground: var(--ink);
-  --border: oklch(0.14 0 0);
-  --input: oklch(0.14 0 0 / 15%);
+  --border: var(--rule);
+  --input: oklch(0.16 0 0 / 18%);
   --ring: var(--ink);
 }
 
@@ -76,21 +79,41 @@
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-optical-sizing: auto;
-    letter-spacing: -0.02em;
-    line-height: 0.95;
+    letter-spacing: -0.035em;
+    line-height: 0.92;
+    font-weight: 700;
   }
 }
 
 @layer components {
   .pill {
-    @apply inline-flex items-center px-3 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-full;
+    @apply inline-flex items-center px-2 py-[3px] text-[10px] font-semibold uppercase tracking-[0.14em];
     font-family: var(--font-sans);
   }
-  .frame {
-    @apply bg-paper;
+  .meta {
+    @apply text-[11px] font-medium tracking-[0.02em];
   }
-  .underline-link {
-    @apply underline underline-offset-4 decoration-[1.5px] hover:decoration-2;
+  .hairline { background-image: linear-gradient(to right, var(--rule) 50%, transparent 0%); background-size: 8px 1px; background-repeat: repeat-x; }
+  .underline-link { @apply underline underline-offset-4 decoration-[1px] hover:decoration-2; }
+
+  /* Poster grid overlay — thin diagonal/cross lines like Muziekgebouw */
+  .poster-grid {
+    background-image:
+      linear-gradient(to right, var(--rule) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--rule) 1px, transparent 1px);
+    background-size: 25% 25%;
+  }
+  .poster-diag::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: linear-gradient(135deg, var(--rule) 0, var(--rule) 1px, transparent 1px, transparent 100%);
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
+
+  /* Highlighter rectangle blocks placed on top of imagery */
+  .hl {
+    position: absolute;
+    mix-blend-mode: multiply;
   }
 }
