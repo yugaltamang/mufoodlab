@@ -475,7 +475,7 @@ function BrandCard({
   return (
     <article className="bg-paper">
       <div className="relative aspect-[4/3] overflow-hidden border-b border-ink">
-        <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover grayscale" loading="lazy" />
+        <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
         <span className="absolute left-6 top-[60%] h-[10%] w-[55%]" style={{ background: hi, mixBlendMode: "multiply" }} />
         <div className="absolute inset-x-0 top-0 flex justify-between p-4 text-[10px] font-semibold uppercase tracking-[0.14em]">
           <span className="border border-ink bg-paper px-2 py-1">{tag}</span>
