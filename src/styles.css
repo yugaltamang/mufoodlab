@@ -101,6 +101,19 @@
   .underline-link { @apply underline underline-offset-4 decoration-[1px] hover:decoration-2; }
 
   /* Poster grid overlay — thin diagonal/cross lines like Muziekgebouw */
+  .hatch {
+    background-image: repeating-linear-gradient(45deg, var(--ink) 0 1.5px, transparent 1.5px 7px);
+  }
+  .hatch-blue {
+    background-image: repeating-linear-gradient(45deg, var(--blue) 0 1.5px, transparent 1.5px 7px);
+  }
+  .barcode {
+    background-image: repeating-linear-gradient(to right,
+      var(--ink) 0 2px, transparent 2px 4px,
+      var(--ink) 4px 5px, transparent 5px 8px,
+      var(--ink) 8px 11px, transparent 11px 13px,
+      var(--ink) 13px 14px, transparent 14px 17px);
+  }
   .poster-grid {
     background-image:
       linear-gradient(to right, var(--rule) 1px, transparent 1px),
