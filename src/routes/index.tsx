@@ -8,6 +8,9 @@ import essential05 from "@/assets/essential-05-supply.jpg";
 import essential06 from "@/assets/essential-06-aggregator.jpg";
 import essential07 from "@/assets/essential-07-mentor.jpg";
 import essential08 from "@/assets/essential-08-tasting.jpg";
+import heroFounder from "@/assets/hero-founder.jpg";
+import heroChef from "@/assets/hero-chef.jpg";
+import heroWok from "@/assets/hero-wok.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
