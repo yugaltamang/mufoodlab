@@ -173,7 +173,7 @@ function Index() {
         <div className="mt-12 grid grid-cols-2 gap-px border border-ink bg-ink md:grid-cols-4">
           {ESSENTIALS.map(([n, label, img]) => (
             <article key={n} className="group relative aspect-[4/5] overflow-hidden bg-paper">
-              <img src={img} alt={label} className="absolute inset-0 h-full w-full object-cover grayscale transition duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]" loading="lazy" />
+              <img src={img} alt={label} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" loading="lazy" />
               <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.65) 100%)" }} />
               <div className="absolute inset-x-0 top-0 flex justify-between p-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-paper">
                 <span>{n}</span>
