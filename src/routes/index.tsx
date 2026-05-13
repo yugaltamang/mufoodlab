@@ -585,6 +585,43 @@ function TileCircle({ dark }: { dark?: boolean }) {
   );
 }
 
+function PillarTile({
+  n,
+  title,
+  img,
+  points,
+}: {
+  n: string;
+  title: string;
+  img: string;
+  points: string[];
+}) {
+  return (
+    <Tile className="aspect-square overflow-hidden p-0 bg-paper text-paper">
+      <img src={img} alt={title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.85) 100%)" }}
+      />
+      <div className="absolute inset-x-5 top-4 flex items-start justify-between text-[10px] font-semibold uppercase tracking-[0.14em]">
+        <span>Food Lab.</span>
+        <span className="grid size-6 place-items-center rounded-full border border-paper/70 bg-paper/15">{n}</span>
+      </div>
+      <div className="absolute inset-x-5 bottom-5">
+        <h3 className="font-display text-[22px] font-bold leading-[0.95] md:text-[26px]">{title}</h3>
+        <ul className="mt-3 space-y-1.5">
+          {points.map((p) => (
+            <li key={p} className="flex items-start gap-2 text-[12px] leading-snug text-paper/85">
+              <span className="mt-1.5 inline-block size-1 shrink-0 rounded-full bg-paper/80" />
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Tile>
+  );
+}
+
 function LineItem({ n, item, amount }: { n: string; item: string; amount: string }) {
   return (
     <li className="flex items-baseline justify-between gap-4 border-b border-ink/15 pb-2">
