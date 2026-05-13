@@ -31,6 +31,8 @@
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-rule: var(--rule);
+  --color-blue: var(--blue);
+  --color-navy: var(--navy);
 
   --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
