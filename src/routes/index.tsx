@@ -8,6 +8,9 @@ import essential05 from "@/assets/essential-05-supply.jpg";
 import essential06 from "@/assets/essential-06-aggregator.jpg";
 import essential07 from "@/assets/essential-07-mentor.jpg";
 import essential08 from "@/assets/essential-08-tasting.jpg";
+import heroFounder from "@/assets/hero-founder.jpg";
+import heroChef from "@/assets/hero-chef.jpg";
+import heroWok from "@/assets/hero-wok.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -48,133 +51,115 @@ function Index() {
         </a>
       </header>
 
-      {/* ============== BENTO HERO (Unit8-inspired) ============== */}
-      <section id="program" className="mx-auto max-w-[1400px] border-b border-ink">
-        <div className="grid grid-cols-2 gap-3 p-3 md:grid-cols-4 md:gap-4 md:p-4">
-          {/* Tile 1 — Wide black headline (2 cols) */}
-          <Tile className="md:col-span-2 md:row-span-1 aspect-[2/1] bg-ink text-paper">
-            <TileHeader brand="Food Lab." tag="cohort 01" dark />
-            <TileCircle dark />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
-              <div className="meta uppercase tracking-[0.14em] text-paper/70">
-                Applications open · ranked among India's top incubators (CIO Apps 2025).
+      {/* ============== HERO — MODE-card grid ============== */}
+      <section id="program" className="border-b border-ink" style={{ background: "var(--navy)" }}>
+        <div className="mx-auto max-w-[1400px] grid grid-cols-1 gap-6 p-6 md:grid-cols-2 md:gap-8 md:p-10">
+          {/* Card 1 — Premium Product */}
+          <ModeCard>
+            <ModeChrome />
+            <div className="grid grid-cols-2 gap-4 px-6 pt-14 md:px-8 md:pt-16">
+              <div className="relative aspect-[4/5] overflow-hidden border border-ink bg-secondary">
+                <img src={heroFounder} alt="Food founder leaping outside cloud kitchen" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
               </div>
-              <h1 className="mt-3 font-display text-[34px] font-bold leading-[0.95] md:text-[52px]">
-                Spoiler alert!<br/>We're cooking.
-              </h1>
-            </div>
-          </Tile>
-
-          {/* Tile 2 — Big yellow logo block */}
-          <Tile className="aspect-square text-ink" style={{ background: "var(--yellow)" }}>
-            <TileHeader brand="Food Lab." tag="™" />
-            <TileCircle />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
-              <div className="font-display text-[18vw] font-bold leading-[0.85] md:text-[88px]">
-                Food<br/>Lab<sub className="align-baseline text-[0.35em] font-medium">8</sub>
-              </div>
-              <div className="mt-3 meta uppercase tracking-[0.14em]">
-                Cohort 01<br/>2025 — 2026, ₹0 setup
+              <div className="flex flex-col justify-center">
+                <h1 className="font-display text-[34px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[44px]">
+                  PREMIUM<br/>
+                  <span style={{ color: "var(--blue)" }}>FOUNDERS</span>
+                </h1>
+                <p className="mt-4 text-[13px] leading-relaxed text-ink/75">
+                  An end-to-end incubator for India's next generation of food brands — kitchen, staff, FSSAI, supply chain and aggregator onboarding included.
+                </p>
               </div>
             </div>
-          </Tile>
+            <ModeFooter code="MU FL · 0001" />
+          </ModeCard>
 
-          {/* Tile 3 — Code/data dark accent */}
-          <Tile className="aspect-square bg-ink text-paper">
-            <TileHeader brand="Food Lab." tag="brief" dark />
-            <TileCircle dark />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
-              <h2 className="font-display text-[28px] font-bold leading-[0.95] md:text-[34px]">
-                Meet the next gen of Indian food founders.
+          {/* Card 2 — The Wait Is Over */}
+          <ModeCard>
+            <div className="absolute left-0 top-0 z-10 flex h-32 w-12 items-center justify-center bg-ink text-paper">
+              <span className="-rotate-90 whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.22em]">Apply Now</span>
+            </div>
+            <ModeChrome series="COHORT 01" />
+            <div className="px-6 pb-4 pt-14 md:px-8 md:pt-16">
+              <div className="relative ml-12 aspect-[16/10] overflow-hidden border border-ink">
+                <img src={heroWok} alt="Chef tossing food in flaming wok" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
+              </div>
+              <div className="mt-5 grid grid-cols-2 items-end gap-6">
+                <a
+                  href={APPLY_URL}
+                  className="inline-flex items-center justify-center gap-3 border border-ink px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper transition hover:opacity-90"
+                  style={{ background: "var(--blue)" }}
+                >
+                  <span className="grid size-5 place-items-center bg-paper text-ink">→</span>
+                  Apply
+                </a>
+                <h2 className="font-display text-[30px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[40px]">
+                  THE WAIT<br/>IS <span style={{ color: "var(--blue)" }}>OVER</span>
+                </h2>
+              </div>
+            </div>
+            <ModeFooter />
+          </ModeCard>
+
+          {/* Card 3 — Summer Collection / Cohort intake */}
+          <ModeCard>
+            <ModeChrome series="2025" />
+            <div className="grid grid-cols-2 gap-4 px-6 pb-4 pt-14 md:px-8 md:pt-16">
+              <div className="flex flex-col">
+                <div className="meta uppercase tracking-[0.18em] text-ink/60">Cohort 01</div>
+                <h2 className="mt-2 font-display text-[28px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[36px]" style={{ color: "var(--blue)" }}>
+                  COHORT<br/>INTAKE<br/>OPEN
+                </h2>
+                <div className="my-5 h-[3px] w-16" style={{ background: "var(--green)" }} />
+                <div className="meta uppercase tracking-[0.18em] text-ink/80">
+                  Use code:<br/>
+                  <span className="text-ink">FOODLAB25</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="relative aspect-[4/3] overflow-hidden border border-ink">
+                  <img src={heroChef} alt="Confident chef-entrepreneur in modern kitchen" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
+                </div>
+                <a
+                  href={APPLY_URL}
+                  className="inline-flex items-center justify-between gap-3 border border-ink bg-ink px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper"
+                >
+                  Apply Now
+                  <span className="grid size-5 place-items-center text-ink" style={{ background: "var(--blue)", color: "white" }}>→</span>
+                </a>
+              </div>
+            </div>
+            <ModeFooter code="MU FL · INTAKE 25" />
+          </ModeCard>
+
+          {/* Card 4 — Clearance / Manifesto */}
+          <ModeCard>
+            <div className="flex items-start justify-between px-6 pt-5 md:px-8">
+              <h2 className="font-display text-[26px] font-bold leading-[0.92] tracking-[-0.04em] md:text-[34px]">
+                <span style={{ color: "var(--blue)" }}>BUILT FOR</span><br/>DELIVERY 2025
               </h2>
-              <div className="mt-4 meta uppercase tracking-[0.14em] text-paper/60">
-                Intake Oct '25, New Delhi
+              <div className="relative">
+                <div className="grid size-16 place-items-center rounded-full text-center text-[10px] font-bold uppercase leading-tight text-paper md:size-20" style={{ background: "var(--blue)" }}>
+                  ₹0<br/>SETUP
+                </div>
               </div>
             </div>
-            <pre aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden p-4 font-mono text-[10px] leading-[1.3] text-paper/15">
-{`const cohort = await foodLab.open({
-  city: "Delhi NCR",
-  seats: 12,
-  verticals: ["cloud","FMCG","RTE"],
-});
-cohort.on("apply", (f) => f.cook());`}
-            </pre>
-          </Tile>
-
-          {/* Tile 4 — Photo + light card combo (2 cols) */}
-          <Tile className="md:col-span-2 aspect-[2/1] grid grid-cols-2 gap-0 bg-paper text-ink overflow-hidden p-0">
-            <div className="relative p-6 md:p-8">
-              <h2 className="font-display text-[28px] font-bold leading-[0.95] md:text-[40px]">
-                Journey is<br/>the reward.
-              </h2>
-              <p className="mt-4 max-w-[28ch] text-[13px] leading-relaxed text-ink/75">
-                Food Lab is more than a programme. It's a 60-day journey: real
-                kitchens, real customers, honest feedback, structured tastings —
-                and a clear path to becoming a founder.
-              </p>
-              <div className="absolute inset-x-6 bottom-5 md:inset-x-8 meta uppercase tracking-[0.14em] text-ink/60">
-                01 / 04 — The promise
+            <div className="mt-5 px-6 md:px-8">
+              <div className="relative aspect-[16/8] overflow-hidden border border-ink">
+                <img src={essential02} alt="Kitchen brigade at work" className="absolute inset-0 h-full w-full object-cover" loading="eager" width={1024} height={1024} />
               </div>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80"
-                alt="Food founder at the kitchen pass"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="eager"
-              />
-              <span className="absolute right-4 top-4 grid size-6 place-items-center rounded-full border border-paper bg-paper/20 text-[10px] font-bold text-paper">02</span>
-            </div>
-          </Tile>
-
-          {/* Tile 5 — Blue manifesto block (2 cols) */}
-          <Tile className="md:col-span-2 aspect-[2/1] text-paper" style={{ background: "var(--magenta)" }}>
-            <TileHeader brand="Food Lab." tag="manifesto" dark />
-            <TileCircle dark />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
-              <h2 className="font-display text-[34px] font-bold leading-[0.95] md:text-[52px]">
-                Customer comes first.<br/>Always.
-              </h2>
-              <p className="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-paper/85">
-                Typical incubators sell you a deck. We hand you a kitchen, staff,
-                FSSAI, supply chain and aggregator onboarding — and ship your
-                first plate by week eight.
-              </p>
-            </div>
-          </Tile>
-
-          {/* Tile 6 — Photo: kitchen team */}
-          <Tile className="aspect-square bg-paper overflow-hidden p-0">
-            <img
-              src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?auto=format&fit=crop&w=1200&q=80"
-              alt="Kitchen brigade"
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
-            <span className="absolute right-4 top-4 grid size-6 place-items-center rounded-full border border-paper bg-paper/20 text-[10px] font-bold text-paper">03</span>
-            <div className="absolute inset-x-6 bottom-6 text-paper">
-              <div className="meta uppercase tracking-[0.14em] text-paper/80">From the brigade</div>
-              <div className="mt-2 font-display text-[22px] font-bold leading-[0.95]">
-                Built by operators, not slides.
+            <div className="mt-5 flex items-end justify-between px-6 pb-4 md:px-8">
+              <div>
+                <div className="font-display text-[20px] font-bold tracking-tight">FOOD&nbsp;LAB</div>
+                <div className="meta uppercase tracking-[0.18em] text-ink/60">
+                  foodlab.mastersunion.org
+                </div>
               </div>
+              <div className="barcode h-10 w-32" aria-hidden />
             </div>
-          </Tile>
-
-          {/* Tile 7 — Light tile, headline */}
-          <Tile className="aspect-square bg-secondary text-ink">
-            <TileHeader brand="Food Lab." tag="outcome" />
-            <TileCircle />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
-              <h2 className="font-display text-[28px] font-bold leading-[0.95] md:text-[40px]">
-                We are the fortunate ones.
-              </h2>
-              <p className="mt-3 text-[13px] leading-relaxed text-ink/75">
-                India's food delivery market is just scratching the surface — 4%
-                of the population orders online vs 40–50% in the US and China.
-              </p>
-            </div>
-          </Tile>
+            <ModeFooter code="56 424 569 648154" hideTopRule />
+          </ModeCard>
         </div>
       </section>
 
@@ -610,6 +595,44 @@ function Stat({ n, kpi, label, caption, hi }: { n: string; kpi: string; label: s
 
 /* ===================== LINE ITEM ===================== */
 /* ===================== TILE (bento) ===================== */
+/* ===================== MODE CARD ===================== */
+function ModeCard({ children }: { children: React.ReactNode }) {
+  return (
+    <article className="relative overflow-hidden border-2 border-ink bg-paper">
+      {children}
+    </article>
+  );
+}
+
+function ModeChrome({ series }: { series?: string }) {
+  return (
+    <>
+      {/* Top bar: logo + TM + hatch corner */}
+      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between border-b border-ink bg-paper px-4 py-2">
+        <div className="flex items-center gap-2">
+          <span className="grid size-6 place-items-center rounded-full border border-ink text-[10px] font-black">M</span>
+          <span className="font-display text-[13px] font-extrabold tracking-[-0.02em]">FOOD LAB</span>
+        </div>
+        {series && (
+          <span className="meta uppercase tracking-[0.18em] text-ink/60">{series}</span>
+        )}
+        <span className="grid size-6 place-items-center rounded-full border border-ink text-[9px] font-bold">TM</span>
+      </div>
+      {/* Diagonal hatch corner accent */}
+      <div className="hatch absolute right-0 top-10 z-0 h-12 w-20 border-l border-b border-ink opacity-90" aria-hidden />
+    </>
+  );
+}
+
+function ModeFooter({ code = "56 424 569 648154", hideTopRule }: { code?: string; hideTopRule?: boolean }) {
+  return (
+    <div className={`mt-auto flex items-center justify-between px-6 py-3 md:px-8 ${hideTopRule ? "" : "border-t border-ink"}`}>
+      <span className="meta uppercase tracking-[0.18em] text-ink/60">foodlab.mastersunion.org</span>
+      <span className="font-mono text-[11px] tracking-[0.1em] text-ink/70">{code}</span>
+    </div>
+  );
+}
+
 function Tile({
   className = "",
   style,
