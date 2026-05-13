@@ -233,37 +233,100 @@ cohort.on("apply", (f) => f.cook());`}
       </section>
 
       {/* ============== ESSENTIALS / SOLUTION ============== */}
-      <section id="solution" className="mx-auto max-w-[1400px] border-b border-ink px-6 py-14 md:px-10 md:py-20">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <span className="pill border border-ink">The Solution — 0X</span>
-            <h2 className="mt-6 font-display text-5xl font-bold leading-[0.92] md:text-6xl">
-              That's where{" "}
-              <span className="relative inline-block">
-                <span className="absolute inset-x-0 top-[15%] h-[80%] -z-0" style={{ background: "var(--green)" }} />
-                <span className="relative">Food Lab</span>
-              </span>{" "}
-              comes in.
-            </h2>
-          </div>
-          <p className="md:col-span-5 md:col-start-8 text-[15px] leading-relaxed">
-            Eight essentials, included. Everything you need to launch your food brand — kitchen, staff, compliance, supply chain, mentorship — wired in from day one.
-          </p>
-        </div>
+      <section id="solution" className="mx-auto max-w-[1400px] border-b border-ink">
+        <div className="grid grid-cols-2 gap-3 p-3 md:grid-cols-4 md:gap-4 md:p-4">
+          {/* Headline tile (2x2) */}
+          <Tile className="md:col-span-2 md:row-span-2 aspect-square text-paper" style={{ background: "var(--magenta)" }}>
+            <TileHeader brand="Food Lab." tag="the solution" dark />
+            <TileCircle dark />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <div className="meta uppercase tracking-[0.14em] text-paper/70">
+                Eight essentials, included.
+              </div>
+              <h2 className="mt-3 font-display text-[40px] font-bold leading-[0.92] md:text-[68px]">
+                That's where<br/>Food Lab<br/>comes in.
+              </h2>
+              <p className="mt-5 max-w-[40ch] text-[13px] leading-relaxed text-paper/85">
+                Kitchen, staff, FSSAI, supply chain, aggregator onboarding,
+                mentorship, R&amp;D and feedback — wired in from day one. You
+                bring the idea and the obsession.
+              </p>
+            </div>
+          </Tile>
 
-        <div className="mt-12 grid grid-cols-2 gap-px border border-ink bg-ink md:grid-cols-4">
-          {ESSENTIALS.map(([n, label, img]) => (
-            <article key={n} className="group relative aspect-[4/5] overflow-hidden bg-paper">
-              <img src={img} alt={label} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" loading="lazy" />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.65) 100%)" }} />
-              <div className="absolute inset-x-0 top-0 flex justify-between p-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-paper">
-                <span>{n}</span>
-                <span>Essential</span>
+          {/* Yellow stat tile */}
+          <Tile className="aspect-square text-ink" style={{ background: "var(--yellow)" }}>
+            <TileHeader brand="Food Lab." tag="kit" />
+            <TileCircle />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <div className="font-display text-[64px] font-bold leading-[0.85] md:text-[88px]">08</div>
+              <div className="mt-2 meta uppercase tracking-[0.14em]">Essentials, day one</div>
+            </div>
+          </Tile>
+
+          {/* Dark code tile */}
+          <Tile className="aspect-square bg-ink text-paper">
+            <TileHeader brand="Food Lab." tag="stack" dark />
+            <TileCircle dark />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <h3 className="font-display text-[24px] font-bold leading-[0.95] md:text-[28px]">
+                Driven by outcome.
+              </h3>
+              <div className="mt-3 meta uppercase tracking-[0.14em] text-paper/60">
+                60 days · 1 launch
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-4">
-                <div className="font-display text-[20px] font-bold leading-[0.95] text-paper">{label}</div>
+            </div>
+            <pre aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden p-4 font-mono text-[10px] leading-[1.3] text-paper/15">
+{`stack.kitchen   = "fully equipped";
+stack.compliance = "FSSAI ready";
+stack.supply    = "vendor mapped";
+stack.aggregator = ["zomato","swiggy"];
+launch(brand);`}
+            </pre>
+          </Tile>
+
+          {/* 4 image tiles for first 4 essentials */}
+          {ESSENTIALS.slice(0, 4).map(([n, label, img]) => (
+            <Tile key={n} className="aspect-square overflow-hidden p-0 bg-paper">
+              <img src={img} alt={label} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.05) 0%, transparent 30%, rgba(0,0,0,0.7) 100%)" }} />
+              <div className="absolute inset-x-5 top-4 flex justify-between text-[10px] font-semibold uppercase tracking-[0.14em] text-paper">
+                <span>Food Lab.</span>
+                <span className="grid size-6 place-items-center rounded-full border border-paper/70 bg-paper/15">{n}</span>
               </div>
-            </article>
+              <div className="absolute inset-x-5 bottom-5 font-display text-[18px] font-bold leading-[0.95] text-paper md:text-[20px]">
+                {label}
+              </div>
+            </Tile>
+          ))}
+
+          {/* Light tile — pull-quote */}
+          <Tile className="md:col-span-2 aspect-[2/1] bg-secondary text-ink">
+            <TileHeader brand="Food Lab." tag="from cohort 01" />
+            <TileCircle />
+            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
+              <h3 className="font-display text-[26px] font-bold leading-[0.95] md:text-[36px]">
+                "Real kitchens. Real customers. And a clear path to becoming founders."
+              </h3>
+              <div className="mt-4 meta uppercase tracking-[0.14em] text-ink/60">
+                — Cohort manifesto
+              </div>
+            </div>
+          </Tile>
+
+          {/* Last 4 image tiles */}
+          {ESSENTIALS.slice(4).map(([n, label, img]) => (
+            <Tile key={n} className="aspect-square overflow-hidden p-0 bg-paper">
+              <img src={img} alt={label} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.05) 0%, transparent 30%, rgba(0,0,0,0.7) 100%)" }} />
+              <div className="absolute inset-x-5 top-4 flex justify-between text-[10px] font-semibold uppercase tracking-[0.14em] text-paper">
+                <span>Food Lab.</span>
+                <span className="grid size-6 place-items-center rounded-full border border-paper/70 bg-paper/15">{n}</span>
+              </div>
+              <div className="absolute inset-x-5 bottom-5 font-display text-[18px] font-bold leading-[0.95] text-paper md:text-[20px]">
+                {label}
+              </div>
+            </Tile>
           ))}
         </div>
       </section>
