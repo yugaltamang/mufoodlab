@@ -537,6 +537,47 @@ function Stat({ n, kpi, label, caption, hi }: { n: string; kpi: string; label: s
 }
 
 /* ===================== LINE ITEM ===================== */
+/* ===================== TILE (bento) ===================== */
+function Tile({
+  className = "",
+  style,
+  children,
+}: {
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={`relative overflow-hidden border border-ink p-6 md:p-8 ${className}`} style={style}>
+      {children}
+    </div>
+  );
+}
+
+function TileHeader({ brand, tag, dark }: { brand: string; tag?: string; dark?: boolean }) {
+  return (
+    <div className={`absolute inset-x-6 top-5 md:inset-x-8 flex items-start justify-between ${dark ? "text-paper" : "text-ink"}`}>
+      <span className="font-display text-[15px] font-bold tracking-tight">{brand}</span>
+      {tag && <span className="meta uppercase tracking-[0.14em] opacity-70">{tag}</span>}
+    </div>
+  );
+}
+
+function TileCircle({ dark }: { dark?: boolean }) {
+  const stroke = dark ? "rgba(255,255,255,0.45)" : "rgba(20,20,20,0.45)";
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 200 200"
+      className="pointer-events-none absolute -right-12 -top-12 size-[60%] opacity-80"
+    >
+      {[80, 65, 50, 35].map((r) => (
+        <circle key={r} cx="100" cy="100" r={r} fill="none" stroke={stroke} strokeWidth="1" />
+      ))}
+    </svg>
+  );
+}
+
 function LineItem({ n, item, amount }: { n: string; item: string; amount: string }) {
   return (
     <li className="flex items-baseline justify-between gap-4 border-b border-ink/15 pb-2">
