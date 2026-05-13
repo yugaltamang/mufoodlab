@@ -595,6 +595,44 @@ function Stat({ n, kpi, label, caption, hi }: { n: string; kpi: string; label: s
 
 /* ===================== LINE ITEM ===================== */
 /* ===================== TILE (bento) ===================== */
+/* ===================== MODE CARD ===================== */
+function ModeCard({ children }: { children: React.ReactNode }) {
+  return (
+    <article className="relative overflow-hidden border-2 border-ink bg-paper">
+      {children}
+    </article>
+  );
+}
+
+function ModeChrome({ series }: { series?: string }) {
+  return (
+    <>
+      {/* Top bar: logo + TM + hatch corner */}
+      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between border-b border-ink bg-paper px-4 py-2">
+        <div className="flex items-center gap-2">
+          <span className="grid size-6 place-items-center rounded-full border border-ink text-[10px] font-black">M</span>
+          <span className="font-display text-[13px] font-extrabold tracking-[-0.02em]">FOOD LAB</span>
+        </div>
+        {series && (
+          <span className="meta uppercase tracking-[0.18em] text-ink/60">{series}</span>
+        )}
+        <span className="grid size-6 place-items-center rounded-full border border-ink text-[9px] font-bold">TM</span>
+      </div>
+      {/* Diagonal hatch corner accent */}
+      <div className="hatch absolute right-0 top-10 z-0 h-12 w-20 border-l border-b border-ink opacity-90" aria-hidden />
+    </>
+  );
+}
+
+function ModeFooter({ code = "56 424 569 648154", hideTopRule }: { code?: string; hideTopRule?: boolean }) {
+  return (
+    <div className={`mt-auto flex items-center justify-between px-6 py-3 md:px-8 ${hideTopRule ? "" : "border-t border-ink"}`}>
+      <span className="meta uppercase tracking-[0.18em] text-ink/60">foodlab.mastersunion.org</span>
+      <span className="font-mono text-[11px] tracking-[0.1em] text-ink/70">{code}</span>
+    </div>
+  );
+}
+
 function Tile({
   className = "",
   style,
