@@ -51,81 +51,64 @@ function Index() {
         </a>
       </header>
 
-      {/* ============== HERO — single unified card ============== */}
-      <section id="program" className="border-b border-ink" style={{ background: "var(--navy)" }}>
-        <div className="mx-auto max-w-[1400px] p-6 md:p-10">
-          <ModeCard>
-            {/* Top vertical "Apply Now" rail */}
-            <div className="absolute left-0 top-0 z-10 hidden h-40 w-12 items-center justify-center bg-ink text-paper md:flex">
-              <span className="-rotate-90 whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.22em]">Apply Now</span>
+      {/* ============== HERO ============== */}
+      <section id="program" className="border-b border-ink bg-paper">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-16 md:grid-cols-12 md:gap-12 md:px-10 md:py-24">
+          {/* LEFT — copy */}
+          <div className="md:col-span-7 flex flex-col">
+            <div className="meta uppercase tracking-[0.18em] text-ink/60 flex items-center gap-3">
+              <span className="inline-block size-1.5 rounded-full bg-ink" />
+              Masters' Union · Food Lab · Cohort 01 · 2025
             </div>
 
-            <ModeChrome series="COHORT 01 · 2025" />
+            <h1 className="mt-6 font-display font-bold leading-[0.9] tracking-[-0.04em] text-[56px] md:text-[104px]">
+              Premium founders.
+              <br />
+              Built for{" "}
+              <span className="relative inline-block">
+                <span className="absolute inset-x-0 top-[58%] h-[40%] -z-0" style={{ background: "var(--yellow)" }} />
+                <span className="relative">delivery.</span>
+              </span>
+            </h1>
 
-            <div className="grid grid-cols-1 gap-8 px-6 pb-8 pt-16 md:grid-cols-12 md:gap-10 md:px-12 md:pb-10 md:pt-20 md:pl-20">
-              {/* LEFT — copy + CTA */}
-              <div className="md:col-span-6 flex flex-col">
-                <div className="meta uppercase tracking-[0.18em] text-ink/60">Masters' Union · Food Lab</div>
-                <h1 className="mt-4 font-display font-bold leading-[0.9] tracking-[-0.04em] text-[56px] md:text-[96px]">
-                  PREMIUM<br/>
-                  <span style={{ color: "var(--blue)" }}>FOUNDERS.</span><br/>
-                  BUILT FOR<br/>
-                  DELIVERY.
-                </h1>
+            <p className="mt-8 max-w-xl text-[16px] leading-relaxed text-ink/75">
+              An end-to-end incubator for India's next generation of food brands — kitchen, staff, FSSAI, supply chain and aggregator onboarding included.
+            </p>
 
-                <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink/75">
-                  An end-to-end incubator for India's next generation of food brands — kitchen, staff, FSSAI, supply chain and aggregator onboarding included.
-                </p>
-
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <a
-                    href={APPLY_URL}
-                    className="inline-flex items-center gap-3 border border-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper transition hover:opacity-90"
-                    style={{ background: "var(--blue)" }}
-                  >
-                    <span className="grid size-5 place-items-center bg-paper text-ink">→</span>
-                    Apply for Cohort 01
-                  </a>
-                  <div className="meta uppercase tracking-[0.18em] text-ink/70">
-                    Use code: <span className="text-ink">FOODLAB25</span>
-                  </div>
-                </div>
-
-                <div className="mt-10 flex items-end justify-between gap-6 border-t border-ink/15 pt-5">
-                  <div>
-                    <div className="font-display text-[18px] font-bold tracking-tight">FOOD&nbsp;LAB</div>
-                    <div className="meta uppercase tracking-[0.18em] text-ink/60">foodlab.mastersunion.org</div>
-                  </div>
-                  <div className="grid size-16 place-items-center rounded-full text-center text-[10px] font-bold uppercase leading-tight text-paper" style={{ background: "var(--blue)" }}>
-                    ₹0<br/>SETUP
-                  </div>
-                </div>
-              </div>
-
-              {/* RIGHT — single hero image */}
-              <div className="md:col-span-6">
-                <div className="relative aspect-[4/5] overflow-hidden border border-ink bg-secondary">
-                  <img
-                    src={heroFounder}
-                    alt="Premium food founder ready to launch a delivery-first brand"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    loading="eager"
-                    width={1024}
-                    height={1280}
-                  />
-                  <div className="absolute left-0 top-0 m-3 inline-flex items-center gap-2 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
-                    <span className="size-1.5 rounded-full" style={{ background: "var(--blue)" }} />
-                    Cohort Intake Open
-                  </div>
-                  <div className="absolute bottom-0 right-0 m-3 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
-                    MU FL · 0001
-                  </div>
-                </div>
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <a
+                href={APPLY_URL}
+                className="inline-flex items-center gap-3 border border-ink bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper transition hover:opacity-90"
+              >
+                Apply for Cohort 01
+                <span aria-hidden>→</span>
+              </a>
+              <div className="meta uppercase tracking-[0.18em] text-ink/70">
+                Use code: <span className="text-ink">FOODLAB25</span>
               </div>
             </div>
+          </div>
 
-            <ModeFooter code="MU FL · INTAKE 25 · 56 424 569 648154" />
-          </ModeCard>
+          {/* RIGHT — image */}
+          <div className="md:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden border border-ink bg-secondary">
+              <img
+                src={heroFounder}
+                alt="Premium food founder ready to launch a delivery-first brand"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="eager"
+                width={1024}
+                height={1280}
+              />
+              <div className="absolute left-0 top-0 m-3 inline-flex items-center gap-2 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+                <span className="size-1.5 rounded-full bg-ink" />
+                Cohort Intake Open
+              </div>
+              <div className="absolute bottom-0 right-0 m-3 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+                MU FL · 0001
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
