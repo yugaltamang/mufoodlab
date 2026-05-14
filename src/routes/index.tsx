@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
 
 import essential01 from "@/assets/essential-01-kitchen.jpg";
@@ -261,12 +261,12 @@ function Index() {
               <div className="meta uppercase tracking-[0.16em] text-ink/55">
                 60 days · 1 launch
               </div>
-              <a
-                href={APPLY_URL}
+              <Link
+                to="/program"
                 className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
               >
-                Apply to cohort 01 <span aria-hidden>→</span>
-              </a>
+                Explore the program <span aria-hidden>→</span>
+              </Link>
             </div>
           </div>
 
