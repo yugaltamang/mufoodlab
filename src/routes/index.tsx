@@ -136,29 +136,20 @@ function Index() {
         </div>
       </section>
 
-      {/* ============== INTRO STRIP ============== */}
-      <section className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 border-b border-ink px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
-        <div className="md:col-span-3 meta uppercase tracking-[0.14em] text-ink/60">
-          <div className="text-ink">Programme brief</div>
-          <div className="mt-2">No. 0001 · Cohort 01</div>
-        </div>
-        <h2 className="md:col-span-9 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[80px]">
-          For the next generation of food brands in India.
-          <span className="text-ink/40"> An end-to-end incubator — kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.</span>
-        </h2>
-      </section>
-
       {/* ============== INVOICE / CHALLENGE ============== */}
       <section className="border-b border-ink">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
           <div className="border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
-            <div className="meta uppercase tracking-[0.18em] text-ink/60">The challenge — 0X</div>
+            <div className="flex items-center justify-between meta uppercase tracking-[0.14em] text-ink/60">
+              <span className="text-ink">The challenge — 0X</span>
+              <span>No. 0001 · Cohort 01</span>
+            </div>
             <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
               Before you sell a single plate, the bill is already
               <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
             </h2>
             <p className="mt-8 max-w-md text-[15px] leading-relaxed text-ink/75">
-              Most aspiring food entrepreneurs never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
+              For the next generation of food brands in India — most aspiring founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
             </p>
           </div>
           <div className="bg-ink p-8 font-mono text-paper md:p-14">
