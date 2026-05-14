@@ -127,13 +127,13 @@ function ProgramPage() {
 
       {/* ============== WHAT'S INCLUDED — at a glance ============== */}
       <section className="border-y border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 What's included
               </span>
-              <h2 className="mt-5 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[52px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[32px] sm:leading-[0.95] md:text-[52px]">
                 A full operating stack — pre-built.
               </h2>
             </div>
