@@ -64,11 +64,11 @@ function Index() {
           {/* Headline + sub */}
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <h1 className="md:col-span-8 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[68px]">
-              Indian Food Delivery Market is just scratching the surface.
+              An end-to-end incubator for India's next food brands.
             </h1>
             <p className="md:col-span-4 self-end text-[14px] leading-relaxed text-ink/70">
-              India's food economy is decades behind the West and China.
-              The next decade belongs to whoever shows up first.
+              Kitchen, staff, compliance, supply chain, aggregator onboarding — handled.
+              You bring the idea and the obsession; we get you from day 0 to a live brand in 60 days.
             </p>
           </div>
 
