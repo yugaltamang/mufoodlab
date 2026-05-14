@@ -126,22 +126,26 @@ function Index() {
         </div>
       </section>
 
-      {/* ============== INVOICE / CHALLENGE ============== */}
+      {/* ============== CHALLENGE HEADER ============== */}
       <section className="border-b border-ink">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
-          <div className="relative border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
-            <span className="absolute left-0 top-0 inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Challenge
-            </span>
-            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
-              Before you sell a single plate, the bill is already
-              <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
-            </h2>
-            <p className="mt-8 max-w-md text-[15px] leading-relaxed text-ink/75">
-              For the next generation of food brands in India — most aspiring founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
-            </p>
-          </div>
-          <div className="bg-ink p-8 font-mono text-paper md:p-14">
+        <div className="mx-auto max-w-[1500px] px-6 pb-10 pt-12 md:px-10 md:pb-14 md:pt-16">
+          <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+            The Challenge
+          </span>
+          <h2 className="mt-6 max-w-4xl font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+            Before you sell a single plate, the bill is already
+            <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
+          </h2>
+          <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-ink/75">
+            For the next generation of food brands in India — most aspiring founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
+          </p>
+        </div>
+      </section>
+
+      {/* ============== INVOICE ============== */}
+      <section className="border-b border-ink bg-ink">
+        <div className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+          <div className="ml-auto max-w-2xl font-mono text-paper">
             <div className="flex items-center justify-between border-b border-paper/30 pb-3 text-[11px] uppercase tracking-[0.14em]">
               <span>Food Lab — Pre-Launch Bill</span>
               <span>Invoice #0001</span>
