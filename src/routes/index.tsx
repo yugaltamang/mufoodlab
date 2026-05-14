@@ -226,7 +226,7 @@ function Index() {
           aria-hidden
           viewBox="0 0 24 24"
           fill="none"
-          className="pointer-events-none absolute -right-10 -top-10 h-[260px] w-[260px] text-ink/[0.06] md:-right-16 md:-top-16 md:h-[420px] md:w-[420px]"
+          className="pointer-events-none absolute -right-4 -top-4 h-[140px] w-[140px] text-ink/[0.08] md:-right-6 md:-top-6 md:h-[220px] md:w-[220px]"
         >
           <path
             d="M6 18L18 6M18 6H8M18 6V16"
