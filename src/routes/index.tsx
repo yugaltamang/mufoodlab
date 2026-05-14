@@ -239,20 +239,21 @@ function Index() {
             backgroundSize: "56px 56px",
           }}
         />
-        {/* Top-right arrow watermark */}
+        {/* Abstract geometric watermark */}
         <svg
           aria-hidden
-          viewBox="0 0 24 24"
+          viewBox="0 0 200 200"
           fill="none"
-          className="pointer-events-none absolute -right-4 -top-4 h-[140px] w-[140px] text-ink/[0.08] md:-right-6 md:-top-6 md:h-[220px] md:w-[220px]"
+          className="pointer-events-none absolute -right-8 -top-8 h-[180px] w-[180px] text-ink/[0.10] md:-right-10 md:-top-10 md:h-[280px] md:w-[280px]"
         >
-          <path
-            d="M6 18L18 6M18 6H8M18 6V16"
-            stroke="currentColor"
-            strokeWidth="5"
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-          />
+          <circle cx="100" cy="100" r="92" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="100" cy="100" r="68" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="100" cy="100" r="44" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="100" cy="100" r="20" fill="currentColor" />
+          <line x1="100" y1="0" x2="100" y2="200" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="0" y1="100" x2="200" y2="100" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="29" y1="29" x2="171" y2="171" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="171" y1="29" x2="29" y2="171" stroke="currentColor" strokeWidth="1.5" />
         </svg>
         <div className="relative">
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
