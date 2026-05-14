@@ -663,17 +663,24 @@ function PillarPoster({
   );
 }
 
-function PosterMentor({ n }: { n: string }) {
+function MentorCircle({ n }: { n: string }) {
   return (
-    <PosterShell>
-      <div className="absolute inset-x-4 top-4 flex items-center justify-between meta uppercase tracking-[0.14em] text-ink/60">
-        <span>M.{n}</span>
-        <span className="text-green">●</span>
+    <div className="flex flex-col items-center text-center">
+      <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-full border border-ink/20 bg-ink/5">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="font-display text-[28px] font-extrabold tracking-[-0.02em] text-ink/30">
+            M.{n}
+          </span>
+        </div>
+        <span className="absolute right-3 top-3 text-[10px] text-green">●</span>
       </div>
-      <div className="absolute inset-x-4 bottom-12 font-display text-[22px] font-extrabold leading-[0.92] tracking-[-0.02em]">
-        Coming<br/>soon
+      <div className="mt-4 font-display text-[15px] font-extrabold leading-tight tracking-[-0.01em] text-ink">
+        Mentor coming soon
       </div>
-    </PosterShell>
+      <div className="mt-1 meta uppercase tracking-[0.14em] text-ink/55">
+        Founder · Operator
+      </div>
+    </div>
   );
 }
 
