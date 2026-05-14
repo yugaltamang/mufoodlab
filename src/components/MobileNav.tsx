@@ -51,7 +51,7 @@ export default function MobileNav() {
                 </button>
               ))}
             </nav>
-            <
+            <a
               href={APPLY_URL}
               target="_blank"
               rel="noopener noreferrer"
