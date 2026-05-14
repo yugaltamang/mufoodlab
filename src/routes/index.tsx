@@ -133,15 +133,15 @@ function Index() {
 
           {/* Total bar */}
           <div className="mt-px grid grid-cols-1 items-stretch gap-px bg-paper/15 md:grid-cols-12">
-            <div className="bg-ink px-6 py-7 md:col-span-7 md:px-8">
+            <div className="bg-ink px-5 py-6 sm:px-6 sm:py-7 md:col-span-7 md:px-8">
               <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-paper/55">
                 Total damage before customer #1
               </div>
-              <div className="mt-2 flex items-end gap-4">
-                <div className="font-display text-[64px] font-extrabold leading-none tracking-[-0.03em] md:text-[96px]">
+              <div className="mt-2 flex flex-wrap items-end gap-3 sm:gap-4">
+                <div className="font-display text-[52px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[96px]">
                   ₹15L+
                 </div>
-                <div className="pb-2 text-[12px] font-mono uppercase tracking-[0.14em] text-paper/55">
+                <div className="pb-2 text-[11px] font-mono uppercase tracking-[0.14em] text-paper/55 sm:text-[12px]">
                   + 60 days <br/> + ★★★★★ luck
                 </div>
               </div>
