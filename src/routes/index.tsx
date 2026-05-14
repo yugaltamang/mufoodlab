@@ -78,7 +78,7 @@ function Index() {
       </section>
 
       {/* ============== CHALLENGE ============== */}
-      <section className="border-b border-ink bg-ink text-paper">
+      <section id="challenge" className="border-b border-ink bg-ink text-paper">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
           {/* Header row */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
