@@ -72,8 +72,15 @@ function Index() {
             </p>
           </div>
 
+          {/* The Opportunity badge */}
+          <div className="mt-14 border-t border-ink pt-6">
+            <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              The Opportunity · 0001
+            </span>
+          </div>
+
           {/* 4-column numbered breakdown */}
-          <div className="mt-14 grid grid-cols-1 gap-10 border-t border-ink pt-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
             {[
               {
                 n: "01",
