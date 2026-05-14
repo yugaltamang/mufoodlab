@@ -48,8 +48,7 @@ function Index() {
       <section id="program" className="relative bg-paper text-ink">
         <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
           {/* Eyebrow */}
-          <div className="mb-6 flex items-center justify-between">
-            <span className="pill bg-green text-ink">The Opportunity</span>
+          <div className="mb-6 flex items-center justify-end">
             <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
           </div>
 
@@ -60,9 +59,6 @@ function Index() {
               alt="Indian food delivery market opportunity"
               className="h-[280px] w-full object-cover md:h-[460px]"
             />
-            <div className="absolute left-0 top-0 bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              Market Brief · 0001
-            </div>
           </div>
 
           {/* Headline + sub */}
