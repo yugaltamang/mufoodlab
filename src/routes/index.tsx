@@ -221,13 +221,20 @@ function Index() {
             backgroundSize: "56px 56px",
           }}
         />
-        {/* Giant watermark numeral */}
-        <div
+        {/* Top-right arrow watermark */}
+        <svg
           aria-hidden
-          className="pointer-events-none absolute -right-6 -top-10 select-none font-display text-[220px] font-extrabold leading-none tracking-[-0.05em] text-ink/[0.04] md:text-[360px]"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="pointer-events-none absolute -right-10 -top-10 h-[260px] w-[260px] text-ink/[0.06] md:-right-16 md:-top-16 md:h-[420px] md:w-[420px]"
         >
-          04
-        </div>
+          <path
+            d="M6 18L18 6M18 6H8M18 6V16"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="square"
+          />
+        </svg>
         <div className="relative">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
           {/* Header row */}
