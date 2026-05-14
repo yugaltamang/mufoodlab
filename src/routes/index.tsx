@@ -163,7 +163,7 @@ function Index() {
 
       {/* ============== THE FOOD LANDSCAPE ============== */}
       <section id="opportunity" className="border-b border-ink bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="border-b border-ink pb-6">
             <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
               The Food Landscape
