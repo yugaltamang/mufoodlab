@@ -343,10 +343,10 @@ function Index() {
 
       {/* ============== MENTORS ============== */}
       <section id="mentors" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 px-4 py-12 sm:px-6 sm:py-14 md:grid-cols-12 md:px-10 md:py-20">
           <div className="md:col-span-7">
             <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
-            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[76px]">
+            <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[76px]">
               Learn from operators who built food businesses
               <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
             </h2>
