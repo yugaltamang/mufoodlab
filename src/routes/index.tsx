@@ -670,7 +670,7 @@ function PillarPoster({
   );
 }
 
-function MentorCircle({ n }: { n: string }) {
+function MentorCircle({ n, name, role }: { n: string; name: string; role: string }) {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-full border border-ink/20 bg-ink/5">
@@ -680,6 +680,12 @@ function MentorCircle({ n }: { n: string }) {
           </span>
         </div>
         <span className="absolute right-3 top-3 text-[10px] text-green">●</span>
+      </div>
+      <div className="mt-4 font-display text-[15px] font-extrabold leading-tight tracking-[-0.01em] text-ink">
+        {name}
+      </div>
+      <div className="mt-1 meta uppercase tracking-[0.14em] text-ink/55">
+        {role}
       </div>
     </div>
   );
