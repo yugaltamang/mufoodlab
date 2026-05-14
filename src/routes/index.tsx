@@ -45,129 +45,93 @@ function Index() {
       </header>
 
       {/* ============== HERO ============== */}
-      <section id="program" className="relative overflow-hidden bg-[oklch(0.97_0.04_142)] text-ink">
-        {/* Soft directional rays */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(115deg, transparent 0 80px, rgba(0,0,0,0.05) 80px 81px)",
-          }}
-        />
+      <section id="program" className="relative bg-paper text-ink">
+        <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
+          {/* Eyebrow */}
+          <div className="mb-6 flex items-center justify-between">
+            <span className="pill bg-green text-ink">The Opportunity</span>
+            <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
+          </div>
 
-        <div className="relative z-10 mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
-          {/* Top meta row */}
-          <div className="mb-8 flex items-start justify-between">
-            <div className="font-display text-[13px] font-semibold leading-tight tracking-tight text-ink/90">
-              Ready To Launch<br />Cohort 01
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="grid h-9 min-w-9 place-items-center rounded-full border border-ink/40 px-3 text-[11px] font-bold uppercase tracking-[0.14em]">60d</span>
-              <span className="grid h-9 min-w-9 place-items-center rounded-full border border-ink/40 px-3 text-[11px] font-bold uppercase tracking-[0.14em]">2025</span>
+          {/* Hero image */}
+          <div className="relative overflow-hidden border border-ink">
+            <img
+              src={heroChef}
+              alt="Indian food delivery market opportunity"
+              className="h-[280px] w-full object-cover md:h-[460px]"
+            />
+            <div className="absolute left-0 top-0 bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              Market Brief · 0001
             </div>
           </div>
 
-          {/* Poster bento grid */}
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
-            {/* Card 1 — Dark headline poster */}
-            <PosterCard tone="dark" className="col-span-2 md:col-span-1 md:row-span-2">
-              <PosterBrandRow tone="dark" />
-              <ArrowMark tone="dark" />
-              <h1 className="mt-6 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[52px]">
-                Launch<br />Your Food<br />Brand
-              </h1>
-              <p className="mt-5 text-[12.5px] leading-relaxed text-paper/70">
-                Let's scale your kitchen — operationally. We handle compliance, supply chain,
-                staffing & aggregator onboarding so you can focus on the food.
-              </p>
-              <div className="mt-auto pt-8">
-                <a
-                  href={APPLY_URL}
-                  className="inline-flex items-center gap-2 rounded-full bg-green px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-ink hover:opacity-90"
-                >
-                  Apply Now
-                </a>
-              </div>
-              <div className="mt-6 flex items-center gap-4 border-t border-paper/15 pt-4 text-[10.5px] font-medium text-paper/60">
-                <span className="uppercase tracking-[0.14em] text-paper/80">Cohort 01</span>
-                <span>·</span>
-                <span>foodlab.in</span>
-              </div>
-            </PosterCard>
+          {/* Headline + sub */}
+          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <h1 className="md:col-span-8 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[68px]">
+              Indian Food Delivery Market is just scratching the surface.
+            </h1>
+            <p className="md:col-span-4 self-end text-[14px] leading-relaxed text-ink/70">
+              India's food economy is decades behind the West and China.
+              The next decade belongs to whoever shows up first.
+            </p>
+          </div>
 
-            {/* Card 2 — Photo with green arrow corner */}
-            <PosterCard tone="photo" className="row-span-2">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${heroChef})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
-              <div className="absolute right-0 top-0 grid h-24 w-24 place-items-center bg-green text-ink">
-                <ArrowGlyph className="h-10 w-10" />
-              </div>
-              <div className="relative mt-auto">
-                <h2 className="font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.03em] text-paper md:text-[34px]">
-                  Kitchens.<br />Brands.<br />Results.
-                </h2>
-              </div>
-            </PosterCard>
-
-            {/* Card 3 — Light green poster with quote */}
-            <PosterCard tone="light">
-              <PosterBrandRow tone="light" />
-              <QuoteMark className="text-ink/80" />
-              <h2 className="mt-3 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[30px]">
-                Built. Branded.<br />Delivered.
-              </h2>
-              <p className="mt-3 text-[12px] leading-relaxed text-ink/75">
-                We don't just consult — we run the playbook with you, end-to-end, in 60 days.
-              </p>
-            </PosterCard>
-
-            {/* Card 4 — Dark stat poster */}
-            <PosterCard tone="dark">
-              <div className="flex items-start justify-between">
-                <PosterBrandRow tone="dark" />
-                <ArrowGlyph className="h-7 w-7 text-green" />
-              </div>
-              <div className="mt-auto">
-                <div className="font-display text-[64px] font-extrabold leading-[0.85] tracking-[-0.04em] text-green md:text-[76px]">
-                  60<span className="text-paper">d</span>
+          {/* 4-column numbered breakdown */}
+          <div className="mt-14 grid grid-cols-1 gap-10 border-t border-ink pt-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+            {[
+              {
+                n: "01",
+                eyebrow: "Food Ordering Population",
+                title: "India 4% vs 40–50%",
+                body: "Only 4% of Indians order food online vs 40–50% in USA & China. 10× headroom in India alone.",
+              },
+              {
+                n: "02",
+                eyebrow: "Number of Restaurants",
+                title: "5 L vs 1.7 Cr",
+                body: "India has ~5 lakh restaurants vs China's 1.7 crore. China is 34× India's market today.",
+              },
+              {
+                n: "03",
+                eyebrow: "Consumer Power",
+                title: "Rising disposable income",
+                body: "Disposable income is climbing — Indians are eating in and ordering more, every quarter.",
+              },
+              {
+                n: "04",
+                eyebrow: "Aggregator Growth",
+                title: "2× in next 5 years",
+                body: "Swiggy + Zomato projected to double — and they need new sticky brands to fuel that growth.",
+              },
+            ].map((c) => (
+              <div key={c.n} className="flex flex-col">
+                <div className="font-display text-[44px] font-extrabold leading-none tracking-[-0.035em] text-ink/90">
+                  {c.n}
                 </div>
-                <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-paper/70">
-                  Idea → live brand
+                <div className="mt-4 text-[10.5px] font-bold uppercase tracking-[0.16em] text-ink/55">
+                  {c.eyebrow}
                 </div>
+                <h3 className="mt-2 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                  {c.title}
+                </h3>
+                <p className="mt-3 text-[13px] leading-relaxed text-ink/70">
+                  {c.body}
+                </p>
               </div>
-            </PosterCard>
+            ))}
+          </div>
 
-            {/* Card 5 — Why choose us checklist */}
-            <PosterCard tone="light" className="col-span-2 md:col-span-2">
-              <div className="flex items-start justify-between">
-                <PosterBrandRow tone="light" />
-                <QuoteMark className="text-ink/70" />
-              </div>
-              <h2 className="mt-4 font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[34px]">
-                Why founders choose Food Lab
-              </h2>
-              <ul className="mt-5 grid gap-2.5 text-[13px] font-medium text-ink/85 md:grid-cols-2">
-                {[
-                  "We don't theorise — we operate kitchens",
-                  "We don't sell decks — we ship brands",
-                  "We don't chase trends — we build cash-flow",
-                  "We don't hand off — we stay till launch",
-                ].map((line) => (
-                  <li key={line} className="flex items-start gap-2">
-                    <span className="mt-[6px] inline-block h-2 w-2 shrink-0 rounded-full bg-ink" />
-                    {line}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 flex items-center justify-between border-t border-ink/15 pt-4 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-ink/70">
-                <span>Register Now</span>
-                <span>foodlab.in</span>
-              </div>
-            </PosterCard>
+          {/* CTA row */}
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-ink pt-6">
+            <span className="meta uppercase tracking-[0.16em] text-ink/60">
+              Idea → live brand in 60 days
+            </span>
+            <a
+              href={APPLY_URL}
+              className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+            >
+              Apply Now <span aria-hidden>→</span>
+            </a>
           </div>
         </div>
       </section>
