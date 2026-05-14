@@ -1,11 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { CSSProperties, ReactNode } from "react";
 
 import essential01 from "@/assets/essential-01-kitchen.jpg";
 import essential02 from "@/assets/essential-02-staff.jpg";
 import essential03 from "@/assets/essential-03-consultant.jpg";
-import essential04 from "@/assets/essential-04-fssai.jpg";
 import essential05 from "@/assets/essential-05-supply.jpg";
-import essential06 from "@/assets/essential-06-aggregator.jpg";
 import essential07 from "@/assets/essential-07-mentor.jpg";
 import essential08 from "@/assets/essential-08-tasting.jpg";
 import heroFounder from "@/assets/hero-founder.jpg";
@@ -17,366 +16,250 @@ export const Route = createFileRoute("/")({
 });
 
 const APPLY_URL = "https://tally.so/r/441zRr";
-
-const ESSENTIALS = [
-  ["01", "Fully equipped kitchen facility", essential01, "Stainless steel, copper, induction — production-ready from day one."],
-  ["02", "Professional kitchen staff", essential02, "Chefs, commis and stewards on payroll, trained to your menu."],
-  ["03", "Food consultant & culinary expertise", essential03, "Recipe development with operators who've launched real menus."],
-  ["04", "FSSAI licensing & compliance", essential04, "Licenses, audits and food-safety SOPs — handled end-to-end."],
-  ["05", "Procurement & supply chain", essential05, "Pre-vetted vendors, daily produce, bulk pricing baked in."],
-  ["06", "Aggregator onboarding (Zomato, Swiggy)", essential06, "Listings, photography and storefronts live in week one."],
-  ["07", "Mentorship from food operators", essential07, "1:1 with founders who've built and scaled F&amp;B brands."],
-  ["08", "Structured feedback & blind tastings", essential08, "Weekly tastings, scorecards and customer panels."],
-] as const;
+const WORDMARK = "Food Lab\u00AE";
 
 function Index() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       {/* ============== TOP NAV ============== */}
-      <header className="mx-auto flex max-w-[1400px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
-        <a href="#" className="flex items-center gap-3">
-          <span className="grid size-8 place-items-center border border-ink text-[11px] font-bold tracking-tighter">MU</span>
-          <span className="text-sm font-bold tracking-tight">Masters' Union — Food&nbsp;Lab</span>
-        </a>
-        <nav className="hidden items-center gap-7 text-[13px] font-medium md:flex">
-          <a className="underline-link" href="#program">Program</a>
-          <a className="underline-link" href="#opportunity">Opportunity</a>
-          <a className="underline-link" href="#solution">Essentials</a>
-          <a className="underline-link" href="#brands">Brands</a>
-          <a className="underline-link" href="#mentors">Mentors</a>
-          <a className="underline-link" href="#beyond">Beyond Cloud</a>
-        </nav>
-        <a href={APPLY_URL} className="border border-ink px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] hover:bg-ink hover:text-paper">
-          Apply →
-        </a>
+      <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
+          <a href="#" className="flex items-center gap-3">
+            <span className="grid size-7 place-items-center rounded-full bg-green text-[11px] font-black tracking-tighter">F</span>
+            <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">{WORDMARK}</span>
+          </a>
+          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
+            <a className="hover:text-ink/60" href="#program">Program</a>
+            <a className="hover:text-ink/60" href="#opportunity">Opportunity</a>
+            <a className="hover:text-ink/60" href="#solution">Pillars</a>
+            <a className="hover:text-ink/60" href="#brands">Brands</a>
+            <a className="hover:text-ink/60" href="#mentors">Mentors</a>
+          </nav>
+          <a
+            href={APPLY_URL}
+            className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+          >
+            Apply <span aria-hidden>→</span>
+          </a>
+        </div>
       </header>
 
-      {/* ============== HERO ============== */}
-      <section id="program" className="border-b border-ink bg-paper">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-16 md:grid-cols-12 md:gap-12 md:px-10 md:py-24">
-          {/* LEFT — copy */}
-          <div className="md:col-span-7 flex flex-col">
-            <div className="meta uppercase tracking-[0.18em] text-ink/60 flex items-center gap-3">
-              <span className="inline-block size-1.5 rounded-full bg-ink" />
-              Masters' Union · Food Lab · Cohort 01 · 2025
-            </div>
-
-            <h1 className="mt-6 font-display font-bold leading-[0.9] tracking-[-0.04em] text-[56px] md:text-[104px]">
-              Premium founders.
-              <br />
-              Built for{" "}
-              <span className="relative inline-block">
-                <span className="absolute inset-x-0 top-[58%] h-[40%] -z-0" style={{ background: "var(--yellow)" }} />
-                <span className="relative">delivery.</span>
-              </span>
-            </h1>
-
-            <p className="mt-8 max-w-xl text-[16px] leading-relaxed text-ink/75">
-              An end-to-end incubator for India's next generation of food brands — kitchen, staff, FSSAI, supply chain and aggregator onboarding included.
-            </p>
-
-            <div className="mt-10 flex flex-wrap items-center gap-5">
-              <a
-                href={APPLY_URL}
-                className="inline-flex items-center gap-3 border border-ink bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper transition hover:opacity-90"
-              >
-                Apply for Cohort 01
-                <span aria-hidden>→</span>
-              </a>
-              <div className="meta uppercase tracking-[0.18em] text-ink/70">
-                Use code: <span className="text-ink">FOODLAB25</span>
-              </div>
-            </div>
+      {/* ============== HERO POSTER WALL ============== */}
+      <section id="program" className="border-b border-ink">
+        <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
+          {/* Row 1 — five poster tiles like Welltec gallery */}
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4">
+            <PosterText
+              kicker="Cohort 01 — 2025"
+              title={<>Premium<br/>founders for<br/>the new food<br/>economy</>}
+              footnote="A Masters' Union programme"
+            />
+            <PosterIndex
+              eyebrow="Food Lab"
+              items={[
+                ["01", "Kitchen & team, fully wired."],
+                ["02", "Compliance & R&D, handled."],
+                ["03", "Supply & aggregator onboarding."],
+                ["04", "Mentors who shipped real brands."],
+              ]}
+            />
+            <PosterGreenWord word="Built for delivery" />
+            <PosterPhoto img={heroChef} caption="Dedicated" sub="Production-ready from day one." />
+            <PosterPortrait img={heroFounder} title="Pioneering" subtitle="brave founders" />
           </div>
 
-          {/* RIGHT — image */}
-          <div className="md:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden border border-ink bg-secondary">
-              <img
-                src={heroFounder}
-                alt="Premium food founder ready to launch a delivery-first brand"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="eager"
-                width={1024}
-                height={1280}
-              />
-              <div className="absolute left-0 top-0 m-3 inline-flex items-center gap-2 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
-                <span className="size-1.5 rounded-full bg-ink" />
-                Cohort Intake Open
-              </div>
-              <div className="absolute bottom-0 right-0 m-3 border border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
-                MU FL · 0001
-              </div>
-            </div>
+          {/* Row 2 */}
+          <div className="mt-3 grid grid-cols-2 gap-3 md:mt-4 md:grid-cols-5 md:gap-4">
+            <PosterPhoto img={essential02} caption="Visionary" sub="inventive — technical" tall />
+            <PosterCircle img={essential01} caption="Kitchen never sleeps" sub="A real working kitchen, not a coworking pitch." />
+            <PosterStat big="15–20%" eyebrow="Efficiency gains" footnote="Versus building solo." green />
+            <PosterPhoto img={essential03} caption="Recipe Lab" sub="Chefs and consultants, on-call." />
+            <PosterCircle img={essential05} caption="Visionary" sub="Vendors, daily produce, bulk pricing." light />
           </div>
         </div>
       </section>
-
-      {/* unused hero assets retained for other sections */}
-      {false && <img src={heroChef} alt="" />}
-      {false && <img src={heroWok} alt="" />}
 
       {/* ============== INTRO STRIP ============== */}
-      <section className="mx-auto max-w-[1400px] grid grid-cols-1 gap-10 border-b border-ink px-6 py-12 md:grid-cols-12 md:px-10 md:py-16">
-        <div className="md:col-span-3 meta uppercase tracking-[0.14em]">
-          <div>Programme Brief</div>
-          <div className="mt-2 text-ink/60">No. 0001 / Cohort 01</div>
+      <section className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 border-b border-ink px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
+        <div className="md:col-span-3 meta uppercase tracking-[0.14em] text-ink/60">
+          <div className="text-ink">Programme brief</div>
+          <div className="mt-2">No. 0001 · Cohort 01</div>
         </div>
-        <h1 className="md:col-span-9 font-display text-[44px] font-bold leading-[0.95] md:text-[68px]">
+        <h2 className="md:col-span-9 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[80px]">
           For the next generation of food brands in India.
-          <span className="text-ink/50"> An end-to-end incubator — kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.</span>
-        </h1>
+          <span className="text-ink/40"> An end-to-end incubator — kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.</span>
+        </h2>
       </section>
 
-      {/* ============== STATS ROW ============== */}
-      <section id="opportunity" className="mx-auto grid max-w-[1400px] grid-cols-2 border-b border-ink md:grid-cols-4">
-        <Stat n="01" kpi="4%" label="India" caption="of population orders food online" />
-        <Stat n="02" kpi="40–50%" label="USA & China" caption="10× headroom waiting in India" hi="var(--yellow)" />
-        <Stat n="03" kpi="34×" label="China vs India" caption="1.7 Cr restaurants vs 5 L" />
-        <Stat n="04" kpi="2×" label="Next 5 yrs" caption="Swiggy + Zomato projected growth" hi="var(--pink)" />
-      </section>
-
-      {/* ============== INVOICE ============== */}
-      <section className="mx-auto grid max-w-[1400px] grid-cols-1 gap-px border-b border-ink bg-ink md:grid-cols-2">
-        <div className="bg-paper p-8 md:p-12">
-          <span className="pill border border-ink">The Challenge — 0X</span>
-          <h2 className="mt-6 font-display text-5xl font-bold leading-[0.92] md:text-7xl">
-            Before you sell a single plate, the bill is already <span className="relative inline-block"><span className="absolute inset-x-0 top-[55%] h-[42%] -z-0" style={{ background: "var(--yellow)" }} /><span className="relative">due.</span></span>
-          </h2>
-          <p className="mt-8 max-w-md text-[15px] leading-relaxed">
-            Most aspiring food entrepreneurs never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
-          </p>
-        </div>
-        <div className="bg-paper p-8 md:p-12 font-mono text-ink">
-          <div className="flex items-center justify-between border-b border-ink pb-3 text-[11px] uppercase tracking-[0.14em]">
-            <span>Masters' Union Food Lab</span>
-            <span>Invoice #0001</span>
-          </div>
-          <div className="mt-2 text-[11px] uppercase tracking-[0.14em] text-ink/60">
-            Pre-Launch Bill · Founder Edition · Day 0 of 60
-          </div>
-          <ul className="mt-8 space-y-3 text-[14px]">
-            <LineItem n="01" item="Kitchen rent + setup" amount="₹6,00,000" />
-            <LineItem n="02" item="R&D + chef consultant" amount="₹3,00,000" />
-            <LineItem n="03" item="Working capital" amount="₹6,00,000" />
-            <li className="flex justify-between border-t border-ink pt-3">
-              <span>Subtotal</span>
-              <span className="font-semibold">₹15,00,000</span>
-            </li>
-            <li className="flex justify-between text-ink/60"><span>+ Your time</span><span>~60 days</span></li>
-            <li className="flex justify-between text-ink/60"><span>+ Luck required</span><span>★★★★★</span></li>
-          </ul>
-          <div className="mt-8 flex items-end justify-between border-t border-ink pt-5">
-            <div>
-              <div className="text-[11px] uppercase tracking-[0.14em] text-ink/60">Total due</div>
-              <div className="font-display text-5xl font-bold">₹15L+</div>
-            </div>
-            <div className="relative text-right text-[11px] uppercase tracking-[0.14em]">
-              Customers served: 0
-              <div className="mt-1 inline-block px-2 py-0.5 text-ink" style={{ background: "var(--pink)" }}>— UNPAID —</div>
-            </div>
+      {/* ============== STATS POSTER ROW ============== */}
+      <section id="opportunity" className="border-b border-ink">
+        <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+            <PosterStat big="04%" eyebrow="01 — India" footnote="of population orders food online" />
+            <PosterStat big="40–50%" eyebrow="02 — USA & China" footnote="10× headroom waiting in India" green />
+            <PosterStat big="34×" eyebrow="03 — China vs India" footnote="1.7 Cr restaurants vs 5 L" />
+            <PosterStat big="2×" eyebrow="04 — Next 5 yrs" footnote="Swiggy + Zomato projected growth" green />
           </div>
         </div>
       </section>
 
-      {/* ============== ESSENTIALS / SOLUTION ============== */}
-      <section id="solution" className="mx-auto max-w-[1400px] border-b border-ink">
-        <div className="grid grid-cols-1 gap-3 p-3 md:grid-cols-3 md:gap-4 md:p-4">
-          {/* Headline tile (spans 2 cols on desktop) */}
-          <Tile className="md:col-span-2 aspect-[2/1] text-paper" style={{ background: "var(--magenta)" }}>
-            <TileHeader brand="Food Lab." tag="the solution" dark />
-            <TileCircle dark />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-10 md:bottom-10">
-              <div className="meta uppercase tracking-[0.14em] text-paper/70">
-                Four pillars, fully wired in.
+      {/* ============== INVOICE / CHALLENGE ============== */}
+      <section className="border-b border-ink">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
+          <div className="border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
+            <div className="meta uppercase tracking-[0.18em] text-ink/60">The challenge — 0X</div>
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+              Before you sell a single plate, the bill is already
+              <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
+            </h2>
+            <p className="mt-8 max-w-md text-[15px] leading-relaxed text-ink/75">
+              Most aspiring food entrepreneurs never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
+            </p>
+          </div>
+          <div className="bg-ink p-8 font-mono text-paper md:p-14">
+            <div className="flex items-center justify-between border-b border-paper/30 pb-3 text-[11px] uppercase tracking-[0.14em]">
+              <span>Food Lab — Pre-Launch Bill</span>
+              <span>Invoice #0001</span>
+            </div>
+            <div className="mt-2 text-[11px] uppercase tracking-[0.14em] text-paper/60">Founder Edition · Day 0 of 60</div>
+            <ul className="mt-8 space-y-3 text-[14px]">
+              <LineItem n="01" item="Kitchen rent + setup" amount="₹6,00,000" />
+              <LineItem n="02" item="R&D + chef consultant" amount="₹3,00,000" />
+              <LineItem n="03" item="Working capital" amount="₹6,00,000" />
+              <li className="flex justify-between border-t border-paper/30 pt-3">
+                <span>Subtotal</span>
+                <span className="font-semibold">₹15,00,000</span>
+              </li>
+              <li className="flex justify-between text-paper/60"><span>+ Your time</span><span>~60 days</span></li>
+              <li className="flex justify-between text-paper/60"><span>+ Luck required</span><span>★★★★★</span></li>
+            </ul>
+            <div className="mt-10 flex items-end justify-between border-t border-paper/30 pt-5">
+              <div>
+                <div className="text-[11px] uppercase tracking-[0.14em] text-paper/60">Total due</div>
+                <div className="font-display text-5xl font-extrabold">₹15L+</div>
               </div>
-              <h2 className="mt-3 font-display text-[40px] font-bold leading-[0.92] md:text-[68px]">
-                That's where<br/>Food Lab comes in.
-              </h2>
-              <p className="mt-5 max-w-[48ch] text-[13px] leading-relaxed text-paper/85">
-                Kitchen, compliance, distribution and mentorship — handled from day one. You bring the idea and the obsession.
-              </p>
+              <div className="text-right text-[11px] uppercase tracking-[0.14em]">
+                Customers served: 0
+                <div className="mt-1 inline-block bg-green px-2 py-0.5 text-ink">— UNPAID —</div>
+              </div>
             </div>
-          </Tile>
+          </div>
+        </div>
+      </section>
 
-          {/* Yellow stat tile */}
-          <Tile className="aspect-[2/1] md:aspect-auto text-ink" style={{ background: "var(--yellow)" }}>
-            <TileHeader brand="Food Lab." tag="kit" />
-            <TileCircle />
-            <div className="absolute inset-x-6 bottom-6 md:inset-x-8 md:bottom-8">
-              <div className="font-display text-[64px] font-bold leading-[0.85] md:text-[88px]">04</div>
-              <div className="mt-2 meta uppercase tracking-[0.14em]">Pillars · 60 days · 1 launch</div>
-            </div>
-          </Tile>
-
-          {/* 4 pillar tiles */}
-          <PillarTile
-            n="01"
-            title="Kitchen & Team"
-            img={essential01}
-            points={["Fully equipped production kitchen", "Chefs, commis & stewards on payroll"]}
-          />
-          <PillarTile
-            n="02"
-            title="Recipe & Compliance"
-            img={essential03}
-            points={["Food consultants & R&D support", "FSSAI licensing, audits & SOPs"]}
-          />
-          <PillarTile
-            n="03"
-            title="Supply & Distribution"
-            img={essential05}
-            points={["Pre-vetted vendors & bulk pricing", "Zomato & Swiggy onboarding in week one"]}
-          />
-          <PillarTile
-            n="04"
-            title="Mentorship & Feedback"
-            img={essential07}
-            points={["1:1 with proven F&B operators", "Weekly tastings & customer panels"]}
-          />
+      {/* ============== PILLARS POSTER WALL ============== */}
+      <section id="solution" className="border-b border-ink">
+        <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4">
+            <PosterText
+              kicker="The solution"
+              title={<>Four pillars,<br/>fully wired in.</>}
+              footnote="60 days — 1 launch"
+              green
+            />
+            <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
+            <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
+            <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
+            <PillarPoster n="04" title="Mentorship & Feedback" img={essential07} points={["1:1 with operators", "Weekly tastings"]} />
+          </div>
         </div>
       </section>
 
       {/* ============== BRANDS ============== */}
-      <section id="brands" className="mx-auto max-w-[1400px] border-b border-ink">
-        <div className="grid grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
-          <div className="md:col-span-4">
-            <span className="pill border border-ink">From our kitchen</span>
-            <h2 className="mt-6 font-display text-5xl font-bold leading-[0.92] md:text-7xl">
-              Brands already{" "}
-              <span className="relative inline-block">
-                <span className="absolute inset-x-0 top-[55%] h-[42%] -z-0" style={{ background: "var(--pink)" }} />
-                <span className="relative">cooking.</span>
-              </span>
+      <section id="brands" className="border-b border-ink">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
+          <div className="md:col-span-5">
+            <div className="meta uppercase tracking-[0.18em] text-ink/60">From our kitchen</div>
+            <h2 className="mt-6 font-display text-[48px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[88px]">
+              Brands already
+              <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
             </h2>
           </div>
-          <p className="md:col-span-5 md:col-start-8 self-end text-[15px] leading-relaxed">
+          <p className="md:col-span-5 md:col-start-8 self-end text-[15px] leading-relaxed text-ink/75">
             Built by MU students. Serving real customers. Growing every week.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 gap-px border-t border-ink bg-ink md:grid-cols-2">
-          <BrandCard
-            tag="Delhi · Gurgaon"
-            name="Lexi's Gourmet Sandwiches"
-            tagline="Gurgaon's highest-rated gourmet sandwich brand"
-            body="What started as a passion for bold, indulgent sandwiches became Gurgaon's top-rated gourmet sandwich brand. Cult favorites: truffle mushroom ciabattas and crispy katsu sandos. Now expanding to Delhi."
-            img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/y11vvcni_Lexi%27s%20Gourmet%20Sandwiches.png"
-            follow="https://www.instagram.com/lexis_sandos/?hl=en"
-            hi="var(--yellow)"
-          />
-          <BrandCard
-            tag="Lajpat Nagar · Delhi"
-            name="Woody's Pizzeria"
-            tagline="Neapolitan-inspired, made for the Indian palate"
-            body="Kanav started baking pizzas in 2011. After years perfecting Neapolitan recipes, he launched Woody's — now live in Lajpat Nagar. Customers keep calling it the best pizza they've ever had."
-            img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/yr5s9vfq_Woody%27s%20Pizzeria.png"
-            follow="https://www.instagram.com/woodyspizzeria/?hl=en"
-            hi="var(--green)"
-          />
+        <div className="mx-auto max-w-[1500px] px-3 pb-3 md:px-4 md:pb-4">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
+            <BrandCard
+              tag="Delhi · Gurgaon"
+              name="Lexi's Gourmet Sandwiches"
+              tagline="Gurgaon's highest-rated gourmet sandwich brand"
+              body="What started as a passion for bold, indulgent sandwiches became Gurgaon's top-rated gourmet sandwich brand. Cult favorites: truffle mushroom ciabattas and crispy katsu sandos. Now expanding to Delhi."
+              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/y11vvcni_Lexi%27s%20Gourmet%20Sandwiches.png"
+              follow="https://www.instagram.com/lexis_sandos/?hl=en"
+            />
+            <BrandCard
+              tag="Lajpat Nagar · Delhi"
+              name="Woody's Pizzeria"
+              tagline="Neapolitan-inspired, made for the Indian palate"
+              body="Kanav started baking pizzas in 2011. After years perfecting Neapolitan recipes, he launched Woody's — now live in Lajpat Nagar. Customers keep calling it the best pizza they've ever had."
+              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/yr5s9vfq_Woody%27s%20Pizzeria.png"
+              follow="https://www.instagram.com/woodyspizzeria/?hl=en"
+            />
+          </div>
         </div>
       </section>
 
       {/* ============== MENTORS ============== */}
-      <section id="mentors" className="mx-auto max-w-[1400px] border-b border-ink px-6 py-14 md:px-10 md:py-20">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
+      <section id="mentors" className="border-b border-ink">
+        <div className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
           <div className="md:col-span-7">
-            <span className="pill border border-ink">Mentors & Partners</span>
-            <h2 className="mt-6 font-display text-5xl font-bold leading-[0.92] md:text-7xl">
-              Learn from people who've built food businesses{" "}
-              <span className="relative inline-block">
-                <span className="absolute inset-x-0 top-[55%] h-[42%] -z-0" style={{ background: "var(--yellow)" }} />
-                <span className="relative">from zero.</span>
-              </span>
+            <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[76px]">
+              Learn from operators who built food businesses
+              <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
             </h2>
           </div>
           <div className="md:col-span-4 md:col-start-9 self-end">
             <div className="meta uppercase tracking-[0.14em] text-ink/60">Aggregator partners</div>
             <div className="mt-3 flex flex-wrap items-center gap-2">
-              <span className="border border-ink px-3 py-1 text-[12px] font-semibold">Zomato</span>
-              <span className="border border-ink px-3 py-1 text-[12px] font-semibold">Swiggy</span>
+              <span className="border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-[0.14em]">Zomato</span>
+              <span className="border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-[0.14em]">Swiggy</span>
             </div>
           </div>
         </div>
-
-        <div className="mt-12 grid grid-cols-2 gap-px border border-ink bg-ink sm:grid-cols-3 lg:grid-cols-6">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <div key={i} className="aspect-[3/4] bg-paper p-4">
-              <div className="flex h-full flex-col justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink/50">
-                  M.{String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="font-display text-[22px] font-bold leading-[0.92]">
-                  Coming<br/>soon
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ============== BEYOND CLOUD ============== */}
-      <section id="beyond" className="mx-auto max-w-[1400px] grid grid-cols-1 gap-px border-b border-ink bg-ink md:grid-cols-12">
-        <div className="bg-paper p-8 md:col-span-5 md:p-12">
-          <span className="pill border border-ink">Beyond cloud kitchens</span>
-          <h2 className="mt-6 font-display text-5xl font-bold leading-[0.92] md:text-6xl">
-            Think bigger.{" "}
-            <span className="relative inline-block">
-              <span className="absolute inset-x-0 top-[15%] h-[80%] -z-0" style={{ background: "var(--pink)" }} />
-              <span className="relative">We're building</span>
-            </span>{" "}
-            for all of food.
-          </h2>
-        </div>
-        <div className="bg-paper p-8 md:col-span-7 md:p-12">
-          <p className="max-w-2xl text-[15px] leading-relaxed">
-            Cloud kitchens are where we start — but Food Lab is designed to incubate any food &amp; beverage brand. Packaged snacks, beverages, health foods, ready-to-eat, condiments — if it's food and it can scale, we want to hear about it.
-          </p>
-          <ul className="mt-8 grid grid-cols-1 gap-px border border-ink bg-ink sm:grid-cols-2">
-            {["Cloud kitchens", "Delivery-first brands", "Packaged foods / FMCG", "Beverages", "Ready-to-eat", "Condiments & sauces"].map((c, i) => (
-              <li key={c} className="flex items-center justify-between bg-paper px-4 py-3 text-[14px] font-medium">
-                <span>{c}</span>
-                <span className="font-mono text-[10px] text-ink/50">0{i+1}</span>
-              </li>
+        <div className="mx-auto max-w-[1500px] px-3 pb-3 md:px-4 md:pb-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6 md:gap-4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <PosterMentor key={i} n={String(i + 1).padStart(2, "0")} />
             ))}
-          </ul>
-          <a href={APPLY_URL} className="mt-8 inline-flex items-center gap-2 border border-ink bg-ink px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-paper hover:bg-paper hover:text-ink">
-            Register your interest →
-          </a>
+          </div>
         </div>
       </section>
 
       {/* ============== APPLY POSTER ============== */}
-      <section id="apply" className="mx-auto max-w-[1400px] border-b border-ink">
-        <div className="relative">
-          <Poster
-            dateLabel={`Apply by\n31 Oct, 21:00`}
-            topRight="‘Real kitchens. Real customers. Real founders.’\n(Admissions open)"
-            eye="04"
-            img="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=80"
-            alt="Hands kneading dough"
-            headline={<>Build your<br/><span className="italic font-medium">food</span> brand.</>}
-            highlights={[
-              { color: "var(--yellow)", className: "left-[8%] top-[40%] w-[55%] h-[10%]" },
-              { color: "var(--pink)", className: "left-[20%] top-[52%] w-[40%] h-[8%]" },
-              { color: "var(--green)", className: "left-[40%] top-[20%] w-[30%] h-[8%]" },
-            ]}
-            subline="Cohort 01\n2025 — 2026\nNew Delhi"
-            bottomLeft="Food Lab"
-            bottomRight={"Apply at\ntally.so/r/441zRr"}
-            big
-          />
-          <a
-            href={APPLY_URL}
-            className="absolute bottom-8 right-8 z-10 inline-flex items-center gap-3 border border-ink bg-paper px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] hover:bg-ink hover:text-paper"
-          >
-            Start application →
-          </a>
+      <section id="apply" className="border-b border-ink">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
+          <div className="relative aspect-[4/5] overflow-hidden bg-ink md:aspect-auto">
+            <img src={heroWok} alt="Hands at work in a working kitchen" className="absolute inset-0 h-full w-full object-cover grayscale" />
+            <div className="absolute inset-0 bg-ink/30" />
+            <div className="absolute left-6 top-6 inline-flex items-center gap-2 bg-paper px-2 py-1 meta uppercase tracking-[0.14em]">
+              <span className="size-1.5 rounded-full bg-green" /> Admissions open
+            </div>
+            <div className="absolute bottom-6 right-6 meta uppercase tracking-[0.14em] text-paper">{WORDMARK}</div>
+          </div>
+          <div className="bg-green p-8 md:p-14">
+            <div className="meta uppercase tracking-[0.18em]">Apply by 31 Oct, 21:00</div>
+            <h2 className="mt-6 font-display text-[56px] font-extrabold leading-[0.86] tracking-[-0.04em] md:text-[120px]">
+              Build your<br/>food brand.
+            </h2>
+            <p className="mt-6 max-w-md text-[15px] leading-relaxed">
+              Cohort 01 · 2025–2026 · New Delhi. Real kitchens. Real customers. Real founders.
+            </p>
+            <a href={APPLY_URL} className="mt-10 inline-flex items-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink">
+              Start application <span aria-hidden>→</span>
+            </a>
+            <div className="mt-10 flex items-end justify-between border-t border-ink pt-4 text-[11px] uppercase tracking-[0.14em]">
+              <span>{WORDMARK}</span>
+              <span>tally.so/r/441zRr</span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1400px] px-6 py-12 md:px-10 md:py-16">
+      <footer className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
         <div className="grid grid-cols-1 gap-10 border-b border-ink pb-12 md:grid-cols-4">
           <div className="meta uppercase tracking-[0.14em]">
             Cohort 01<br/>2025 — 2026
@@ -396,196 +279,194 @@ function Index() {
             <label className="font-semibold">Subscribe to the kitchen brief</label>
             <div className="mt-3 flex items-center border-b border-ink pb-2">
               <input type="email" placeholder="Email" className="flex-1 bg-transparent text-[14px] placeholder:text-ink/50 focus:outline-none" />
-              <button className="text-[12px] font-semibold uppercase tracking-[0.14em]">Subscribe ›</button>
+              <button className="text-[12px] font-bold uppercase tracking-[0.14em]">Subscribe ›</button>
             </div>
           </form>
         </div>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[14vw] font-bold leading-[0.85] md:text-[160px]">Food Lab.</span>
-          <span className="meta uppercase tracking-[0.14em] text-ink/60">
-            © Masters' Union {new Date().getFullYear()}
-          </span>
+          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">{WORDMARK}</span>
+          <span className="meta uppercase tracking-[0.14em] text-ink/60">© Masters' Union {new Date().getFullYear()}</span>
         </div>
       </footer>
+
+      {/* unused import warden */}
+      {false && <img src={essential08} alt="" />}
     </div>
   );
 }
 
-/* ===================== POSTER ===================== */
-function Poster({
-  dateLabel,
-  topRight,
-  eye,
-  img,
-  alt,
-  headline,
-  highlights,
-  subline,
-  bottomLeft,
-  bottomRight,
-  big,
-}: {
-  dateLabel: string;
-  topRight: string;
-  eye: string;
-  img: string;
-  alt: string;
-  headline: React.ReactNode;
-  highlights: { color: string; className: string }[];
-  subline: string;
-  bottomLeft: string;
-  bottomRight: string;
-  big?: boolean;
-}) {
-  return (
-    <article className={`relative overflow-hidden bg-paper ${big ? "aspect-[16/9]" : "aspect-[3/4]"}`}>
-      {/* Photo */}
-      <img src={img} alt={alt} className="absolute inset-0 h-full w-full object-cover grayscale" loading="eager" />
-      {/* Soft white overlay so type stays readable */}
-      <div className="absolute inset-0 bg-paper/35" />
-      {/* Thin grid lines */}
-      <div className="pointer-events-none absolute inset-0 poster-grid opacity-60" />
-      {/* Diagonal hairline */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, transparent calc(50% - 0.5px), var(--rule) 50%, transparent calc(50% + 0.5px))" }} />
-      </div>
+/* ===================== POSTER PRIMITIVES ===================== */
 
-      {/* Highlight blocks */}
-      {highlights.map((h, i) => (
-        <span key={i} className={`hl ${h.className}`} style={{ background: h.color }} />
-      ))}
-
-      {/* Top row */}
-      <div className="absolute inset-x-0 top-0 flex items-start justify-between p-5 md:p-6">
-        <div className="border border-ink bg-paper px-2 py-1 meta whitespace-pre-line">
-          {dateLabel}
-        </div>
-        <div className="hidden md:block max-w-[55%] text-right meta whitespace-pre-line text-ink/80">
-          {topRight}
-        </div>
-        <div className="grid size-7 place-items-center rounded-full border border-ink bg-paper text-[10px] font-bold">
-          {eye}
-        </div>
-      </div>
-
-      {/* Subline (left, mid) */}
-      <div className="absolute left-5 top-[42%] hidden md:block meta whitespace-pre-line text-ink/80">
-        {subline}
-      </div>
-
-      {/* Headline */}
-      <h2 className={`absolute left-5 right-5 ${big ? "bottom-20" : "bottom-16"} font-display font-bold tracking-[-0.04em] leading-[0.86] ${big ? "text-[10vw] md:text-[140px]" : "text-[14vw] md:text-[64px]"}`}>
-        {headline}
-      </h2>
-
-      {/* Bottom row */}
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between border-t border-ink bg-paper px-5 py-3 md:px-6">
-        <span className="font-display text-[18px] font-bold tracking-tight">{bottomLeft}</span>
-        <span className="meta whitespace-pre-line text-right text-ink/80">{bottomRight}</span>
-      </div>
-    </article>
-  );
-}
-
-/* ===================== STAT ===================== */
-function Stat({ n, kpi, label, caption, hi }: { n: string; kpi: string; label: string; caption: string; hi?: string }) {
-  return (
-    <div className="relative border-b border-r border-ink p-6 last:border-r-0 md:p-8">
-      <div className="flex items-center justify-between meta uppercase tracking-[0.14em] text-ink/60">
-        <span>{n}</span>
-        <span>{label}</span>
-      </div>
-      <div className="relative mt-6 inline-block font-display text-5xl font-bold md:text-6xl">
-        {hi && <span className="absolute inset-x-[-4px] top-[55%] h-[42%] -z-0" style={{ background: hi }} />}
-        <span className="relative">{kpi}</span>
-      </div>
-      <div className="mt-4 text-[14px] leading-relaxed">{caption}</div>
-    </div>
-  );
-}
-
-/* ===================== LINE ITEM ===================== */
-/* ===================== TILE (bento) ===================== */
-/* ===================== MODE CARD ===================== */
-function ModeCard({ children }: { children: React.ReactNode }) {
-  return (
-    <article className="relative overflow-hidden border-2 border-ink bg-paper">
-      {children}
-    </article>
-  );
-}
-
-function ModeChrome({ series }: { series?: string }) {
-  return (
-    <>
-      {/* Top bar: logo + TM + hatch corner */}
-      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between border-b border-ink bg-paper px-4 py-2">
-        <div className="flex items-center gap-2">
-          <span className="grid size-6 place-items-center rounded-full border border-ink text-[10px] font-black">M</span>
-          <span className="font-display text-[13px] font-extrabold tracking-[-0.02em]">FOOD LAB</span>
-        </div>
-        {series && (
-          <span className="meta uppercase tracking-[0.18em] text-ink/60">{series}</span>
-        )}
-        <span className="grid size-6 place-items-center rounded-full border border-ink text-[9px] font-bold">TM</span>
-      </div>
-      {/* Diagonal hatch corner accent */}
-      <div className="hatch absolute right-0 top-10 z-0 h-12 w-20 border-l border-b border-ink opacity-90" aria-hidden />
-    </>
-  );
-}
-
-function ModeFooter({ code = "56 424 569 648154", hideTopRule }: { code?: string; hideTopRule?: boolean }) {
-  return (
-    <div className={`mt-auto flex items-center justify-between px-6 py-3 md:px-8 ${hideTopRule ? "" : "border-t border-ink"}`}>
-      <span className="meta uppercase tracking-[0.18em] text-ink/60">foodlab.mastersunion.org</span>
-      <span className="font-mono text-[11px] tracking-[0.1em] text-ink/70">{code}</span>
-    </div>
-  );
-}
-
-function Tile({
+function PosterShell({
+  children,
   className = "",
   style,
-  children,
+  dark,
+  green,
 }: {
+  children: ReactNode;
   className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
+  style?: CSSProperties;
+  dark?: boolean;
+  green?: boolean;
+}) {
+  const tone = green
+    ? "bg-green text-ink"
+    : dark
+    ? "bg-ink text-paper"
+    : "bg-paper text-ink";
+  return (
+    <article className={`relative aspect-[3/4] overflow-hidden border border-ink ${tone} ${className}`} style={style}>
+      {children}
+      <div className="pointer-events-none absolute inset-x-3 bottom-2 flex items-end justify-between text-[10px] font-bold uppercase tracking-[0.14em] opacity-90">
+        <span>{WORDMARK}</span>
+        <span className="opacity-60">foodlab.in</span>
+      </div>
+    </article>
+  );
+}
+
+function PosterText({
+  kicker,
+  title,
+  footnote,
+  green,
+}: {
+  kicker: string;
+  title: ReactNode;
+  footnote?: string;
+  green?: boolean;
 }) {
   return (
-    <div className={`relative overflow-hidden border border-ink p-6 md:p-8 ${className}`} style={style}>
-      {children}
-    </div>
+    <PosterShell green={green}>
+      <div className="absolute inset-x-4 top-4 meta uppercase tracking-[0.14em]">{kicker}</div>
+      <h3 className="absolute inset-x-4 top-14 font-display text-[26px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[34px]">
+        {title}
+      </h3>
+      {footnote && (
+        <div className="absolute inset-x-4 bottom-10 meta uppercase tracking-[0.14em] opacity-70">{footnote}</div>
+      )}
+    </PosterShell>
   );
 }
 
-function TileHeader({ brand, tag, dark }: { brand: string; tag?: string; dark?: boolean }) {
+function PosterIndex({ eyebrow, items }: { eyebrow: string; items: [string, string][] }) {
   return (
-    <div className={`absolute inset-x-6 top-5 md:inset-x-8 flex items-start justify-between ${dark ? "text-paper" : "text-ink"}`}>
-      <span className="font-display text-[15px] font-bold tracking-tight">{brand}</span>
-      {tag && <span className="meta uppercase tracking-[0.14em] opacity-70">{tag}</span>}
-    </div>
+    <PosterShell>
+      <div className="absolute inset-x-4 top-4 flex items-center justify-between meta uppercase tracking-[0.14em]">
+        <span className="text-green">●</span>
+        <span className="opacity-70">{eyebrow}</span>
+      </div>
+      <ul className="absolute inset-x-4 top-14 space-y-3">
+        {items.map(([n, label]) => (
+          <li key={n} className="border-b border-ink/15 pb-2">
+            <div className="flex items-baseline justify-between font-display text-[20px] font-extrabold tracking-[-0.02em]">
+              <span>{n}</span>
+            </div>
+            <div className="mt-1 text-[11px] leading-snug text-ink/70">{label}</div>
+          </li>
+        ))}
+      </ul>
+    </PosterShell>
   );
 }
 
-function TileCircle({ dark }: { dark?: boolean }) {
-  const stroke = dark ? "rgba(255,255,255,0.45)" : "rgba(20,20,20,0.45)";
+function PosterGreenWord({ word }: { word: string }) {
   return (
-    <svg
-      aria-hidden
-      viewBox="0 0 200 200"
-      className="pointer-events-none absolute -right-12 -top-12 size-[60%] opacity-80"
-    >
-      {[80, 65, 50, 35].map((r) => (
-        <circle key={r} cx="100" cy="100" r={r} fill="none" stroke={stroke} strokeWidth="1" />
-      ))}
-    </svg>
+    <PosterShell green>
+      <div className="absolute inset-0 flex items-center justify-center px-4">
+        <h3 className="font-display text-[40px] font-extrabold leading-[0.86] tracking-[-0.04em] md:text-[56px]">
+          <span className="block">{word.split(" ")[0]}</span>
+          <span className="block">{word.split(" ").slice(1).join(" ")}</span>
+        </h3>
+      </div>
+      <div className="absolute left-4 top-4 meta uppercase tracking-[0.14em]">Manifesto · 01</div>
+    </PosterShell>
   );
 }
 
-function PillarTile({
+function PosterPhoto({
+  img,
+  caption,
+  sub,
+  tall,
+}: {
+  img: string;
+  caption: string;
+  sub: string;
+  tall?: boolean;
+}) {
+  return (
+    <PosterShell className={tall ? "aspect-[3/4]" : ""}>
+      <img src={img} alt={caption} className="absolute inset-0 h-full w-full object-cover grayscale" loading="lazy" />
+      <div className="absolute inset-0 bg-paper/10" />
+      <div className="absolute right-3 top-3 bg-paper px-2 py-1 meta uppercase tracking-[0.14em]">{caption}</div>
+      <div className="absolute left-3 bottom-10 right-3 bg-paper p-3 text-[11px] leading-snug">
+        {sub}
+      </div>
+    </PosterShell>
+  );
+}
+
+function PosterPortrait({ img, title, subtitle }: { img: string; title: string; subtitle: string }) {
+  return (
+    <PosterShell>
+      <img src={img} alt={title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/10 to-transparent" />
+      <div className="absolute right-3 bottom-12 max-w-[70%] bg-paper p-3">
+        <div className="font-display text-[18px] font-extrabold tracking-[-0.02em]">{title}</div>
+        <div className="text-[11px] uppercase tracking-[0.14em] text-ink/60">— {subtitle}</div>
+      </div>
+    </PosterShell>
+  );
+}
+
+function PosterCircle({
+  img,
+  caption,
+  sub,
+  light,
+}: {
+  img: string;
+  caption: string;
+  sub: string;
+  light?: boolean;
+}) {
+  return (
+    <PosterShell className={light ? "" : ""} green={false}>
+      <div className="absolute inset-x-4 top-4 meta uppercase tracking-[0.14em]">{caption}</div>
+      <div className="absolute inset-x-6 top-12 aspect-square overflow-hidden rounded-full">
+        <img src={img} alt={caption} className="h-full w-full object-cover" loading="lazy" />
+      </div>
+      <div className="absolute inset-x-4 bottom-10 text-[11px] leading-snug text-ink/75">{sub}</div>
+    </PosterShell>
+  );
+}
+
+function PosterStat({
+  big,
+  eyebrow,
+  footnote,
+  green,
+}: {
+  big: string;
+  eyebrow: string;
+  footnote: string;
+  green?: boolean;
+}) {
+  return (
+    <PosterShell green={green}>
+      <div className="absolute inset-x-4 top-4 meta uppercase tracking-[0.14em]">{eyebrow}</div>
+      <div className="absolute inset-x-4 bottom-12">
+        <div className="font-display text-[64px] font-extrabold leading-[0.85] tracking-[-0.045em] md:text-[88px]">{big}</div>
+        <div className="mt-2 text-[12px] leading-snug">{footnote}</div>
+      </div>
+    </PosterShell>
+  );
+}
+
+function PillarPoster({
   n,
   title,
   img,
@@ -597,62 +478,71 @@ function PillarTile({
   points: string[];
 }) {
   return (
-    <Tile className="aspect-square overflow-hidden p-0 bg-paper text-paper">
-      <img src={img} alt={title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-      <div
-        className="absolute inset-0"
-        style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.85) 100%)" }}
-      />
-      <div className="absolute inset-x-5 top-4 flex items-start justify-between text-[10px] font-semibold uppercase tracking-[0.14em]">
-        <span>Food Lab.</span>
-        <span className="grid size-6 place-items-center rounded-full border border-paper/70 bg-paper/15">{n}</span>
+    <PosterShell>
+      <img src={img} alt={title} className="absolute inset-0 h-full w-full object-cover grayscale" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ink/10 to-ink/80" />
+      <div className="absolute inset-x-3 top-3 flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.14em] text-paper">
+        <span>Pillar {n}</span>
+        <span className="grid size-6 place-items-center rounded-full bg-green text-ink">{n}</span>
       </div>
-      <div className="absolute inset-x-5 bottom-5">
-        <h3 className="font-display text-[22px] font-bold leading-[0.95] md:text-[26px]">{title}</h3>
-        <ul className="mt-3 space-y-1.5">
+      <div className="absolute inset-x-3 bottom-10 text-paper">
+        <h3 className="font-display text-[22px] font-extrabold leading-[0.92] tracking-[-0.02em] md:text-[26px]">{title}</h3>
+        <ul className="mt-2 space-y-1">
           {points.map((p) => (
-            <li key={p} className="flex items-start gap-2 text-[12px] leading-snug text-paper/85">
-              <span className="mt-1.5 inline-block size-1 shrink-0 rounded-full bg-paper/80" />
+            <li key={p} className="flex items-start gap-2 text-[11px] leading-snug text-paper/85">
+              <span className="mt-1.5 inline-block size-1 shrink-0 rounded-full bg-green" />
               <span>{p}</span>
             </li>
           ))}
         </ul>
       </div>
-    </Tile>
+    </PosterShell>
+  );
+}
+
+function PosterMentor({ n }: { n: string }) {
+  return (
+    <PosterShell>
+      <div className="absolute inset-x-4 top-4 flex items-center justify-between meta uppercase tracking-[0.14em] text-ink/60">
+        <span>M.{n}</span>
+        <span className="text-green">●</span>
+      </div>
+      <div className="absolute inset-x-4 bottom-12 font-display text-[22px] font-extrabold leading-[0.92] tracking-[-0.02em]">
+        Coming<br/>soon
+      </div>
+    </PosterShell>
   );
 }
 
 function LineItem({ n, item, amount }: { n: string; item: string; amount: string }) {
   return (
-    <li className="flex items-baseline justify-between gap-4 border-b border-ink/15 pb-2">
-      <span className="text-ink/50">{n}</span>
+    <li className="flex items-baseline justify-between gap-4 border-b border-paper/15 pb-2">
+      <span className="text-paper/50">{n}</span>
       <span className="flex-1">{item}</span>
       <span className="font-semibold">{amount}</span>
     </li>
   );
 }
 
-/* ===================== BRAND CARD ===================== */
 function BrandCard({
-  tag, name, tagline, body, img, follow, hi,
+  tag, name, tagline, body, img, follow,
 }: {
-  tag: string; name: string; tagline: string; body: string; img: string; follow: string; hi: string;
+  tag: string; name: string; tagline: string; body: string; img: string; follow: string;
 }) {
   return (
-    <article className="bg-paper">
+    <article className="border border-ink bg-paper">
       <div className="relative aspect-[4/3] overflow-hidden border-b border-ink">
         <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-        <span className="absolute left-6 top-[60%] h-[10%] w-[55%]" style={{ background: hi, mixBlendMode: "multiply" }} />
-        <div className="absolute inset-x-0 top-0 flex justify-between p-4 text-[10px] font-semibold uppercase tracking-[0.14em]">
-          <span className="border border-ink bg-paper px-2 py-1">{tag}</span>
-          <span className="border border-ink bg-paper px-2 py-1">Live</span>
+        <div className="absolute inset-x-0 top-0 flex justify-between p-3 text-[10px] font-bold uppercase tracking-[0.14em]">
+          <span className="bg-paper px-2 py-1">{tag}</span>
+          <span className="bg-green px-2 py-1">Live</span>
         </div>
       </div>
       <div className="p-6 md:p-8">
-        <h3 className="font-display text-4xl font-bold leading-[0.92] md:text-5xl">{name}</h3>
+        <h3 className="font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[52px]">{name}</h3>
         <p className="mt-3 text-[14px] font-semibold italic">{tagline}</p>
-        <p className="mt-4 text-[14px] leading-relaxed text-ink/80">{body}</p>
-        <div className="mt-6 flex items-center justify-between text-[12px] font-semibold uppercase tracking-[0.14em]">
+        <p className="mt-4 text-[14px] leading-relaxed text-ink/75">{body}</p>
+        <div className="mt-6 flex items-center justify-between text-[12px] font-bold uppercase tracking-[0.14em]">
           <a href={follow} target="_blank" rel="noreferrer" className="underline-link">Follow on Instagram →</a>
           <span className="text-ink/50">Available on Zomato</span>
         </div>
