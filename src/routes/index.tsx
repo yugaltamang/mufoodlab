@@ -654,3 +654,63 @@ function FloatingPill({ className = "", dot, label }: { className?: string; dot:
     </div>
   );
 }
+
+function PosterCard({
+  tone,
+  className = "",
+  children,
+}: {
+  tone: "dark" | "light" | "photo";
+  className?: string;
+  children: ReactNode;
+}) {
+  const base =
+    tone === "light"
+      ? "bg-[oklch(0.92_0.22_142)] text-ink"
+      : "bg-ink text-paper";
+  return (
+    <article
+      className={`relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl p-6 md:min-h-[320px] md:p-7 ${base} ${className}`}
+    >
+      {children}
+    </article>
+  );
+}
+
+function PosterBrandRow({ tone }: { tone: "dark" | "light" }) {
+  const ring = tone === "dark" ? "border-paper/30" : "border-ink/30";
+  const text = tone === "dark" ? "text-paper/80" : "text-ink/80";
+  const dot = tone === "dark" ? "bg-green" : "bg-ink";
+  return (
+    <div className={`inline-flex items-center gap-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] ${text}`}>
+      <span className={`grid size-5 place-items-center rounded-full border ${ring}`}>
+        <span className={`size-1.5 rounded-full ${dot}`} />
+      </span>
+      Food Lab
+    </div>
+  );
+}
+
+function ArrowGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M6 18L18 6M18 6H8M18 6V16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+function ArrowMark({ tone }: { tone: "dark" | "light" }) {
+  return (
+    <div className={`absolute right-5 top-5 grid size-12 place-items-center ${tone === "dark" ? "bg-green text-ink" : "bg-ink text-green"}`}>
+      <ArrowGlyph className="h-6 w-6" />
+    </div>
+  );
+}
+
+function QuoteMark({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" className={`h-7 w-7 ${className}`} fill="currentColor" aria-hidden>
+      <path d="M10 8c-3 1.5-5 4.5-5 9v7h8v-9H8c0-3 1-5 3-6L10 8zm14 0c-3 1.5-5 4.5-5 9v7h8v-9h-5c0-3 1-5 3-6l-1-1z" />
+    </svg>
+  );
+}
