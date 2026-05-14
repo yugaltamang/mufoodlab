@@ -631,61 +631,48 @@ function BrandCard({
 }: {
   tag: string; name: string; tagline: string; body: string; img: string; follow: string;
 }) {
-  // Split name → first word in serif italic, rest in sans bold (poster style)
   const [firstWord, ...restWords] = name.split(" ");
   const rest = restWords.join(" ");
 
   return (
-    <article className="group relative isolate aspect-[3/4] overflow-hidden border border-ink bg-ink text-paper">
-      {/* Background image */}
-      <img
-        src={img}
-        alt={name}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105"
-      />
-      {/* Gradient wash for legibility */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 32%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.85) 100%)",
-        }}
-      />
-
+    <article className="group relative flex flex-col overflow-hidden border border-ink bg-paper p-5 text-ink md:p-6">
       {/* Top label row */}
-      <div className="relative z-10 flex items-start justify-between gap-4 p-5 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-paper/85 md:p-6">
+      <div className="flex items-center justify-between gap-4 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink/60">
         <span>From the kitchen</span>
         <span className="hidden sm:block">{tag}</span>
-        <span>Live</span>
+        <span className="inline-flex items-center gap-1.5 text-ink">
+          <span className="size-1.5 rounded-full bg-green" /> Live
+        </span>
       </div>
 
-      {/* Center poster headline */}
-      <div className="relative z-10 px-5 pt-2 md:px-6">
-        <h3 className="font-display text-[44px] font-extrabold leading-[0.88] tracking-[-0.035em] text-paper drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)] md:text-[64px]">
-          <span className="font-display italic">{firstWord}</span>{" "}
-          {rest && (
-            <span className="bg-green px-1.5 leading-none text-ink">{rest}</span>
-          )}
-        </h3>
-        <p className="mt-3 max-w-[22ch] text-[13px] font-semibold leading-snug text-paper/90 md:text-[14px]">
-          {tagline}
-        </p>
+      {/* Headline */}
+      <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[36px]">
+        <span className="font-display italic">{firstWord}</span>{" "}
+        {rest && (
+          <span className="bg-green px-1.5 leading-none text-ink">{rest}</span>
+        )}
+      </h3>
+      <p className="mt-2 text-[12.5px] font-semibold italic text-ink/75">
+        {tagline}
+      </p>
+
+      {/* Small logo above description */}
+      <div className="mt-5 flex items-center gap-3 border-t border-ink/15 pt-4">
+        <img
+          src={img}
+          alt={`${name} logo`}
+          loading="lazy"
+          className="size-12 shrink-0 rounded-full border border-ink/15 object-cover"
+        />
+        <p className="text-[12.5px] leading-relaxed text-ink/70">{body}</p>
       </div>
 
-      {/* Bottom slab */}
-      <div className="absolute inset-x-0 bottom-0 z-10 p-5 md:p-6">
-        <p className="max-w-[42ch] text-[12.5px] leading-relaxed text-paper/85 md:text-[13px]">
-          {body}
-        </p>
-        <div className="mt-5 flex items-center justify-between gap-3 border-t border-paper/30 pt-3 text-[11px] font-bold uppercase tracking-[0.16em]">
-          <a href={follow} target="_blank" rel="noreferrer" className="text-paper hover:text-green">
-            Instagram →
-          </a>
-          <span className="inline-flex items-center gap-2 text-paper/65">
-            <span className="size-1.5 rounded-full bg-green" /> On Zomato
-          </span>
-        </div>
+      {/* Footer */}
+      <div className="mt-5 flex items-center justify-between gap-3 border-t border-ink/15 pt-3 text-[10.5px] font-bold uppercase tracking-[0.16em]">
+        <a href={follow} target="_blank" rel="noreferrer" className="underline-link">
+          Instagram →
+        </a>
+        <span className="text-ink/50">On Zomato</span>
       </div>
     </article>
   );
