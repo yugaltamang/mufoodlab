@@ -275,21 +275,26 @@ function Index() {
       </section>
 
       {/* ============== BRANDS ============== */}
-      <section id="brands" className="border-b border-ink">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
-          <div className="md:col-span-5">
-            <div className="meta uppercase tracking-[0.18em] text-ink/60">From our kitchen</div>
-            <h2 className="mt-6 font-display text-[48px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[88px]">
-              Brands already
-              <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
-            </h2>
+      <section id="brands" className="border-b border-ink bg-paper">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+          {/* Header */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
+              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+                From our kitchen
+              </span>
+              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+                Brands already
+                <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
+              </h2>
+            </div>
+            <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
+              Built by MU students. Serving real customers. Growing every week.
+            </p>
           </div>
-          <p className="md:col-span-5 md:col-start-8 self-end text-[15px] leading-relaxed text-ink/75">
-            Built by MU students. Serving real customers. Growing every week.
-          </p>
-        </div>
-        <div className="mx-auto max-w-[1500px] px-3 pb-3 md:px-4 md:pb-4">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
+
+          {/* Brand list */}
+          <div className="mt-12 grid grid-cols-1 gap-px bg-ink/10 md:mt-14 md:grid-cols-2">
             <BrandCard
               tag="Delhi · Gurgaon"
               name="Lexi's Gourmet Sandwiches"
