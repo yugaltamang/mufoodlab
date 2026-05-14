@@ -200,22 +200,21 @@ function Index() {
       </section>
 
       {/* ============== SOLUTION — PROGRAMME + PILLARS ============== */}
-      <section id="solution" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
-          {/* Programme intro card */}
-          <div className="relative grid grid-cols-1 gap-6 border border-ink bg-ink p-6 text-paper md:grid-cols-12 md:gap-8 md:p-10">
-            <div className="absolute left-0 top-0 bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Solution
-            </div>
-
-            <div className="md:col-span-8 md:pt-6">
-              <div className="meta uppercase tracking-[0.16em] text-paper/60">
+      <section id="solution" className="border-b border-ink bg-paper text-ink">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+          {/* Header row */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-8">
+              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+                The Solution
+              </span>
+              <div className="mt-6 meta uppercase tracking-[0.16em] text-ink/55">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[56px]">
+              <h2 className="mt-3 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[72px]">
                 Four pillars, fully wired in.
               </h2>
-              <p className="mt-4 max-w-2xl text-[14px] leading-relaxed text-paper/75">
+              <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
                 Kitchen, staff, FSSAI compliance, supply chain, aggregator onboarding on
                 Zomato &amp; Swiggy, mentorship and structured tastings — all handled. You
                 bring the idea and the obsession; we get you from day 0 to a live brand
@@ -223,13 +222,13 @@ function Index() {
               </p>
             </div>
 
-            <div className="md:col-span-4 flex flex-col justify-end gap-4 md:items-end md:pt-6">
-              <div className="meta uppercase tracking-[0.16em] text-paper/60 md:text-right">
+            <div className="md:col-span-4 flex flex-col gap-4 md:items-start md:pt-2">
+              <div className="meta uppercase tracking-[0.16em] text-ink/55">
                 60 days · 1 launch
               </div>
               <a
                 href={APPLY_URL}
-                className="inline-flex items-center gap-2 bg-green px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-paper"
+                className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
               >
                 Apply to cohort 01 <span aria-hidden>→</span>
               </a>
@@ -237,7 +236,7 @@ function Index() {
           </div>
 
           {/* Four pillars */}
-          <div className="mt-3 grid grid-cols-2 gap-3 md:mt-4 md:grid-cols-4 md:gap-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-4 md:gap-4">
             <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
             <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
             <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
