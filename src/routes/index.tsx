@@ -674,12 +674,6 @@ function MentorCircle({ n }: { n: string }) {
         </div>
         <span className="absolute right-3 top-3 text-[10px] text-green">●</span>
       </div>
-      <div className="mt-4 font-display text-[15px] font-extrabold leading-tight tracking-[-0.01em] text-ink">
-        To be announced
-      </div>
-      <div className="mt-1 meta uppercase tracking-[0.14em] text-ink/55">
-        Founder · Operator
-      </div>
     </div>
   );
 }
