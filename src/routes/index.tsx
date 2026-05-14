@@ -395,20 +395,20 @@ function Index() {
             </div>
             <div className="absolute bottom-6 right-6 meta uppercase tracking-[0.14em] text-paper">{WORDMARK}</div>
           </div>
-          <div className="bg-green p-8 md:p-14">
+          <div className="bg-green p-6 sm:p-8 md:p-14">
             <div className="meta uppercase tracking-[0.18em]">Apply by 31 Oct, 21:00</div>
-            <h2 className="mt-6 font-display text-[56px] font-extrabold leading-[0.86] tracking-[-0.04em] md:text-[120px]">
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] sm:text-[56px] sm:leading-[0.86] md:text-[120px]">
               Build your<br/>food brand.
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed">
               Cohort 01 · 2025–2026 · New Delhi. Real kitchens. Real customers. Real founders.
             </p>
-            <a href={APPLY_URL} className="mt-10 inline-flex items-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink">
+            <a href={APPLY_URL} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
               Start application <span aria-hidden>→</span>
             </a>
-            <div className="mt-10 flex items-end justify-between border-t border-ink pt-4 text-[11px] uppercase tracking-[0.14em]">
+            <div className="mt-8 flex items-end justify-between border-t border-ink pt-4 text-[11px] uppercase tracking-[0.14em] sm:mt-10">
               <span>{WORDMARK}</span>
-              <span>tally.so/r/441zRr</span>
+              <span className="truncate">tally.so/r/441zRr</span>
             </div>
           </div>
         </div>
