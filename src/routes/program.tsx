@@ -367,8 +367,10 @@ function ProgramPage() {
       <section className="border-b border-ink bg-paper">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
-              <h2 className="font-display text-[40px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[80px]">
                 Ready to cook your
                 <span className="ml-3 inline-block bg-green px-2 leading-none">first plate?</span>
               </h2>
@@ -376,10 +378,10 @@ function ProgramPage() {
                 Cohort 01 closes 31 October. We review applications on a rolling basis.
               </p>
             </div>
-            <div className="md:col-span-4 flex flex-col items-start justify-end gap-4">
+            <div className="md:col-span-4 flex flex-col items-stretch justify-end gap-4 md:items-start">
               <a
                 href={APPLY_URL}
-                className="inline-flex items-center gap-2 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+                className="inline-flex items-center justify-center gap-2 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
               >
                 Apply to cohort 01 <span aria-hidden>→</span>
               </a>
@@ -395,7 +397,7 @@ function ProgramPage() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">
             {WORDMARK}
