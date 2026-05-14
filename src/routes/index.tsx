@@ -129,11 +129,10 @@ function Index() {
       {/* ============== INVOICE / CHALLENGE ============== */}
       <section className="border-b border-ink">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
-          <div className="border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
-            <div className="flex items-center justify-between meta uppercase tracking-[0.14em] text-ink/60">
-              <span className="text-ink">The challenge — 0X</span>
-              <span>No. 0001 · Cohort 01</span>
-            </div>
+          <div className="relative border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
+            <span className="absolute left-0 top-0 inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              The Challenge · 0003
+            </span>
             <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
               Before you sell a single plate, the bill is already
               <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
