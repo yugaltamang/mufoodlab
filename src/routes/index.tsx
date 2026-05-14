@@ -378,8 +378,15 @@ function Index() {
           </div>
 
           <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} />
+            {[
+              { name: "Ananya Sharma", role: "Founder · Cloud Kitchen" },
+              { name: "Rohan Mehta", role: "Ex-Swiggy · Operator" },
+              { name: "Priya Iyer", role: "Chef · Restaurateur" },
+              { name: "Vikram Rao", role: "Supply Chain Lead" },
+              { name: "Neha Kapoor", role: "Brand · D2C Foods" },
+              { name: "Arjun Singh", role: "Investor · F&B" },
+            ].map((m, i) => (
+              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} />
             ))}
           </div>
         </div>
@@ -663,7 +670,7 @@ function PillarPoster({
   );
 }
 
-function MentorCircle({ n }: { n: string }) {
+function MentorCircle({ n, name, role }: { n: string; name: string; role: string }) {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-full border border-ink/20 bg-ink/5">
@@ -673,6 +680,12 @@ function MentorCircle({ n }: { n: string }) {
           </span>
         </div>
         <span className="absolute right-3 top-3 text-[10px] text-green">●</span>
+      </div>
+      <div className="mt-4 font-display text-[15px] font-extrabold leading-tight tracking-[-0.01em] text-ink">
+        {name}
+      </div>
+      <div className="mt-1 meta uppercase tracking-[0.14em] text-ink/55">
+        {role}
       </div>
     </div>
   );
