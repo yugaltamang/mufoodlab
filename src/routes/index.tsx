@@ -180,7 +180,7 @@ function Index() {
                 Masters' Union Food Lab
               </div>
               <h2 className="mt-3 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[56px]">
-                An end-to-end incubator. Four pillars, fully wired in.
+                Four pillars, fully wired in.
               </h2>
               <p className="mt-4 max-w-2xl text-[14px] leading-relaxed text-paper/75">
                 Kitchen, staff, FSSAI compliance, supply chain, aggregator onboarding on
