@@ -39,18 +39,18 @@ export const Route = createFileRoute("/program")({
 
 function ProgramPage() {
   return (
-    <div className="min-h-screen bg-paper text-ink">
+    <div className="min-h-screen bg-paper text-ink pb-16 lg:pb-0">
       {/* ============== TOP NAV ============== */}
       <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-10 w-auto md:h-12" />
-            <span className="h-7 w-px bg-ink/20" aria-hidden />
-            <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 border-b border-ink px-4 py-3 sm:px-6 sm:py-4 md:px-10">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto sm:h-10 md:h-12" />
+            <span className="hidden h-7 w-px bg-ink/20 sm:inline-block" aria-hidden />
+            <span className="hidden font-display text-[13px] font-extrabold tracking-[-0.02em] sm:inline sm:text-[15px]">
               {WORDMARK}
             </span>
           </Link>
-          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
+          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] lg:flex">
             <Link to="/" className="hover:text-ink/60">
               Home
             </Link>
@@ -69,7 +69,7 @@ function ProgramPage() {
           </nav>
           <a
             href={APPLY_URL}
-            className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+            className="hidden items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink lg:inline-flex"
           >
             Apply <span aria-hidden>→</span>
           </a>
@@ -78,7 +78,7 @@ function ProgramPage() {
 
       {/* ============== HERO ============== */}
       <section className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
+        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
           <div className="flex items-center justify-between">
             <Link
               to="/"
@@ -96,7 +96,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Program
               </span>
-              <h1 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[88px]">
+              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[88px]">
                 Sixty days. One
                 <span className="ml-3 inline-block bg-green px-2 leading-none">live brand.</span>
               </h1>
@@ -112,7 +112,7 @@ function ProgramPage() {
                 <img
                   src={heroChef}
                   alt="Founder in a working kitchen"
-                  className="h-[260px] w-full object-cover md:h-[340px]"
+                  className="h-[220px] w-full object-cover sm:h-[260px] md:h-[340px]"
                 />
               </div>
               <div className="mt-4 grid grid-cols-3 gap-px bg-ink/15 text-center">
