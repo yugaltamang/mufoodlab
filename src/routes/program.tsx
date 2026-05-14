@@ -3,15 +3,15 @@ import type { ReactNode } from "react";
 
 import MobileNav from "@/components/MobileNav";
 
-import essential01 from "@/assets/essential-01-kitchen.jpg";
-import essential02 from "@/assets/essential-02-staff.jpg";
-import essential03 from "@/assets/essential-03-consultant.jpg";
-import essential04 from "@/assets/essential-04-fssai.jpg";
-import essential05 from "@/assets/essential-05-supply.jpg";
-import essential06 from "@/assets/essential-06-aggregator.jpg";
-import essential07 from "@/assets/essential-07-mentor.jpg";
-import essential08 from "@/assets/essential-08-tasting.jpg";
-import heroChef from "@/assets/hero-chef.jpg";
+import essential01 from "@/assets/essential-01-kitchen.webp";
+import essential02 from "@/assets/essential-02-staff.webp";
+import essential03 from "@/assets/essential-03-consultant.webp";
+import essential04 from "@/assets/essential-04-fssai.webp";
+import essential05 from "@/assets/essential-05-supply.webp";
+import essential06 from "@/assets/essential-06-aggregator.webp";
+import essential07 from "@/assets/essential-07-mentor.webp";
+import essential08 from "@/assets/essential-08-tasting.webp";
+import heroChef from "@/assets/hero-chef.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
