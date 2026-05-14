@@ -192,22 +192,23 @@ function Index() {
         </div>
       </section>
 
-      {/* ============== PROGRAM CARD ============== */}
-      <section id="opportunity" className="border-b border-ink">
+      {/* ============== SOLUTION — PROGRAMME + PILLARS ============== */}
+      <section id="solution" className="border-b border-ink">
         <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
+          {/* Programme intro card */}
           <div className="relative grid grid-cols-1 gap-6 border border-ink bg-ink p-6 text-paper md:grid-cols-12 md:gap-8 md:p-10">
             <div className="absolute left-0 top-0 bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Programme · 0002
+              The Solution · 0002
             </div>
 
-            <div className="md:col-span-7 md:pt-6">
+            <div className="md:col-span-8 md:pt-6">
               <div className="meta uppercase tracking-[0.16em] text-paper/60">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[44px]">
-                An end-to-end incubator for India's next food brands.
+              <h2 className="mt-3 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[56px]">
+                An end-to-end incubator. Four pillars, fully wired in.
               </h2>
-              <p className="mt-4 max-w-xl text-[13.5px] leading-relaxed text-paper/75 md:text-[14px]">
+              <p className="mt-4 max-w-2xl text-[14px] leading-relaxed text-paper/75">
                 Kitchen, staff, FSSAI compliance, supply chain, aggregator onboarding on
                 Zomato &amp; Swiggy, mentorship and structured tastings — all handled. You
                 bring the idea and the obsession; we get you from day 0 to a live brand
@@ -215,38 +216,21 @@ function Index() {
               </p>
             </div>
 
-            <div className="md:col-span-5 flex flex-col justify-between gap-6 md:items-end md:pt-6">
-              <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-[12px] text-paper/80 md:text-[12.5px]">
-                <li>· Equipped kitchen</li>
-                <li>· Pro kitchen staff</li>
-                <li>· Chef consultant</li>
-                <li>· FSSAI &amp; compliance</li>
-                <li>· Supply chain</li>
-                <li>· Aggregator onboarding</li>
-                <li>· Operator mentorship</li>
-                <li>· Blind tastings</li>
-              </ul>
+            <div className="md:col-span-4 flex flex-col justify-end gap-4 md:items-end md:pt-6">
+              <div className="meta uppercase tracking-[0.16em] text-paper/60 md:text-right">
+                60 days · 1 launch
+              </div>
               <a
-                href="#solution"
+                href={APPLY_URL}
                 className="inline-flex items-center gap-2 bg-green px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-paper"
               >
-                Explore the programme <span aria-hidden>→</span>
+                Apply to cohort 01 <span aria-hidden>→</span>
               </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ============== PILLARS POSTER WALL ============== */}
-      <section id="solution" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4">
-            <PosterText
-              kicker="The solution"
-              title={<>Four pillars,<br/>fully wired in.</>}
-              footnote="60 days — 1 launch"
-              green
-            />
+          {/* Four pillars */}
+          <div className="mt-3 grid grid-cols-2 gap-3 md:mt-4 md:grid-cols-4 md:gap-4">
             <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
             <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
             <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
