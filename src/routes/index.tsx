@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
 
+import MobileNav from "@/components/MobileNav";
+
 import essential01 from "@/assets/essential-01-kitchen.jpg";
 import essential02 from "@/assets/essential-02-staff.jpg";
 import essential03 from "@/assets/essential-03-consultant.jpg";
