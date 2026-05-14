@@ -27,7 +27,7 @@ export default function MobileNav() {
     <div className="lg:hidden">
       {/* Fixed bottom bar */}
       <div className="fixed bottom-0 left-0 right-0 z-50">
-        <div className="bg-ink/95 backdrop-blur-xl">
+        <div className="bg-ink/95 backdrop-blur-xl" style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
           <div className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-3.5">
             <button
               onClick={() => setIsOpen(!isOpen)}
