@@ -200,7 +200,35 @@ function Index() {
       </section>
 
       {/* ============== SOLUTION — PROGRAMME + PILLARS ============== */}
-      <section id="solution" className="border-b border-ink bg-paper text-ink">
+      <section
+        id="solution"
+        className="relative overflow-hidden border-b border-ink bg-paper text-ink"
+        style={{
+          backgroundImage: [
+            "radial-gradient(60% 50% at 85% 0%, oklch(0.92 0.22 142 / 0.55), transparent 70%)",
+            "radial-gradient(50% 40% at 0% 100%, oklch(0.92 0.22 142 / 0.35), transparent 65%)",
+            "linear-gradient(to bottom, oklch(0.985 0.005 95), oklch(0.96 0.01 95))",
+          ].join(", "),
+        }}
+      >
+        {/* Subtle grid overlay */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
+        {/* Giant watermark numeral */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-6 -top-10 select-none font-display text-[220px] font-extrabold leading-none tracking-[-0.05em] text-ink/[0.04] md:text-[360px]"
+        >
+          04
+        </div>
+        <div className="relative">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
           {/* Header row */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
@@ -242,6 +270,7 @@ function Index() {
             <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
             <PillarPoster n="04" title="Mentorship & Feedback" img={essential07} points={["1:1 with operators", "Weekly tastings"]} />
           </div>
+        </div>
         </div>
       </section>
 
