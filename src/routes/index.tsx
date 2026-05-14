@@ -26,13 +26,13 @@ function Index() {
     <div className="min-h-screen bg-paper text-ink pb-16 lg:pb-0">
       {/* ============== TOP NAV ============== */}
       <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
-          <a href="#" className="flex items-center gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-10 w-auto md:h-12" />
-            <span className="h-7 w-px bg-ink/20" aria-hidden />
-            <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">{WORDMARK}</span>
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 border-b border-ink px-4 py-3 sm:px-6 sm:py-4 md:px-10">
+          <a href="#" className="flex items-center gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto sm:h-10 md:h-12" />
+            <span className="hidden h-7 w-px bg-ink/20 sm:inline-block" aria-hidden />
+            <span className="hidden font-display text-[13px] font-extrabold tracking-[-0.02em] sm:inline sm:text-[15px]">{WORDMARK}</span>
           </a>
-          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
+          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] lg:flex">
             <a className="hover:text-ink/60" href="#challenge">The Challenge</a>
             <a className="hover:text-ink/60" href="#opportunity">The Food Landscape</a>
             <a className="hover:text-ink/60" href="#solution">The Solution</a>
@@ -41,7 +41,7 @@ function Index() {
           </nav>
           <a
             href={APPLY_URL}
-            className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+            className="hidden items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink lg:inline-flex"
           >
             Apply <span aria-hidden>→</span>
           </a>
