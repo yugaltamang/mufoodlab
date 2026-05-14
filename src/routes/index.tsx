@@ -116,19 +116,6 @@ function Index() {
               </div>
             ))}
           </div>
-
-          {/* CTA row */}
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-ink pt-6">
-            <span className="meta uppercase tracking-[0.16em] text-ink/60">
-              Idea → live brand in 60 days
-            </span>
-            <a
-              href={APPLY_URL}
-              className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
-            >
-              Apply Now <span aria-hidden>→</span>
-            </a>
-          </div>
         </div>
       </section>
 
