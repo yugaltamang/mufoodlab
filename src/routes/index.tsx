@@ -579,3 +579,14 @@ function BrandCard({
     </article>
   );
 }
+
+function FloatingPill({ className = "", dot, label }: { className?: string; dot: string; label: string }) {
+  return (
+    <div
+      className={`absolute z-10 inline-flex items-center gap-2 rounded-full border border-paper/15 bg-paper/10 px-3 py-1.5 text-[11px] font-semibold tracking-[0.02em] text-paper backdrop-blur-md ${className}`}
+    >
+      <span className={`size-2 rounded-full ${dot}`} />
+      {label}
+    </div>
+  );
+}
