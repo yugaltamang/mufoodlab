@@ -271,6 +271,7 @@ function Index() {
             <PillarPoster n="04" title="Mentorship & Feedback" img={essential07} points={["1:1 with operators", "Weekly tastings"]} />
           </div>
         </div>
+        </div>
       </section>
 
       {/* ============== BRANDS ============== */}
