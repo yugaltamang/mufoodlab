@@ -23,16 +23,16 @@ const WORDMARK = "FOODLAB\u00AE";
 
 function Index() {
   return (
-    <div className="min-h-screen bg-paper text-ink pb-16 lg:pb-0">
+    <div className="min-h-screen overflow-x-hidden bg-paper text-ink pb-16 lg:pb-0">
       {/* ============== TOP NAV ============== */}
       <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
-          <a href="#" className="flex items-center gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-10 w-auto md:h-12" />
-            <span className="h-7 w-px bg-ink/20" aria-hidden />
-            <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">{WORDMARK}</span>
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 border-b border-ink px-4 py-3 sm:px-6 sm:py-4 md:px-10">
+          <a href="#" className="flex items-center gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto sm:h-10 md:h-12" />
+            <span className="hidden h-7 w-px bg-ink/20 sm:inline-block" aria-hidden />
+            <span className="hidden font-display text-[13px] font-extrabold tracking-[-0.02em] sm:inline sm:text-[15px]">{WORDMARK}</span>
           </a>
-          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
+          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] lg:flex">
             <a className="hover:text-ink/60" href="#challenge">The Challenge</a>
             <a className="hover:text-ink/60" href="#opportunity">The Food Landscape</a>
             <a className="hover:text-ink/60" href="#solution">The Solution</a>
@@ -41,7 +41,7 @@ function Index() {
           </nav>
           <a
             href={APPLY_URL}
-            className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+            className="hidden items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink lg:inline-flex"
           >
             Apply <span aria-hidden>→</span>
           </a>
@@ -50,9 +50,9 @@ function Index() {
 
       {/* ============== HERO ============== */}
       <section id="program" className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
+        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
           {/* Eyebrow */}
-          <div className="mb-6 flex items-center justify-end">
+          <div className="mb-5 flex items-center justify-end sm:mb-6">
             <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
           </div>
 
@@ -61,13 +61,13 @@ function Index() {
             <img
               src={heroChef}
               alt="Indian food delivery market opportunity"
-              className="h-[280px] w-full object-cover md:h-[460px]"
+              className="h-[240px] w-full object-cover sm:h-[320px] md:h-[460px]"
             />
           </div>
 
           {/* Headline + sub */}
-          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <h1 className="md:col-span-8 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[68px]">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
+            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
               An end-to-end incubator for India's next food brands.
             </h1>
             <div className="md:col-span-4 self-end">
@@ -75,16 +75,16 @@ function Index() {
                 Kitchen, staff, compliance, supply chain, aggregator onboarding — handled.
                 You bring the idea and the obsession; we get you from day 0 to a live brand in 60 days.
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
-                  className="inline-flex items-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+                  className="inline-flex items-center justify-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
                 >
                   Apply to cohort 01 <span aria-hidden>→</span>
                 </a>
                 <Link
                   to="/program"
-                  className="inline-flex items-center gap-2 border border-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-ink hover:text-paper"
+                  className="inline-flex items-center justify-center gap-2 border border-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-ink hover:text-paper"
                 >
                   Explore the program
                 </Link>
@@ -97,14 +97,14 @@ function Index() {
 
       {/* ============== CHALLENGE ============== */}
       <section id="challenge" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           {/* Header row */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Challenge
               </span>
-              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[78px]">
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
                 Before you sell a single plate, the bill is already
                 <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
               </h2>
@@ -133,15 +133,15 @@ function Index() {
 
           {/* Total bar */}
           <div className="mt-px grid grid-cols-1 items-stretch gap-px bg-paper/15 md:grid-cols-12">
-            <div className="bg-ink px-6 py-7 md:col-span-7 md:px-8">
+            <div className="bg-ink px-5 py-6 sm:px-6 sm:py-7 md:col-span-7 md:px-8">
               <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-paper/55">
                 Total damage before customer #1
               </div>
-              <div className="mt-2 flex items-end gap-4">
-                <div className="font-display text-[64px] font-extrabold leading-none tracking-[-0.03em] md:text-[96px]">
+              <div className="mt-2 flex flex-wrap items-end gap-3 sm:gap-4">
+                <div className="font-display text-[52px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[96px]">
                   ₹15L+
                 </div>
-                <div className="pb-2 text-[12px] font-mono uppercase tracking-[0.14em] text-paper/55">
+                <div className="pb-2 text-[11px] font-mono uppercase tracking-[0.14em] text-paper/55 sm:text-[12px]">
                   + 60 days <br/> + ★★★★★ luck
                 </div>
               </div>
@@ -163,7 +163,7 @@ function Index() {
 
       {/* ============== THE FOOD LANDSCAPE ============== */}
       <section id="opportunity" className="border-b border-ink bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="border-b border-ink pb-6">
             <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
               The Food Landscape
@@ -255,7 +255,7 @@ function Index() {
           />
         </svg>
         <div className="relative">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           {/* Header row */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
@@ -265,7 +265,7 @@ function Index() {
               <div className="mt-6 meta uppercase tracking-[0.16em] text-ink/55">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[72px]">
+              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[72px]">
                 Four pillars, fully wired in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
@@ -282,7 +282,7 @@ function Index() {
               </div>
               <Link
                 to="/program"
-                className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+                className="inline-flex w-full items-center justify-center gap-2 bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink sm:w-auto sm:py-2.5"
               >
                 Explore the program <span aria-hidden>→</span>
               </Link>
@@ -290,7 +290,7 @@ function Index() {
           </div>
 
           {/* Four pillars */}
-          <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-4 md:gap-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 md:mt-16 md:grid-cols-4 md:gap-4">
             <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
             <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
             <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
@@ -302,14 +302,14 @@ function Index() {
 
       {/* ============== BRANDS ============== */}
       <section id="brands" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           {/* Header */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 From our kitchen
               </span>
-              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[80px]">
                 Brands already
                 <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
               </h2>
@@ -343,10 +343,10 @@ function Index() {
 
       {/* ============== MENTORS ============== */}
       <section id="mentors" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 px-4 py-12 sm:px-6 sm:py-14 md:grid-cols-12 md:px-10 md:py-20">
           <div className="md:col-span-7">
             <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
-            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[76px]">
+            <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[76px]">
               Learn from operators who built food businesses
               <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
             </h2>
@@ -395,27 +395,27 @@ function Index() {
             </div>
             <div className="absolute bottom-6 right-6 meta uppercase tracking-[0.14em] text-paper">{WORDMARK}</div>
           </div>
-          <div className="bg-green p-8 md:p-14">
+          <div className="bg-green p-6 sm:p-8 md:p-14">
             <div className="meta uppercase tracking-[0.18em]">Apply by 31 Oct, 21:00</div>
-            <h2 className="mt-6 font-display text-[56px] font-extrabold leading-[0.86] tracking-[-0.04em] md:text-[120px]">
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] sm:text-[56px] sm:leading-[0.86] md:text-[120px]">
               Build your<br/>food brand.
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed">
               Cohort 01 · 2025–2026 · New Delhi. Real kitchens. Real customers. Real founders.
             </p>
-            <a href={APPLY_URL} className="mt-10 inline-flex items-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink">
+            <a href={APPLY_URL} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
               Start application <span aria-hidden>→</span>
             </a>
-            <div className="mt-10 flex items-end justify-between border-t border-ink pt-4 text-[11px] uppercase tracking-[0.14em]">
+            <div className="mt-8 flex items-end justify-between border-t border-ink pt-4 text-[11px] uppercase tracking-[0.14em] sm:mt-10">
               <span>{WORDMARK}</span>
-              <span>tally.so/r/441zRr</span>
+              <span className="truncate">tally.so/r/441zRr</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
         <div className="grid grid-cols-1 gap-10 border-b border-ink pb-12 md:grid-cols-4">
           <div className="meta uppercase tracking-[0.14em]">
             Cohort 01<br/>2025 — 2026

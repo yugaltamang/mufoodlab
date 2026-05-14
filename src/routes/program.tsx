@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import MobileNav from "@/components/MobileNav";
+
 import essential01 from "@/assets/essential-01-kitchen.jpg";
 import essential02 from "@/assets/essential-02-staff.jpg";
 import essential03 from "@/assets/essential-03-consultant.jpg";
@@ -37,18 +39,18 @@ export const Route = createFileRoute("/program")({
 
 function ProgramPage() {
   return (
-    <div className="min-h-screen bg-paper text-ink">
+    <div className="min-h-screen overflow-x-hidden bg-paper text-ink pb-16 lg:pb-0">
       {/* ============== TOP NAV ============== */}
       <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-10 w-auto md:h-12" />
-            <span className="h-7 w-px bg-ink/20" aria-hidden />
-            <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 border-b border-ink px-4 py-3 sm:px-6 sm:py-4 md:px-10">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto sm:h-10 md:h-12" />
+            <span className="hidden h-7 w-px bg-ink/20 sm:inline-block" aria-hidden />
+            <span className="hidden font-display text-[13px] font-extrabold tracking-[-0.02em] sm:inline sm:text-[15px]">
               {WORDMARK}
             </span>
           </Link>
-          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
+          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] lg:flex">
             <Link to="/" className="hover:text-ink/60">
               Home
             </Link>
@@ -67,7 +69,7 @@ function ProgramPage() {
           </nav>
           <a
             href={APPLY_URL}
-            className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+            className="hidden items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink lg:inline-flex"
           >
             Apply <span aria-hidden>→</span>
           </a>
@@ -76,7 +78,7 @@ function ProgramPage() {
 
       {/* ============== HERO ============== */}
       <section className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
+        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
           <div className="flex items-center justify-between">
             <Link
               to="/"
@@ -94,7 +96,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Program
               </span>
-              <h1 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[88px]">
+              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[88px]">
                 Sixty days. One
                 <span className="ml-3 inline-block bg-green px-2 leading-none">live brand.</span>
               </h1>
@@ -110,7 +112,7 @@ function ProgramPage() {
                 <img
                   src={heroChef}
                   alt="Founder in a working kitchen"
-                  className="h-[260px] w-full object-cover md:h-[340px]"
+                  className="h-[220px] w-full object-cover sm:h-[260px] md:h-[340px]"
                 />
               </div>
               <div className="mt-4 grid grid-cols-3 gap-px bg-ink/15 text-center">
@@ -125,13 +127,13 @@ function ProgramPage() {
 
       {/* ============== WHAT'S INCLUDED — at a glance ============== */}
       <section className="border-y border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 What's included
               </span>
-              <h2 className="mt-5 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[52px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[32px] sm:leading-[0.95] md:text-[52px]">
                 A full operating stack — pre-built.
               </h2>
             </div>
@@ -156,13 +158,13 @@ function ProgramPage() {
 
       {/* ============== TIMELINE ============== */}
       <section id="timeline" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Timeline
               </span>
-              <h2 className="mt-6 font-display text-[40px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[68px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[68px]">
                 Day 0 to first
                 <span className="ml-3 inline-block bg-green px-2 leading-none">order.</span>
               </h2>
@@ -239,13 +241,13 @@ function ProgramPage() {
             backgroundSize: "56px 56px",
           }}
         />
-        <div className="relative mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="relative mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Pillars
               </span>
-              <h2 className="mt-6 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[68px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.92] md:text-[68px]">
                 Four pillars, fully wired in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
@@ -290,13 +292,13 @@ function ProgramPage() {
 
       {/* ============== WHAT WE EXPECT ============== */}
       <section id="expect" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 What we expect
               </span>
-              <h2 className="mt-6 font-display text-[40px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[68px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[68px]">
                 You bring the
                 <span className="ml-3 inline-block bg-green px-2 leading-none">obsession.</span>
               </h2>
@@ -329,13 +331,13 @@ function ProgramPage() {
 
       {/* ============== FAQ ============== */}
       <section id="faq" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-5">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 FAQ
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[56px]">
+              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[36px] sm:leading-[0.95] md:text-[56px]">
                 Quick answers, no fluff.
               </h2>
             </div>
@@ -363,10 +365,10 @@ function ProgramPage() {
 
       {/* ============== CTA ============== */}
       <section className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
-              <h2 className="font-display text-[40px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[80px]">
                 Ready to cook your
                 <span className="ml-3 inline-block bg-green px-2 leading-none">first plate?</span>
               </h2>
@@ -374,10 +376,10 @@ function ProgramPage() {
                 Cohort 01 closes 31 October. We review applications on a rolling basis.
               </p>
             </div>
-            <div className="md:col-span-4 flex flex-col items-start justify-end gap-4">
+            <div className="md:col-span-4 flex flex-col items-stretch justify-end gap-4 md:items-start">
               <a
                 href={APPLY_URL}
-                className="inline-flex items-center gap-2 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+                className="inline-flex items-center justify-center gap-2 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
               >
                 Apply to cohort 01 <span aria-hidden>→</span>
               </a>
@@ -393,7 +395,7 @@ function ProgramPage() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">
             {WORDMARK}
@@ -416,6 +418,9 @@ function ProgramPage() {
           <img src={essential08} alt="" />
         </>
       )}
+
+      {/* Mobile / tablet sticky nav */}
+      <MobileNav />
     </div>
   );
 }
