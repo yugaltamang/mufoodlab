@@ -84,6 +84,7 @@ export default function MobileNav() {
       />
 
       <div
+        id="mobile-section-menu"
         className={`fixed inset-x-0 bottom-[66px] z-[80] border-y border-paper/15 bg-ink text-paper shadow-2xl transition-transform duration-200 ease-out ${
           isOpen ? "translate-y-0" : "translate-y-[120%]"
         }`}
