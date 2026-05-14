@@ -143,10 +143,9 @@ function Index() {
       </section>
 
       {/* ============== INVOICE ============== */}
-      <section className="border-b border-ink">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
-          <div className="hidden md:block md:border-r md:border-ink" />
-          <div className="bg-ink p-8 font-mono text-paper md:p-14">
+      <section className="border-b border-ink bg-ink">
+        <div className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+          <div className="ml-auto max-w-2xl font-mono text-paper">
             <div className="flex items-center justify-between border-b border-paper/30 pb-3 text-[11px] uppercase tracking-[0.14em]">
               <span>Food Lab — Pre-Launch Bill</span>
               <span>Invoice #0001</span>
