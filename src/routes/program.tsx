@@ -418,6 +418,9 @@ function ProgramPage() {
           <img src={essential08} alt="" />
         </>
       )}
+
+      {/* Mobile / tablet sticky nav */}
+      <MobileNav />
     </div>
   );
 }
