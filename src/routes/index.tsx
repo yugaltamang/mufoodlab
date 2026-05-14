@@ -44,37 +44,66 @@ function Index() {
         </div>
       </header>
 
-      {/* ============== HERO POSTER WALL ============== */}
-      <section id="program" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
-          {/* Row 1 — five poster tiles like Welltec gallery */}
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4">
-            <PosterText
-              kicker="Cohort 01 — 2025"
-              title={<>Premium<br/>founders for<br/>the new food<br/>economy</>}
-              footnote="A Masters' Union programme"
-            />
-            <PosterIndex
-              eyebrow="Food Lab"
-              items={[
-                ["01", "Kitchen & team, fully wired."],
-                ["02", "Compliance & R&D, handled."],
-                ["03", "Supply & aggregator onboarding."],
-                ["04", "Mentors who shipped real brands."],
-              ]}
-            />
-            <PosterGreenWord word="Built for delivery" />
-            <PosterPhoto img={heroChef} caption="Dedicated" sub="Production-ready from day one." />
-            <PosterPortrait img={heroFounder} title="Pioneering" subtitle="brave founders" />
-          </div>
+      {/* ============== HERO ============== */}
+      <section id="program" className="relative overflow-hidden bg-ink text-paper">
+        {/* Radial green glow */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(60% 55% at 50% 0%, color-mix(in oklch, var(--green) 45%, transparent) 0%, transparent 70%)",
+          }}
+        />
 
-          {/* Row 2 */}
-          <div className="mt-3 grid grid-cols-2 gap-3 md:mt-4 md:grid-cols-5 md:gap-4">
-            <PosterPhoto img={essential02} caption="Visionary" sub="inventive — technical" tall />
-            <PosterCircle img={essential01} caption="Kitchen never sleeps" sub="A real working kitchen, not a coworking pitch." />
-            <PosterStat big="15–20%" eyebrow="Efficiency gains" footnote="Versus building solo." green />
-            <PosterPhoto img={essential03} caption="Recipe Lab" sub="Chefs and consultants, on-call." />
-            <PosterCircle img={essential05} caption="Visionary" sub="Vendors, daily produce, bulk pricing." light />
+        {/* Hero portrait, centered, fades into background */}
+        <div className="pointer-events-none absolute left-1/2 top-0 z-0 -translate-x-1/2">
+          <div
+            className="h-[460px] w-[460px] md:h-[620px] md:w-[620px] bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${heroFounder})`,
+              WebkitMaskImage:
+                "radial-gradient(closest-side at 50% 45%, black 55%, transparent 85%)",
+              maskImage:
+                "radial-gradient(closest-side at 50% 45%, black 55%, transparent 85%)",
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-[1500px] px-6 pb-24 pt-[360px] md:px-10 md:pb-32 md:pt-[460px]">
+          {/* Floating pills */}
+          <FloatingPill className="left-[6%] top-[44%] hidden md:flex" dot="bg-[#5BC0EB]" label="Built for delivery" />
+          <FloatingPill className="left-[10%] top-[64%] hidden md:flex" dot="bg-green" label="Production-ready" />
+          <FloatingPill className="right-[7%] top-[42%] hidden md:flex" dot="bg-pink" label="Mentor-led" />
+          <FloatingPill className="right-[4%] top-[62%] hidden md:flex" dot="bg-green" label="Cohort 01 — 2025" />
+          <FloatingPill className="left-[42%] top-[28%] hidden md:flex" dot="bg-green" label="Food Lab" />
+
+          {/* Headline */}
+          <div className="relative mx-auto max-w-4xl text-center">
+            <h1 className="font-display text-[44px] font-extrabold leading-[0.95] tracking-[-0.035em] text-paper md:text-[78px]">
+              Clear kitchens. Real brands.<br />
+              <span className="text-paper">Sustainable food businesses.</span>
+            </h1>
+            <p className="mx-auto mt-7 max-w-xl text-[15px] leading-relaxed text-paper/65 md:text-[16px]">
+              We help founders launch food brands in 60 days — kitchen, staff, compliance, supply
+              chain, and aggregator onboarding, fully handled. You bring the idea.
+            </p>
+
+            {/* CTAs */}
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="#program"
+                className="inline-flex items-center gap-2 rounded-full border border-paper/25 bg-paper/10 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper backdrop-blur hover:bg-paper/15"
+              >
+                View Program
+              </a>
+              <a
+                href={APPLY_URL}
+                className="inline-flex items-center gap-2 rounded-full bg-green px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:opacity-90"
+              >
+                Apply Now <span aria-hidden>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
