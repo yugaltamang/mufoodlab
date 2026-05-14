@@ -598,6 +598,24 @@ function LineItem({ n, item, amount }: { n: string; item: string; amount: string
   );
 }
 
+function CostTile({ n, label, amount, sub }: { n: string; label: string; amount: string; sub: string }) {
+  return (
+    <div className="flex flex-col justify-between bg-ink p-5 md:p-6">
+      <div className="flex items-center justify-between text-[10.5px] font-mono uppercase tracking-[0.16em] text-paper/55">
+        <span>{n}</span>
+        <span>Cost</span>
+      </div>
+      <div className="mt-8 font-display text-[40px] font-extrabold leading-none tracking-[-0.02em] md:text-[52px]">
+        {amount}
+      </div>
+      <div className="mt-4 border-t border-paper/15 pt-3">
+        <div className="text-[13px] font-semibold leading-tight text-paper">{label}</div>
+        <div className="mt-1 text-[11.5px] leading-snug text-paper/55">{sub}</div>
+      </div>
+    </div>
+  );
+}
+
 function BrandCard({
   tag, name, tagline, body, img, follow,
 }: {
