@@ -32,7 +32,7 @@ function Index() {
           </a>
           <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
             <a className="hover:text-ink/60" href="#program">Program</a>
-            <a className="hover:text-ink/60" href="#opportunity">Opportunity</a>
+            <a className="hover:text-ink/60" href="#opportunity">Food Landscape</a>
             <a className="hover:text-ink/60" href="#solution">Pillars</a>
             <a className="hover:text-ink/60" href="#brands">Brands</a>
             <a className="hover:text-ink/60" href="#mentors">Mentors</a>
@@ -74,57 +74,6 @@ function Index() {
             </p>
           </div>
 
-          {/* The Opportunity badge */}
-          <div className="mt-14 border-t border-ink pt-6">
-            <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Opportunity
-            </span>
-          </div>
-
-          {/* 4-column numbered breakdown */}
-          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
-            {[
-              {
-                n: "01",
-                eyebrow: "Food Ordering Population",
-                title: "India 4% vs 40–50%",
-                body: "Only 4% of Indians order food online vs 40–50% in USA & China. 10× headroom in India alone.",
-              },
-              {
-                n: "02",
-                eyebrow: "Number of Restaurants",
-                title: "5 L vs 1.7 Cr",
-                body: "India has ~5 lakh restaurants vs China's 1.7 crore. China is 34× India's market today.",
-              },
-              {
-                n: "03",
-                eyebrow: "Consumer Power",
-                title: "Rising disposable income",
-                body: "Disposable income is climbing — Indians are eating in and ordering more, every quarter.",
-              },
-              {
-                n: "04",
-                eyebrow: "Aggregator Growth",
-                title: "2× in next 5 years",
-                body: "Swiggy + Zomato projected to double — and they need new sticky brands to fuel that growth.",
-              },
-            ].map((c) => (
-              <div key={c.n} className="flex flex-col">
-                <div className="font-display text-[44px] font-extrabold leading-none tracking-[-0.035em] text-ink/90">
-                  {c.n}
-                </div>
-                <div className="mt-4 text-[10.5px] font-bold uppercase tracking-[0.16em] text-ink/55">
-                  {c.eyebrow}
-                </div>
-                <h3 className="mt-2 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em]">
-                  {c.title}
-                </h3>
-                <p className="mt-3 text-[13px] leading-relaxed text-ink/70">
-                  {c.body}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -190,6 +139,62 @@ function Index() {
                 <span className="size-1.5 rounded-full bg-ink" /> Status — Unpaid
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============== THE FOOD LANDSCAPE ============== */}
+      <section id="opportunity" className="border-b border-ink bg-paper text-ink">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+          <div className="border-b border-ink pb-6">
+            <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              The Food Landscape
+            </span>
+          </div>
+
+          {/* 4-column numbered breakdown */}
+          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+            {[
+              {
+                n: "01",
+                eyebrow: "Food Ordering Population",
+                title: "India 4% vs 40–50%",
+                body: "Only 4% of Indians order food online vs 40–50% in USA & China. 10× headroom in India alone.",
+              },
+              {
+                n: "02",
+                eyebrow: "Number of Restaurants",
+                title: "5 L vs 1.7 Cr",
+                body: "India has ~5 lakh restaurants vs China's 1.7 crore. China is 34× India's market today.",
+              },
+              {
+                n: "03",
+                eyebrow: "Consumer Power",
+                title: "Rising disposable income",
+                body: "Disposable income is climbing — Indians are eating in and ordering more, every quarter.",
+              },
+              {
+                n: "04",
+                eyebrow: "Aggregator Growth",
+                title: "2× in next 5 years",
+                body: "Swiggy + Zomato projected to double — and they need new sticky brands to fuel that growth.",
+              },
+            ].map((c) => (
+              <div key={c.n} className="flex flex-col">
+                <div className="font-display text-[44px] font-extrabold leading-none tracking-[-0.035em] text-ink/90">
+                  {c.n}
+                </div>
+                <div className="mt-4 text-[10.5px] font-bold uppercase tracking-[0.16em] text-ink/55">
+                  {c.eyebrow}
+                </div>
+                <h3 className="mt-2 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                  {c.title}
+                </h3>
+                <p className="mt-3 text-[13px] leading-relaxed text-ink/70">
+                  {c.body}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
