@@ -3,15 +3,15 @@ import type { CSSProperties, ReactNode } from "react";
 
 import MobileNav from "@/components/MobileNav";
 
-import essential01 from "@/assets/essential-01-kitchen.jpg";
-import essential02 from "@/assets/essential-02-staff.jpg";
-import essential03 from "@/assets/essential-03-consultant.jpg";
-import essential05 from "@/assets/essential-05-supply.jpg";
-import essential07 from "@/assets/essential-07-mentor.jpg";
-import essential08 from "@/assets/essential-08-tasting.jpg";
-import heroFounder from "@/assets/hero-founder.jpg";
-import heroChef from "@/assets/hero-chef.jpg";
-import heroWok from "@/assets/hero-wok.jpg";
+import essential01 from "@/assets/essential-01-kitchen.webp";
+import essential02 from "@/assets/essential-02-staff.webp";
+import essential03 from "@/assets/essential-03-consultant.webp";
+import essential05 from "@/assets/essential-05-supply.webp";
+import essential07 from "@/assets/essential-07-mentor.webp";
+import essential08 from "@/assets/essential-08-tasting.webp";
+import heroFounder from "@/assets/hero-founder.webp";
+import heroChef from "@/assets/hero-chef.webp";
+import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 export const Route = createFileRoute("/")({
