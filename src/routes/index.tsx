@@ -275,21 +275,26 @@ function Index() {
       </section>
 
       {/* ============== BRANDS ============== */}
-      <section id="brands" className="border-b border-ink">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 gap-8 px-6 py-14 md:grid-cols-12 md:px-10 md:py-20">
-          <div className="md:col-span-5">
-            <div className="meta uppercase tracking-[0.18em] text-ink/60">From our kitchen</div>
-            <h2 className="mt-6 font-display text-[48px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[88px]">
-              Brands already
-              <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
-            </h2>
+      <section id="brands" className="border-b border-ink bg-paper">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+          {/* Header */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
+              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+                From our kitchen
+              </span>
+              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+                Brands already
+                <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
+              </h2>
+            </div>
+            <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
+              Built by MU students. Serving real customers. Growing every week.
+            </p>
           </div>
-          <p className="md:col-span-5 md:col-start-8 self-end text-[15px] leading-relaxed text-ink/75">
-            Built by MU students. Serving real customers. Growing every week.
-          </p>
-        </div>
-        <div className="mx-auto max-w-[1500px] px-3 pb-3 md:px-4 md:pb-4">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
+
+          {/* Brand list */}
+          <div className="mt-12 grid grid-cols-1 gap-px bg-ink/10 md:mt-14 md:grid-cols-2">
             <BrandCard
               tag="Delhi · Gurgaon"
               name="Lexi's Gourmet Sandwiches"
@@ -663,46 +668,43 @@ function BrandCard({
   const rest = restWords.join(" ");
 
   return (
-    <article className="group relative flex flex-col overflow-hidden border border-ink bg-paper text-ink">
-      {/* Logo showcase */}
-      <div className="relative flex h-44 items-center justify-center border-b border-ink bg-[oklch(0.97_0.01_95)] p-6 md:h-52">
-        <img
-          src={img}
-          alt={`${name} logo`}
-          loading="lazy"
-          className="max-h-full max-w-full object-contain"
-        />
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 bg-paper/90 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] backdrop-blur">
+    <article className="group relative flex flex-col bg-paper p-6 text-ink md:p-8">
+      {/* Top meta row */}
+      <div className="flex items-center justify-between gap-4 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink/55">
+        <span>{tag}</span>
+        <span className="inline-flex items-center gap-1.5 text-ink">
           <span className="size-1.5 rounded-full bg-green" /> Live
-        </span>
-        <span className="absolute right-3 top-3 bg-paper/90 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] backdrop-blur">
-          {tag}
         </span>
       </div>
 
-      {/* Content */}
-      <div className="flex flex-col p-5 md:p-6">
-        <div className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink/55">
-          From the kitchen
+      {/* Logo + headline */}
+      <div className="mt-6 flex items-center gap-5">
+        <div className="flex h-20 w-28 shrink-0 items-center justify-center bg-[oklch(0.97_0.01_95)] p-3">
+          <img
+            src={img}
+            alt={`${name} logo`}
+            loading="lazy"
+            className="max-h-full max-w-full object-contain"
+          />
         </div>
-        <h3 className="mt-3 font-display text-[28px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[34px]">
+        <h3 className="font-display text-[26px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[32px]">
           <span className="font-display italic">{firstWord}</span>{" "}
           {rest && (
             <span className="bg-green px-1.5 leading-none text-ink">{rest}</span>
           )}
         </h3>
-        <p className="mt-2 text-[12.5px] font-semibold italic text-ink/75">
-          {tagline}
-        </p>
-        <p className="mt-4 text-[12.5px] leading-relaxed text-ink/70">{body}</p>
+      </div>
 
-        {/* Footer */}
-        <div className="mt-5 flex items-center justify-between gap-3 border-t border-ink/15 pt-3 text-[10.5px] font-bold uppercase tracking-[0.16em]">
-          <a href={follow} target="_blank" rel="noreferrer" className="underline-link">
-            Instagram →
-          </a>
-          <span className="text-ink/50">On Zomato</span>
-        </div>
+      {/* Tagline + body */}
+      <p className="mt-5 text-[13px] font-semibold italic text-ink/80">{tagline}</p>
+      <p className="mt-2 text-[13px] leading-relaxed text-ink/70">{body}</p>
+
+      {/* Footer */}
+      <div className="mt-6 flex items-center justify-between gap-3 text-[10.5px] font-bold uppercase tracking-[0.16em]">
+        <a href={follow} target="_blank" rel="noreferrer" className="underline-link">
+          Instagram →
+        </a>
+        <span className="text-ink/50">On Zomato</span>
       </div>
     </article>
   );
