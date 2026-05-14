@@ -31,11 +31,11 @@ function Index() {
             <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">{WORDMARK}</span>
           </a>
           <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
-            <a className="hover:text-ink/60" href="#program">Program</a>
-            <a className="hover:text-ink/60" href="#opportunity">Food Landscape</a>
-            <a className="hover:text-ink/60" href="#solution">Pillars</a>
-            <a className="hover:text-ink/60" href="#brands">Brands</a>
-            <a className="hover:text-ink/60" href="#mentors">Mentors</a>
+            <a className="hover:text-ink/60" href="#challenge">The Challenge</a>
+            <a className="hover:text-ink/60" href="#opportunity">The Food Landscape</a>
+            <a className="hover:text-ink/60" href="#solution">The Solution</a>
+            <a className="hover:text-ink/60" href="#brands">From Our Kitchen</a>
+            <a className="hover:text-ink/60" href="#mentors">Mentors & Partners</a>
           </nav>
           <a
             href={APPLY_URL}
