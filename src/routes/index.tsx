@@ -588,21 +588,19 @@ function BrandCard({
   tag: string; name: string; tagline: string; body: string; img: string; follow: string;
 }) {
   return (
-    <article className="border border-ink bg-paper">
-      <div className="relative aspect-[4/3] overflow-hidden border-b border-ink">
+    <article className="grid grid-cols-1 border border-ink bg-paper sm:grid-cols-5">
+      <div className="relative aspect-[4/3] overflow-hidden border-b border-ink sm:col-span-2 sm:aspect-auto sm:border-b-0 sm:border-r">
         <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-        <div className="absolute inset-x-0 top-0 flex justify-between p-3 text-[10px] font-bold uppercase tracking-[0.14em]">
-          <span className="bg-paper px-2 py-1">{tag}</span>
-          <span className="bg-green px-2 py-1">Live</span>
-        </div>
+        <span className="absolute left-2 top-2 bg-green px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em]">Live</span>
       </div>
-      <div className="p-6 md:p-8">
-        <h3 className="font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[52px]">{name}</h3>
-        <p className="mt-3 text-[14px] font-semibold italic">{tagline}</p>
-        <p className="mt-4 text-[14px] leading-relaxed text-ink/75">{body}</p>
-        <div className="mt-6 flex items-center justify-between text-[12px] font-bold uppercase tracking-[0.14em]">
-          <a href={follow} target="_blank" rel="noreferrer" className="underline-link">Follow on Instagram →</a>
-          <span className="text-ink/50">Available on Zomato</span>
+      <div className="flex flex-col p-5 sm:col-span-3 md:p-6">
+        <div className="meta uppercase tracking-[0.14em] text-ink/55">{tag}</div>
+        <h3 className="mt-2 font-display text-[24px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[28px]">{name}</h3>
+        <p className="mt-1.5 text-[12.5px] font-semibold italic text-ink/80">{tagline}</p>
+        <p className="mt-3 text-[13px] leading-relaxed text-ink/70">{body}</p>
+        <div className="mt-auto flex items-center justify-between gap-3 pt-4 text-[11px] font-bold uppercase tracking-[0.14em]">
+          <a href={follow} target="_blank" rel="noreferrer" className="underline-link">Instagram →</a>
+          <span className="text-ink/50">On Zomato</span>
         </div>
       </div>
     </article>
