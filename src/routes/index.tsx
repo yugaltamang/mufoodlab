@@ -415,7 +415,7 @@ function Index() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
         <div className="grid grid-cols-1 gap-10 border-b border-ink pb-12 md:grid-cols-4">
           <div className="meta uppercase tracking-[0.14em]">
             Cohort 01<br/>2025 — 2026
