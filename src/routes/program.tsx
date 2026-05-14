@@ -365,8 +365,6 @@ function ProgramPage() {
 
       {/* ============== CTA ============== */}
       <section className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
