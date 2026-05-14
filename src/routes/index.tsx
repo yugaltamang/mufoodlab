@@ -668,46 +668,43 @@ function BrandCard({
   const rest = restWords.join(" ");
 
   return (
-    <article className="group relative flex flex-col overflow-hidden border border-ink bg-paper text-ink">
-      {/* Logo showcase */}
-      <div className="relative flex h-44 items-center justify-center border-b border-ink bg-[oklch(0.97_0.01_95)] p-6 md:h-52">
-        <img
-          src={img}
-          alt={`${name} logo`}
-          loading="lazy"
-          className="max-h-full max-w-full object-contain"
-        />
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 bg-paper/90 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] backdrop-blur">
+    <article className="group relative flex flex-col bg-paper p-6 text-ink md:p-8">
+      {/* Top meta row */}
+      <div className="flex items-center justify-between gap-4 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink/55">
+        <span>{tag}</span>
+        <span className="inline-flex items-center gap-1.5 text-ink">
           <span className="size-1.5 rounded-full bg-green" /> Live
-        </span>
-        <span className="absolute right-3 top-3 bg-paper/90 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] backdrop-blur">
-          {tag}
         </span>
       </div>
 
-      {/* Content */}
-      <div className="flex flex-col p-5 md:p-6">
-        <div className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink/55">
-          From the kitchen
+      {/* Logo + headline */}
+      <div className="mt-6 flex items-center gap-5">
+        <div className="flex h-20 w-28 shrink-0 items-center justify-center bg-[oklch(0.97_0.01_95)] p-3">
+          <img
+            src={img}
+            alt={`${name} logo`}
+            loading="lazy"
+            className="max-h-full max-w-full object-contain"
+          />
         </div>
-        <h3 className="mt-3 font-display text-[28px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[34px]">
+        <h3 className="font-display text-[26px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[32px]">
           <span className="font-display italic">{firstWord}</span>{" "}
           {rest && (
             <span className="bg-green px-1.5 leading-none text-ink">{rest}</span>
           )}
         </h3>
-        <p className="mt-2 text-[12.5px] font-semibold italic text-ink/75">
-          {tagline}
-        </p>
-        <p className="mt-4 text-[12.5px] leading-relaxed text-ink/70">{body}</p>
+      </div>
 
-        {/* Footer */}
-        <div className="mt-5 flex items-center justify-between gap-3 border-t border-ink/15 pt-3 text-[10.5px] font-bold uppercase tracking-[0.16em]">
-          <a href={follow} target="_blank" rel="noreferrer" className="underline-link">
-            Instagram →
-          </a>
-          <span className="text-ink/50">On Zomato</span>
-        </div>
+      {/* Tagline + body */}
+      <p className="mt-5 text-[13px] font-semibold italic text-ink/80">{tagline}</p>
+      <p className="mt-2 text-[13px] leading-relaxed text-ink/70">{body}</p>
+
+      {/* Footer */}
+      <div className="mt-6 flex items-center justify-between gap-3 text-[10.5px] font-bold uppercase tracking-[0.16em]">
+        <a href={follow} target="_blank" rel="noreferrer" className="underline-link">
+          Instagram →
+        </a>
+        <span className="text-ink/50">On Zomato</span>
       </div>
     </article>
   );
