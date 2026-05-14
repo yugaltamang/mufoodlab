@@ -21,6 +21,9 @@ export default function MobileNav() {
     if (el) {
       const y = el.getBoundingClientRect().top + window.scrollY - 20;
       window.scrollTo({ top: y, behavior: "smooth" });
+    } else {
+      // Section not on current page — navigate home with hash
+      window.location.href = `/${href}`;
     }
   };
 
