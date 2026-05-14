@@ -148,6 +148,50 @@ function Index() {
         </h2>
       </section>
 
+      {/* ============== INVOICE / CHALLENGE ============== */}
+      <section className="border-b border-ink">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
+          <div className="border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
+            <div className="meta uppercase tracking-[0.18em] text-ink/60">The challenge — 0X</div>
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+              Before you sell a single plate, the bill is already
+              <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
+            </h2>
+            <p className="mt-8 max-w-md text-[15px] leading-relaxed text-ink/75">
+              Most aspiring food entrepreneurs never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
+            </p>
+          </div>
+          <div className="bg-ink p-8 font-mono text-paper md:p-14">
+            <div className="flex items-center justify-between border-b border-paper/30 pb-3 text-[11px] uppercase tracking-[0.14em]">
+              <span>Food Lab — Pre-Launch Bill</span>
+              <span>Invoice #0001</span>
+            </div>
+            <div className="mt-2 text-[11px] uppercase tracking-[0.14em] text-paper/60">Founder Edition · Day 0 of 60</div>
+            <ul className="mt-8 space-y-3 text-[14px]">
+              <LineItem n="01" item="Kitchen rent + setup" amount="₹6,00,000" />
+              <LineItem n="02" item="R&D + chef consultant" amount="₹3,00,000" />
+              <LineItem n="03" item="Working capital" amount="₹6,00,000" />
+              <li className="flex justify-between border-t border-paper/30 pt-3">
+                <span>Subtotal</span>
+                <span className="font-semibold">₹15,00,000</span>
+              </li>
+              <li className="flex justify-between text-paper/60"><span>+ Your time</span><span>~60 days</span></li>
+              <li className="flex justify-between text-paper/60"><span>+ Luck required</span><span>★★★★★</span></li>
+            </ul>
+            <div className="mt-10 flex items-end justify-between border-t border-paper/30 pt-5">
+              <div>
+                <div className="text-[11px] uppercase tracking-[0.14em] text-paper/60">Total due</div>
+                <div className="font-display text-5xl font-extrabold">₹15L+</div>
+              </div>
+              <div className="text-right text-[11px] uppercase tracking-[0.14em]">
+                Customers served: 0
+                <div className="mt-1 inline-block bg-green px-2 py-0.5 text-ink">— UNPAID —</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============== PROGRAM CARD ============== */}
       <section id="opportunity" className="border-b border-ink">
         <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
@@ -188,50 +232,6 @@ function Index() {
               >
                 Explore the programme <span aria-hidden>→</span>
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============== INVOICE / CHALLENGE ============== */}
-      <section className="border-b border-ink">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
-          <div className="border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
-            <div className="meta uppercase tracking-[0.18em] text-ink/60">The challenge — 0X</div>
-            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
-              Before you sell a single plate, the bill is already
-              <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
-            </h2>
-            <p className="mt-8 max-w-md text-[15px] leading-relaxed text-ink/75">
-              Most aspiring food entrepreneurs never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
-            </p>
-          </div>
-          <div className="bg-ink p-8 font-mono text-paper md:p-14">
-            <div className="flex items-center justify-between border-b border-paper/30 pb-3 text-[11px] uppercase tracking-[0.14em]">
-              <span>Food Lab — Pre-Launch Bill</span>
-              <span>Invoice #0001</span>
-            </div>
-            <div className="mt-2 text-[11px] uppercase tracking-[0.14em] text-paper/60">Founder Edition · Day 0 of 60</div>
-            <ul className="mt-8 space-y-3 text-[14px]">
-              <LineItem n="01" item="Kitchen rent + setup" amount="₹6,00,000" />
-              <LineItem n="02" item="R&D + chef consultant" amount="₹3,00,000" />
-              <LineItem n="03" item="Working capital" amount="₹6,00,000" />
-              <li className="flex justify-between border-t border-paper/30 pt-3">
-                <span>Subtotal</span>
-                <span className="font-semibold">₹15,00,000</span>
-              </li>
-              <li className="flex justify-between text-paper/60"><span>+ Your time</span><span>~60 days</span></li>
-              <li className="flex justify-between text-paper/60"><span>+ Luck required</span><span>★★★★★</span></li>
-            </ul>
-            <div className="mt-10 flex items-end justify-between border-t border-paper/30 pt-5">
-              <div>
-                <div className="text-[11px] uppercase tracking-[0.14em] text-paper/60">Total due</div>
-                <div className="font-display text-5xl font-extrabold">₹15L+</div>
-              </div>
-              <div className="text-right text-[11px] uppercase tracking-[0.14em]">
-                Customers served: 0
-                <div className="mt-1 inline-block bg-green px-2 py-0.5 text-ink">— UNPAID —</div>
-              </div>
             </div>
           </div>
         </div>
