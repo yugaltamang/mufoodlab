@@ -45,7 +45,7 @@ function Index() {
       </header>
 
       {/* ============== HERO ============== */}
-      <section id="program" className="relative overflow-hidden bg-green text-ink">
+      <section id="program" className="relative overflow-hidden bg-[oklch(0.93_0.09_142)] text-ink">
         {/* Soft directional rays */}
         <div
           aria-hidden
