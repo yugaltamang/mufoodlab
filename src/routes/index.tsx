@@ -302,14 +302,14 @@ function Index() {
 
       {/* ============== BRANDS ============== */}
       <section id="brands" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           {/* Header */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 From our kitchen
               </span>
-              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[80px]">
                 Brands already
                 <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
               </h2>
