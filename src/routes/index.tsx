@@ -75,7 +75,7 @@ function Index() {
           {/* The Opportunity badge */}
           <div className="mt-14 border-t border-ink pt-6">
             <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Opportunity · 0001
+              The Opportunity
             </span>
           </div>
 
@@ -131,7 +131,7 @@ function Index() {
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
           <div className="relative border-b border-ink p-8 md:border-b-0 md:border-r md:p-14">
             <span className="absolute left-0 top-0 inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Challenge · 0003
+              The Challenge
             </span>
             <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
               Before you sell a single plate, the bill is already
@@ -178,7 +178,7 @@ function Index() {
           {/* Programme intro card */}
           <div className="relative grid grid-cols-1 gap-6 border border-ink bg-ink p-6 text-paper md:grid-cols-12 md:gap-8 md:p-10">
             <div className="absolute left-0 top-0 bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Solution · 0002
+              The Solution
             </div>
 
             <div className="md:col-span-8 md:pt-6">
