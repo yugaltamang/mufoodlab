@@ -26,8 +26,8 @@ function Index() {
       <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
           <a href="#" className="flex items-center gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-6 w-auto md:h-7" />
-            <span className="h-5 w-px bg-ink/20" aria-hidden />
+            <img src={muLogo} alt="Masters' Union" className="h-10 w-auto md:h-12" />
+            <span className="h-7 w-px bg-ink/20" aria-hidden />
             <span className="font-display text-[15px] font-extrabold tracking-[-0.02em]">{WORDMARK}</span>
           </a>
           <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
