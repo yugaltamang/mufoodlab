@@ -255,7 +255,7 @@ function Index() {
           />
         </svg>
         <div className="relative">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           {/* Header row */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
@@ -265,7 +265,7 @@ function Index() {
               <div className="mt-6 meta uppercase tracking-[0.16em] text-ink/55">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[72px]">
+              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[72px]">
                 Four pillars, fully wired in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
@@ -282,7 +282,7 @@ function Index() {
               </div>
               <Link
                 to="/program"
-                className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+                className="inline-flex w-full items-center justify-center gap-2 bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink sm:w-auto sm:py-2.5"
               >
                 Explore the program <span aria-hidden>→</span>
               </Link>
@@ -290,7 +290,7 @@ function Index() {
           </div>
 
           {/* Four pillars */}
-          <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-4 md:gap-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 md:mt-16 md:grid-cols-4 md:gap-4">
             <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
             <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
             <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
