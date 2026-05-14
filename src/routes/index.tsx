@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
 
+import MobileNav from "@/components/MobileNav";
+
 import essential01 from "@/assets/essential-01-kitchen.jpg";
 import essential02 from "@/assets/essential-02-staff.jpg";
 import essential03 from "@/assets/essential-03-consultant.jpg";
@@ -21,7 +23,7 @@ const WORDMARK = "FOODLAB\u00AE";
 
 function Index() {
   return (
-    <div className="min-h-screen bg-paper text-ink">
+    <div className="min-h-screen bg-paper text-ink pb-16 lg:pb-0">
       {/* ============== TOP NAV ============== */}
       <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between border-b border-ink px-6 py-4 md:px-10">
@@ -449,6 +451,9 @@ function Index() {
 
       {/* unused import warden */}
       {false && <img src={essential08} alt="" />}
+
+      {/* Mobile / tablet sticky nav */}
+      <MobileNav />
     </div>
   );
 }
