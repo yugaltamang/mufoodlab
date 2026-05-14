@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 });
 
 const APPLY_URL = "https://tally.so/r/441zRr";
-const WORDMARK = "Food Lab\u00AE";
+const WORDMARK = "FOOD LAB\u00AE";
 
 function Index() {
   return (
