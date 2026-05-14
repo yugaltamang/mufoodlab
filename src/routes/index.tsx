@@ -45,65 +45,129 @@ function Index() {
       </header>
 
       {/* ============== HERO ============== */}
-      <section id="program" className="relative overflow-hidden bg-ink text-paper">
-        {/* Radial green glow */}
+      <section id="program" className="relative overflow-hidden bg-green text-ink">
+        {/* Soft directional rays */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 opacity-40"
           style={{
-            background:
-              "radial-gradient(60% 55% at 50% 0%, color-mix(in oklch, var(--green) 45%, transparent) 0%, transparent 70%)",
+            backgroundImage:
+              "repeating-linear-gradient(115deg, transparent 0 80px, rgba(0,0,0,0.05) 80px 81px)",
           }}
         />
 
-        {/* Hero portrait, centered, fades into background */}
-        <div className="pointer-events-none absolute left-1/2 top-0 z-0 -translate-x-1/2">
-          <div
-            className="h-[460px] w-[460px] md:h-[620px] md:w-[620px] bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${heroFounder})`,
-              WebkitMaskImage:
-                "radial-gradient(closest-side at 50% 45%, black 55%, transparent 85%)",
-              maskImage:
-                "radial-gradient(closest-side at 50% 45%, black 55%, transparent 85%)",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-[1500px] px-6 pb-24 pt-[360px] md:px-10 md:pb-32 md:pt-[460px]">
-          {/* Floating pills */}
-          <FloatingPill className="left-[6%] top-[44%] hidden md:flex" dot="bg-[#5BC0EB]" label="Built for delivery" />
-          <FloatingPill className="left-[10%] top-[64%] hidden md:flex" dot="bg-green" label="Production-ready" />
-          <FloatingPill className="right-[7%] top-[42%] hidden md:flex" dot="bg-pink" label="Mentor-led" />
-          <FloatingPill className="right-[4%] top-[62%] hidden md:flex" dot="bg-green" label="Cohort 01 — 2025" />
-          <FloatingPill className="left-[42%] top-[28%] hidden md:flex" dot="bg-green" label="Food Lab" />
-
-          {/* Headline */}
-          <div className="relative mx-auto max-w-4xl text-center">
-            <h1 className="font-display text-[44px] font-extrabold leading-[0.95] tracking-[-0.035em] text-paper md:text-[78px]">
-              Clear kitchens. Real brands.<br />
-              <span className="text-paper">Sustainable food businesses.</span>
-            </h1>
-            <p className="mx-auto mt-7 max-w-xl text-[15px] leading-relaxed text-paper/65 md:text-[16px]">
-              We help founders launch food brands in 60 days — kitchen, staff, compliance, supply
-              chain, and aggregator onboarding, fully handled. You bring the idea.
-            </p>
-
-            {/* CTAs */}
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="#program"
-                className="inline-flex items-center gap-2 rounded-full border border-paper/25 bg-paper/10 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper backdrop-blur hover:bg-paper/15"
-              >
-                View Program
-              </a>
-              <a
-                href={APPLY_URL}
-                className="inline-flex items-center gap-2 rounded-full bg-green px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:opacity-90"
-              >
-                Apply Now <span aria-hidden>→</span>
-              </a>
+        <div className="relative z-10 mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
+          {/* Top meta row */}
+          <div className="mb-8 flex items-start justify-between">
+            <div className="font-display text-[13px] font-semibold leading-tight tracking-tight text-ink/90">
+              Ready To Launch<br />Cohort 01
             </div>
+            <div className="flex items-center gap-2">
+              <span className="grid h-9 min-w-9 place-items-center rounded-full border border-ink/40 px-3 text-[11px] font-bold uppercase tracking-[0.14em]">60d</span>
+              <span className="grid h-9 min-w-9 place-items-center rounded-full border border-ink/40 px-3 text-[11px] font-bold uppercase tracking-[0.14em]">2025</span>
+            </div>
+          </div>
+
+          {/* Poster bento grid */}
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+            {/* Card 1 — Dark headline poster */}
+            <PosterCard tone="dark" className="col-span-2 md:col-span-1 md:row-span-2">
+              <PosterBrandRow tone="dark" />
+              <ArrowMark tone="dark" />
+              <h1 className="mt-6 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[52px]">
+                Launch<br />Your Food<br />Brand
+              </h1>
+              <p className="mt-5 text-[12.5px] leading-relaxed text-paper/70">
+                Let's scale your kitchen — operationally. We handle compliance, supply chain,
+                staffing & aggregator onboarding so you can focus on the food.
+              </p>
+              <div className="mt-auto pt-8">
+                <a
+                  href={APPLY_URL}
+                  className="inline-flex items-center gap-2 rounded-full bg-green px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-ink hover:opacity-90"
+                >
+                  Apply Now
+                </a>
+              </div>
+              <div className="mt-6 flex items-center gap-4 border-t border-paper/15 pt-4 text-[10.5px] font-medium text-paper/60">
+                <span className="uppercase tracking-[0.14em] text-paper/80">Cohort 01</span>
+                <span>·</span>
+                <span>foodlab.in</span>
+              </div>
+            </PosterCard>
+
+            {/* Card 2 — Photo with green arrow corner */}
+            <PosterCard tone="photo" className="row-span-2">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${heroChef})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
+              <div className="absolute right-0 top-0 grid h-24 w-24 place-items-center bg-green text-ink">
+                <ArrowGlyph className="h-10 w-10" />
+              </div>
+              <div className="relative mt-auto">
+                <h2 className="font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.03em] text-paper md:text-[34px]">
+                  Kitchens.<br />Brands.<br />Results.
+                </h2>
+              </div>
+            </PosterCard>
+
+            {/* Card 3 — Light green poster with quote */}
+            <PosterCard tone="light">
+              <PosterBrandRow tone="light" />
+              <QuoteMark className="text-ink/80" />
+              <h2 className="mt-3 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[30px]">
+                Built. Branded.<br />Delivered.
+              </h2>
+              <p className="mt-3 text-[12px] leading-relaxed text-ink/75">
+                We don't just consult — we run the playbook with you, end-to-end, in 60 days.
+              </p>
+            </PosterCard>
+
+            {/* Card 4 — Dark stat poster */}
+            <PosterCard tone="dark">
+              <div className="flex items-start justify-between">
+                <PosterBrandRow tone="dark" />
+                <ArrowGlyph className="h-7 w-7 text-green" />
+              </div>
+              <div className="mt-auto">
+                <div className="font-display text-[64px] font-extrabold leading-[0.85] tracking-[-0.04em] text-green md:text-[76px]">
+                  60<span className="text-paper">d</span>
+                </div>
+                <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-paper/70">
+                  Idea → live brand
+                </div>
+              </div>
+            </PosterCard>
+
+            {/* Card 5 — Why choose us checklist */}
+            <PosterCard tone="light" className="col-span-2 md:col-span-2">
+              <div className="flex items-start justify-between">
+                <PosterBrandRow tone="light" />
+                <QuoteMark className="text-ink/70" />
+              </div>
+              <h2 className="mt-4 font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[34px]">
+                Why founders choose Food Lab
+              </h2>
+              <ul className="mt-5 grid gap-2.5 text-[13px] font-medium text-ink/85 md:grid-cols-2">
+                {[
+                  "We don't theorise — we operate kitchens",
+                  "We don't sell decks — we ship brands",
+                  "We don't chase trends — we build cash-flow",
+                  "We don't hand off — we stay till launch",
+                ].map((line) => (
+                  <li key={line} className="flex items-start gap-2">
+                    <span className="mt-[6px] inline-block h-2 w-2 shrink-0 rounded-full bg-ink" />
+                    {line}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 flex items-center justify-between border-t border-ink/15 pt-4 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-ink/70">
+                <span>Register Now</span>
+                <span>foodlab.in</span>
+              </div>
+            </PosterCard>
           </div>
         </div>
       </section>
@@ -588,5 +652,65 @@ function FloatingPill({ className = "", dot, label }: { className?: string; dot:
       <span className={`size-2 rounded-full ${dot}`} />
       {label}
     </div>
+  );
+}
+
+function PosterCard({
+  tone,
+  className = "",
+  children,
+}: {
+  tone: "dark" | "light" | "photo";
+  className?: string;
+  children: ReactNode;
+}) {
+  const base =
+    tone === "light"
+      ? "bg-[oklch(0.92_0.22_142)] text-ink"
+      : "bg-ink text-paper";
+  return (
+    <article
+      className={`relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl p-6 md:min-h-[320px] md:p-7 ${base} ${className}`}
+    >
+      {children}
+    </article>
+  );
+}
+
+function PosterBrandRow({ tone }: { tone: "dark" | "light" }) {
+  const ring = tone === "dark" ? "border-paper/30" : "border-ink/30";
+  const text = tone === "dark" ? "text-paper/80" : "text-ink/80";
+  const dot = tone === "dark" ? "bg-green" : "bg-ink";
+  return (
+    <div className={`inline-flex items-center gap-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] ${text}`}>
+      <span className={`grid size-5 place-items-center rounded-full border ${ring}`}>
+        <span className={`size-1.5 rounded-full ${dot}`} />
+      </span>
+      Food Lab
+    </div>
+  );
+}
+
+function ArrowGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M6 18L18 6M18 6H8M18 6V16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+function ArrowMark({ tone }: { tone: "dark" | "light" }) {
+  return (
+    <div className={`absolute right-5 top-5 grid size-12 place-items-center ${tone === "dark" ? "bg-green text-ink" : "bg-ink text-green"}`}>
+      <ArrowGlyph className="h-6 w-6" />
+    </div>
+  );
+}
+
+function QuoteMark({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" className={`h-7 w-7 ${className}`} fill="currentColor" aria-hidden>
+      <path d="M10 8c-3 1.5-5 4.5-5 9v7h8v-9H8c0-3 1-5 3-6L10 8zm14 0c-3 1.5-5 4.5-5 9v7h8v-9h-5c0-3 1-5 3-6l-1-1z" />
+    </svg>
   );
 }
