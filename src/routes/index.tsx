@@ -646,7 +646,7 @@ function BrandCard({
       </div>
 
       {/* Headline */}
-      <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[36px]">
+      <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[0.92] tracking-[-0.03em] md:text-[34px]">
         <span className="font-display italic">{firstWord}</span>{" "}
         {rest && (
           <span className="bg-green px-1.5 leading-none text-ink">{rest}</span>
@@ -656,14 +656,16 @@ function BrandCard({
         {tagline}
       </p>
 
-      {/* Small logo above description */}
-      <div className="mt-5 flex items-center gap-3 border-t border-ink/15 pt-4">
-        <img
-          src={img}
-          alt={`${name} logo`}
-          loading="lazy"
-          className="size-12 shrink-0 rounded-full border border-ink/15 object-cover"
-        />
+      {/* Logo box + description */}
+      <div className="mt-5 flex items-stretch gap-4 border-t border-ink/15 pt-4">
+        <div className="relative h-20 w-24 shrink-0 overflow-hidden border border-ink/20 bg-paper">
+          <img
+            src={img}
+            alt={`${name} logo`}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
         <p className="text-[12.5px] leading-relaxed text-ink/70">{body}</p>
       </div>
 
