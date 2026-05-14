@@ -50,9 +50,9 @@ function Index() {
 
       {/* ============== HERO ============== */}
       <section id="program" className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-10 md:px-10 md:pb-24 md:pt-14">
+        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
           {/* Eyebrow */}
-          <div className="mb-6 flex items-center justify-end">
+          <div className="mb-5 flex items-center justify-end sm:mb-6">
             <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
           </div>
 
@@ -61,13 +61,13 @@ function Index() {
             <img
               src={heroChef}
               alt="Indian food delivery market opportunity"
-              className="h-[280px] w-full object-cover md:h-[460px]"
+              className="h-[240px] w-full object-cover sm:h-[320px] md:h-[460px]"
             />
           </div>
 
           {/* Headline + sub */}
-          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <h1 className="md:col-span-8 font-display text-[40px] font-extrabold leading-[0.92] tracking-[-0.035em] md:text-[68px]">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
+            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
               An end-to-end incubator for India's next food brands.
             </h1>
             <div className="md:col-span-4 self-end">
@@ -75,16 +75,16 @@ function Index() {
                 Kitchen, staff, compliance, supply chain, aggregator onboarding — handled.
                 You bring the idea and the obsession; we get you from day 0 to a live brand in 60 days.
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
-                  className="inline-flex items-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
+                  className="inline-flex items-center justify-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
                 >
                   Apply to cohort 01 <span aria-hidden>→</span>
                 </a>
                 <Link
                   to="/program"
-                  className="inline-flex items-center gap-2 border border-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-ink hover:text-paper"
+                  className="inline-flex items-center justify-center gap-2 border border-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-ink hover:text-paper"
                 >
                   Explore the program
                 </Link>
@@ -97,14 +97,14 @@ function Index() {
 
       {/* ============== CHALLENGE ============== */}
       <section id="challenge" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           {/* Header row */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Challenge
               </span>
-              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[78px]">
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
                 Before you sell a single plate, the bill is already
                 <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
               </h2>
