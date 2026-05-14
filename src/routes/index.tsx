@@ -32,7 +32,7 @@ function Index() {
           </a>
           <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] md:flex">
             <a className="hover:text-ink/60" href="#program">Program</a>
-            <a className="hover:text-ink/60" href="#opportunity">Opportunity</a>
+            <a className="hover:text-ink/60" href="#opportunity">Food Landscape</a>
             <a className="hover:text-ink/60" href="#solution">Pillars</a>
             <a className="hover:text-ink/60" href="#brands">Brands</a>
             <a className="hover:text-ink/60" href="#mentors">Mentors</a>
