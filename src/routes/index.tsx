@@ -148,14 +148,47 @@ function Index() {
         </h2>
       </section>
 
-      {/* ============== STATS POSTER ROW ============== */}
+      {/* ============== PROGRAM CARD ============== */}
       <section id="opportunity" className="border-b border-ink">
         <div className="mx-auto max-w-[1500px] px-3 py-3 md:px-4 md:py-4">
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            <PosterStat big="04%" eyebrow="01 — India" footnote="of population orders food online" />
-            <PosterStat big="40–50%" eyebrow="02 — USA & China" footnote="10× headroom waiting in India" green />
-            <PosterStat big="34×" eyebrow="03 — China vs India" footnote="1.7 Cr restaurants vs 5 L" />
-            <PosterStat big="2×" eyebrow="04 — Next 5 yrs" footnote="Swiggy + Zomato projected growth" green />
+          <div className="relative grid grid-cols-1 gap-6 border border-ink bg-ink p-6 text-paper md:grid-cols-12 md:gap-8 md:p-10">
+            <div className="absolute left-0 top-0 bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              The Programme · 0002
+            </div>
+
+            <div className="md:col-span-7 md:pt-6">
+              <div className="meta uppercase tracking-[0.16em] text-paper/60">
+                Masters' Union Food Lab
+              </div>
+              <h2 className="mt-3 font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[44px]">
+                An end-to-end incubator for India's next food brands.
+              </h2>
+              <p className="mt-4 max-w-xl text-[13.5px] leading-relaxed text-paper/75 md:text-[14px]">
+                Kitchen, staff, FSSAI compliance, supply chain, aggregator onboarding on
+                Zomato &amp; Swiggy, mentorship and structured tastings — all handled. You
+                bring the idea and the obsession; we get you from day 0 to a live brand
+                in 60 days.
+              </p>
+            </div>
+
+            <div className="md:col-span-5 flex flex-col justify-between gap-6 md:items-end md:pt-6">
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-[12px] text-paper/80 md:text-[12.5px]">
+                <li>· Equipped kitchen</li>
+                <li>· Pro kitchen staff</li>
+                <li>· Chef consultant</li>
+                <li>· FSSAI &amp; compliance</li>
+                <li>· Supply chain</li>
+                <li>· Aggregator onboarding</li>
+                <li>· Operator mentorship</li>
+                <li>· Blind tastings</li>
+              </ul>
+              <a
+                href="#solution"
+                className="inline-flex items-center gap-2 bg-green px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-paper"
+              >
+                Explore the programme <span aria-hidden>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
