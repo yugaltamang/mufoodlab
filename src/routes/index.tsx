@@ -334,9 +334,25 @@ function Index() {
           </div>
           <div className="md:col-span-4 md:col-start-9 self-end">
             <div className="meta uppercase tracking-[0.14em] text-ink/60">Aggregator partners</div>
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              <span className="border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-[0.14em]">Zomato</span>
-              <span className="border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-[0.14em]">Swiggy</span>
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              <span className="inline-flex h-10 items-center gap-2 border border-ink bg-paper px-3">
+                <img
+                  src="https://cdn.simpleicons.org/zomato/E23744"
+                  alt="Zomato"
+                  className="h-4 w-auto"
+                  loading="lazy"
+                />
+                <span className="text-[12px] font-bold uppercase tracking-[0.14em]">Zomato</span>
+              </span>
+              <span className="inline-flex h-10 items-center gap-2 border border-ink bg-paper px-3">
+                <img
+                  src="https://cdn.simpleicons.org/swiggy/FC8019"
+                  alt="Swiggy"
+                  className="h-4 w-auto"
+                  loading="lazy"
+                />
+                <span className="text-[12px] font-bold uppercase tracking-[0.14em]">Swiggy</span>
+              </span>
             </div>
           </div>
         </div>
