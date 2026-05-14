@@ -631,20 +631,60 @@ function BrandCard({
 }: {
   tag: string; name: string; tagline: string; body: string; img: string; follow: string;
 }) {
+  // Split name → first word in serif italic, rest in sans bold (poster style)
+  const [firstWord, ...restWords] = name.split(" ");
+  const rest = restWords.join(" ");
+
   return (
-    <article className="grid grid-cols-1 border border-ink bg-paper sm:grid-cols-5">
-      <div className="relative aspect-[4/3] overflow-hidden border-b border-ink sm:col-span-2 sm:aspect-auto sm:border-b-0 sm:border-r">
-        <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-        <span className="absolute left-2 top-2 bg-green px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em]">Live</span>
+    <article className="group relative isolate aspect-[3/4] overflow-hidden border border-ink bg-ink text-paper">
+      {/* Background image */}
+      <img
+        src={img}
+        alt={name}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105"
+      />
+      {/* Gradient wash for legibility */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 32%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.85) 100%)",
+        }}
+      />
+
+      {/* Top label row */}
+      <div className="relative z-10 flex items-start justify-between gap-4 p-5 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-paper/85 md:p-6">
+        <span>From the kitchen</span>
+        <span className="hidden sm:block">{tag}</span>
+        <span>Live</span>
       </div>
-      <div className="flex flex-col p-5 sm:col-span-3 md:p-6">
-        <div className="meta uppercase tracking-[0.14em] text-ink/55">{tag}</div>
-        <h3 className="mt-2 font-display text-[24px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[28px]">{name}</h3>
-        <p className="mt-1.5 text-[12.5px] font-semibold italic text-ink/80">{tagline}</p>
-        <p className="mt-3 text-[13px] leading-relaxed text-ink/70">{body}</p>
-        <div className="mt-auto flex items-center justify-between gap-3 pt-4 text-[11px] font-bold uppercase tracking-[0.14em]">
-          <a href={follow} target="_blank" rel="noreferrer" className="underline-link">Instagram →</a>
-          <span className="text-ink/50">On Zomato</span>
+
+      {/* Center poster headline */}
+      <div className="relative z-10 px-5 pt-2 md:px-6">
+        <h3 className="font-display text-[44px] font-extrabold leading-[0.88] tracking-[-0.035em] text-paper drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)] md:text-[64px]">
+          <span className="font-display italic">{firstWord}</span>{" "}
+          {rest && (
+            <span className="bg-green px-1.5 leading-none text-ink">{rest}</span>
+          )}
+        </h3>
+        <p className="mt-3 max-w-[22ch] text-[13px] font-semibold leading-snug text-paper/90 md:text-[14px]">
+          {tagline}
+        </p>
+      </div>
+
+      {/* Bottom slab */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-5 md:p-6">
+        <p className="max-w-[42ch] text-[12.5px] leading-relaxed text-paper/85 md:text-[13px]">
+          {body}
+        </p>
+        <div className="mt-5 flex items-center justify-between gap-3 border-t border-paper/30 pt-3 text-[11px] font-bold uppercase tracking-[0.16em]">
+          <a href={follow} target="_blank" rel="noreferrer" className="text-paper hover:text-green">
+            Instagram →
+          </a>
+          <span className="inline-flex items-center gap-2 text-paper/65">
+            <span className="size-1.5 rounded-full bg-green" /> On Zomato
+          </span>
         </div>
       </div>
     </article>
