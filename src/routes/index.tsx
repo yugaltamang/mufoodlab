@@ -343,42 +343,43 @@ function Index() {
 
       {/* ============== MENTORS ============== */}
       <section id="mentors" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] grid grid-cols-1 gap-8 px-4 py-12 sm:px-6 sm:py-14 md:grid-cols-12 md:px-10 md:py-20">
-          <div className="md:col-span-7">
-            <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
-            <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[76px]">
-              Learn from operators who built food businesses
-              <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
-            </h2>
-          </div>
-          <div className="md:col-span-4 md:col-start-9 self-end">
-            <div className="meta uppercase tracking-[0.14em] text-ink/60">Aggregator partners</div>
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-              <span className="inline-flex h-10 items-center gap-2 border border-ink bg-paper px-3">
-                <img
-                  src="https://cdn.simpleicons.org/zomato/E23744"
-                  alt="Zomato"
-                  className="h-4 w-auto"
-                  loading="lazy"
-                />
-                <span className="text-[12px] font-bold uppercase tracking-[0.14em]">Zomato</span>
-              </span>
-              <span className="inline-flex h-10 items-center gap-2 border border-ink bg-paper px-3">
-                <img
-                  src="https://cdn.simpleicons.org/swiggy/FC8019"
-                  alt="Swiggy"
-                  className="h-4 w-auto"
-                  loading="lazy"
-                />
-                <span className="text-[12px] font-bold uppercase tracking-[0.14em]">Swiggy</span>
-              </span>
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[76px]">
+                Learn from operators who built food businesses
+                <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
+              </h2>
+            </div>
+            <div className="md:col-span-4 md:col-start-9 self-end">
+              <div className="meta uppercase tracking-[0.14em] text-ink/60">Aggregator partners</div>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <span className="inline-flex h-10 items-center gap-2 border border-ink bg-paper px-3">
+                  <img
+                    src="https://cdn.simpleicons.org/zomato/E23744"
+                    alt="Zomato"
+                    className="h-4 w-auto"
+                    loading="lazy"
+                  />
+                  <span className="text-[12px] font-bold uppercase tracking-[0.14em]">Zomato</span>
+                </span>
+                <span className="inline-flex h-10 items-center gap-2 border border-ink bg-paper px-3">
+                  <img
+                    src="https://cdn.simpleicons.org/swiggy/FC8019"
+                    alt="Swiggy"
+                    className="h-4 w-auto"
+                    loading="lazy"
+                  />
+                  <span className="text-[12px] font-bold uppercase tracking-[0.14em]">Swiggy</span>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mx-auto max-w-[1500px] px-3 pb-3 md:px-4 md:pb-4">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6 md:gap-4">
+
+          <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-6">
             {Array.from({ length: 6 }).map((_, i) => (
-              <PosterMentor key={i} n={String(i + 1).padStart(2, "0")} />
+              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} />
             ))}
           </div>
         </div>
@@ -662,17 +663,24 @@ function PillarPoster({
   );
 }
 
-function PosterMentor({ n }: { n: string }) {
+function MentorCircle({ n }: { n: string }) {
   return (
-    <PosterShell>
-      <div className="absolute inset-x-4 top-4 flex items-center justify-between meta uppercase tracking-[0.14em] text-ink/60">
-        <span>M.{n}</span>
-        <span className="text-green">●</span>
+    <div className="flex flex-col items-center text-center">
+      <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-full border border-ink/20 bg-ink/5">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="font-display text-[28px] font-extrabold tracking-[-0.02em] text-ink/30">
+            M.{n}
+          </span>
+        </div>
+        <span className="absolute right-3 top-3 text-[10px] text-green">●</span>
       </div>
-      <div className="absolute inset-x-4 bottom-12 font-display text-[22px] font-extrabold leading-[0.92] tracking-[-0.02em]">
-        Coming<br/>soon
+      <div className="mt-4 font-display text-[15px] font-extrabold leading-tight tracking-[-0.01em] text-ink">
+        Mentor coming soon
       </div>
-    </PosterShell>
+      <div className="mt-1 meta uppercase tracking-[0.14em] text-ink/55">
+        Founder · Operator
+      </div>
+    </div>
   );
 }
 
