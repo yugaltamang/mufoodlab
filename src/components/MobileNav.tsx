@@ -28,10 +28,10 @@ export default function MobileNav() {
       {/* Fixed bottom bar */}
       <div className="fixed bottom-0 left-0 right-0 z-50">
         <div className="bg-ink/95 backdrop-blur-xl" style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
-          <div className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-3.5">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-3.5">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 py-1 text-paper transition-all active:scale-95"
+              className="flex items-center gap-2 py-1 text-paper transition-all active:scale-95 md:hidden"
             >
               <div className="flex h-9 w-9 items-center justify-center border border-paper/25 bg-ink">
                 {isOpen ? <X size={16} /> : <Menu size={16} />}
@@ -40,6 +40,17 @@ export default function MobileNav() {
                 {isOpen ? "Close" : "Menu"}
               </span>
             </button>
+            <nav className="hidden flex-1 items-center gap-5 md:flex">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => scrollTo(item.href)}
+                  className="text-[10px] font-bold uppercase tracking-[0.16em] text-paper/80 transition-colors hover:text-paper"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
             <a
               href={APPLY_URL}
               target="_blank"
