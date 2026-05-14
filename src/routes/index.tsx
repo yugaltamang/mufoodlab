@@ -231,8 +231,9 @@ function Index() {
           <path
             d="M6 18L18 6M18 6H8M18 6V16"
             stroke="currentColor"
-            strokeWidth="2.5"
+            strokeWidth="5"
             strokeLinecap="square"
+            strokeLinejoin="miter"
           />
         </svg>
         <div className="relative">
