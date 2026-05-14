@@ -126,50 +126,66 @@ function Index() {
         </div>
       </section>
 
-      {/* ============== CHALLENGE HEADER ============== */}
-      <section className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] px-6 pb-10 pt-12 md:px-10 md:pb-14 md:pt-16">
-          <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-            The Challenge
-          </span>
-          <h2 className="mt-6 max-w-4xl font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[80px]">
-            Before you sell a single plate, the bill is already
-            <span className="ml-3 inline-block bg-green px-2 leading-none">due.</span>
-          </h2>
-          <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-ink/75">
-            For the next generation of food brands in India — most aspiring founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking. Most great food ideas die right here.
-          </p>
-        </div>
-      </section>
-
-      {/* ============== INVOICE ============== */}
-      <section className="border-b border-ink bg-ink">
-        <div className="mx-auto max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
-          <div className="ml-auto max-w-2xl font-mono text-paper">
-            <div className="flex items-center justify-between border-b border-paper/30 pb-3 text-[11px] uppercase tracking-[0.14em]">
-              <span>Food Lab — Pre-Launch Bill</span>
-              <span>Invoice #0001</span>
+      {/* ============== CHALLENGE ============== */}
+      <section className="border-b border-ink bg-ink text-paper">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-20">
+          {/* Header row */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
+              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+                The Challenge
+              </span>
+              <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.9] tracking-[-0.035em] md:text-[78px]">
+                Before you sell a single plate, the bill is already
+                <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
+              </h2>
             </div>
-            <div className="mt-2 text-[11px] uppercase tracking-[0.14em] text-paper/60">Founder Edition · Day 0 of 60</div>
-            <ul className="mt-8 space-y-3 text-[14px]">
-              <LineItem n="01" item="Kitchen rent + setup" amount="₹6,00,000" />
-              <LineItem n="02" item="R&D + chef consultant" amount="₹3,00,000" />
-              <LineItem n="03" item="Working capital" amount="₹6,00,000" />
-              <li className="flex justify-between border-t border-paper/30 pt-3">
-                <span>Subtotal</span>
-                <span className="font-semibold">₹15,00,000</span>
-              </li>
-              <li className="flex justify-between text-paper/60"><span>+ Your time</span><span>~60 days</span></li>
-              <li className="flex justify-between text-paper/60"><span>+ Luck required</span><span>★★★★★</span></li>
-            </ul>
-            <div className="mt-10 flex items-end justify-between border-t border-paper/30 pt-5">
-              <div>
-                <div className="text-[11px] uppercase tracking-[0.14em] text-paper/60">Total due</div>
-                <div className="font-display text-5xl font-extrabold">₹15L+</div>
+            <div className="md:col-span-5 md:pt-2">
+              <p className="text-[15px] leading-relaxed text-paper/75">
+                For India's next generation of food brands, most founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking — and most great food ideas die right here.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-paper/70">
+                <span className="border border-paper/25 px-2.5 py-1">FSSAI maze</span>
+                <span className="border border-paper/25 px-2.5 py-1">No kitchen</span>
+                <span className="border border-paper/25 px-2.5 py-1">Hiring chefs</span>
+                <span className="border border-paper/25 px-2.5 py-1">Aggregator gatekeeping</span>
+                <span className="border border-paper/25 px-2.5 py-1">Cash-burn before sale 1</span>
               </div>
-              <div className="text-right text-[11px] uppercase tracking-[0.14em]">
-                Customers served: 0
-                <div className="mt-1 inline-block bg-green px-2 py-0.5 text-ink">— UNPAID —</div>
+            </div>
+          </div>
+
+          {/* Cost breakdown grid */}
+          <div className="mt-12 grid grid-cols-2 gap-px bg-paper/15 md:mt-16 md:grid-cols-4">
+            <CostTile n="01" label="Kitchen rent + setup" amount="₹6L" sub="Lease, equipment, fit-out" />
+            <CostTile n="02" label="R&D + chef consultant" amount="₹3L" sub="Recipes, trials, tastings" />
+            <CostTile n="03" label="Compliance + onboarding" amount="₹1.5L+" sub="FSSAI, GST, Zomato/Swiggy" />
+            <CostTile n="04" label="Working capital" amount="₹6L" sub="Staff, raw material, runway" />
+          </div>
+
+          {/* Total bar */}
+          <div className="mt-px grid grid-cols-1 items-stretch gap-px bg-paper/15 md:grid-cols-12">
+            <div className="bg-ink px-6 py-7 md:col-span-7 md:px-8">
+              <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-paper/55">
+                Total damage before customer #1
+              </div>
+              <div className="mt-2 flex items-end gap-4">
+                <div className="font-display text-[64px] font-extrabold leading-none tracking-[-0.03em] md:text-[96px]">
+                  ₹15L+
+                </div>
+                <div className="pb-2 text-[12px] font-mono uppercase tracking-[0.14em] text-paper/55">
+                  + 60 days <br/> + ★★★★★ luck
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-between bg-green px-6 py-7 text-ink md:col-span-5 md:px-8">
+              <div className="text-[11px] font-mono uppercase tracking-[0.16em]">
+                Customers served · 0
+              </div>
+              <div className="mt-3 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.02em] md:text-[32px]">
+                You haven't even cooked yet.
+              </div>
+              <div className="mt-4 inline-flex w-fit items-center gap-2 border border-ink px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.16em]">
+                <span className="size-1.5 rounded-full bg-ink" /> Status — Unpaid
               </div>
             </div>
           </div>
@@ -579,6 +595,24 @@ function LineItem({ n, item, amount }: { n: string; item: string; amount: string
       <span className="flex-1">{item}</span>
       <span className="font-semibold">{amount}</span>
     </li>
+  );
+}
+
+function CostTile({ n, label, amount, sub }: { n: string; label: string; amount: string; sub: string }) {
+  return (
+    <div className="flex flex-col justify-between bg-ink p-5 md:p-6">
+      <div className="flex items-center justify-between text-[10.5px] font-mono uppercase tracking-[0.16em] text-paper/55">
+        <span>{n}</span>
+        <span>Cost</span>
+      </div>
+      <div className="mt-8 font-display text-[40px] font-extrabold leading-none tracking-[-0.02em] md:text-[52px]">
+        {amount}
+      </div>
+      <div className="mt-4 border-t border-paper/15 pt-3">
+        <div className="text-[13px] font-semibold leading-tight text-paper">{label}</div>
+        <div className="mt-1 text-[11.5px] leading-snug text-paper/55">{sub}</div>
+      </div>
+    </div>
   );
 }
 
