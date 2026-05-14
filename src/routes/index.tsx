@@ -239,21 +239,19 @@ function Index() {
             backgroundSize: "56px 56px",
           }}
         />
-        {/* Abstract geometric watermark */}
+        {/* Abstract overlapping shapes watermark */}
         <svg
           aria-hidden
-          viewBox="0 0 200 200"
+          viewBox="0 0 240 240"
           fill="none"
-          className="pointer-events-none absolute -right-8 -top-8 h-[180px] w-[180px] text-ink/[0.10] md:-right-10 md:-top-10 md:h-[280px] md:w-[280px]"
+          className="pointer-events-none absolute -right-10 -top-10 h-[200px] w-[200px] text-ink/[0.10] md:-right-12 md:-top-12 md:h-[300px] md:w-[300px]"
         >
-          <circle cx="100" cy="100" r="92" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="100" cy="100" r="68" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="100" cy="100" r="44" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="100" cy="100" r="20" fill="currentColor" />
-          <line x1="100" y1="0" x2="100" y2="200" stroke="currentColor" strokeWidth="1.5" />
-          <line x1="0" y1="100" x2="200" y2="100" stroke="currentColor" strokeWidth="1.5" />
-          <line x1="29" y1="29" x2="171" y2="171" stroke="currentColor" strokeWidth="1.5" />
-          <line x1="171" y1="29" x2="29" y2="171" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="20" y="20" width="140" height="140" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="60" y="60" width="140" height="140" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="160" cy="80" r="60" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="80" cy="160" r="40" fill="currentColor" opacity="0.5" />
+          <path d="M30 200 Q120 100 210 200" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M30 40 L210 40" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 6" />
         </svg>
         <div className="relative">
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
