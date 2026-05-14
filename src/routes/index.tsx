@@ -449,6 +449,9 @@ function Index() {
 
       {/* unused import warden */}
       {false && <img src={essential08} alt="" />}
+
+      {/* Mobile / tablet sticky nav */}
+      <MobileNav />
     </div>
   );
 }
