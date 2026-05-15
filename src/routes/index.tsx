@@ -413,10 +413,6 @@ function Index() {
             <a href={APPLY_URL} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
               Start application <span aria-hidden>→</span>
             </a>
-            <div className="mt-8 flex items-end justify-between border-t border-ink pt-4 text-[11px] uppercase tracking-[0.14em] sm:mt-10">
-              <span>{WORDMARK}</span>
-              <span className="truncate">tally.so/r/441zRr</span>
-            </div>
           </div>
         </div>
       </section>
