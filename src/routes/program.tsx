@@ -283,7 +283,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 FAQ
               </span>
-              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[36px] sm:leading-[0.95] md:text-[56px]">
+              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[42px] lg:text-[56px]">
                 Quick answers, no fluff.
               </h2>
             </div>
