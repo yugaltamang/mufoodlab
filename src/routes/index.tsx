@@ -329,7 +329,7 @@ function Index() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 From our kitchen
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[80px]">
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[60px] lg:text-[80px]">
                 Brands already
                 <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
               </h2>
