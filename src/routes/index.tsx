@@ -433,7 +433,7 @@ function Index() {
             {[
               ["01", "Cloud kitchens"],
               ["02", "Delivery-first brands"],
-              ["03", "Packaged foods / FMCG"],
+              ["03", "Packaged foods"],
               ["04", "Beverages"],
               ["05", "Ready-to-eat"],
             ].map(([n, label]) => (
