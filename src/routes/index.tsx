@@ -137,7 +137,7 @@ function Index() {
                 Total damage before customer #1
               </div>
               <div className="mt-2 flex flex-wrap items-end gap-3 sm:gap-4">
-                <div className="font-display text-[52px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[96px]">
+                <div className="font-display text-[48px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[72px] lg:text-[96px]">
                   ₹15L+
                 </div>
                 <div className="pb-2 text-[11px] font-mono uppercase tracking-[0.14em] text-paper/55 sm:text-[12px]">
