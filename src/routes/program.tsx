@@ -358,10 +358,12 @@ function ProgramPage() {
       {/* unused import warden */}
       {false && (
         <>
-          <img src={essential02} alt="" />
+          <img src={essential03} alt="" />
           <img src={essential04} alt="" />
-          <img src={essential06} alt="" />
           <img src={essential08} alt="" />
+          <IncludedTile n="00" label="" />
+          <Phase days="" phase="" title="" points={[]} />
+          <PillarRow n="" img={essential03} title="" body="" points={[]} />
         </>
       )}
 
