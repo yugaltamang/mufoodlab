@@ -96,7 +96,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Program
               </span>
-              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[88px]">
+              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[60px] lg:text-[88px]">
                 YC for food brands
                 <span className="ml-3 inline-block bg-green px-2 leading-none">in India.</span>
               </h1>
@@ -130,7 +130,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 How it works
               </span>
-              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[36px] sm:leading-[0.95] md:text-[56px]">
+              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[44px] lg:text-[56px]">
                 A stage-gated program. Earn your way forward.
               </h2>
             </div>
@@ -166,7 +166,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Stages
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[68px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[68px]">
                 From paper to a
                 <span className="ml-3 inline-block bg-green px-2 leading-none">100Cr business.</span>
               </h2>
@@ -244,7 +244,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 What we expect
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[68px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[68px]">
                 You bring the
                 <span className="ml-3 inline-block bg-green px-2 leading-none">obsession.</span>
               </h2>
@@ -283,7 +283,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 FAQ
               </span>
-              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[36px] sm:leading-[0.95] md:text-[56px]">
+              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[42px] lg:text-[56px]">
                 Quick answers, no fluff.
               </h2>
             </div>
@@ -314,7 +314,7 @@ function ProgramPage() {
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
-              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[80px]">
+              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[60px] lg:text-[80px]">
                 Ready to cook your
                 <span className="ml-3 inline-block bg-green px-2 leading-none">first plate?</span>
               </h2>
@@ -343,7 +343,7 @@ function ProgramPage() {
       {/* ============== FOOTER ============== */}
       <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">
+          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">
             {WORDMARK}
           </span>
           <div className="flex flex-col items-end gap-3">

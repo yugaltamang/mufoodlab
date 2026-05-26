@@ -61,13 +61,13 @@ function Index() {
             <img
               src={heroChef}
               alt="Indian food delivery market opportunity"
-              className="h-[240px] w-full object-cover sm:h-[320px] md:h-[460px]"
+              className="h-[220px] w-full object-cover sm:h-[300px] md:h-[380px] lg:h-[460px]"
             />
           </div>
 
           {/* Headline + sub */}
           <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
-            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
+            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               For the Next Gen of Food Brands in India.
             </h1>
             <div className="md:col-span-4 self-end">
@@ -103,7 +103,7 @@ function Index() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Challenge
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[58px] lg:text-[78px]">
                 Before you sell a single plate, the bill is already
                 <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
               </h2>
@@ -137,7 +137,7 @@ function Index() {
                 Total damage before customer #1
               </div>
               <div className="mt-2 flex flex-wrap items-end gap-3 sm:gap-4">
-                <div className="font-display text-[52px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[96px]">
+                <div className="font-display text-[48px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[72px] lg:text-[96px]">
                   ₹15L+
                 </div>
                 <div className="pb-2 text-[11px] font-mono uppercase tracking-[0.14em] text-paper/55 sm:text-[12px]">
@@ -170,7 +170,7 @@ function Index() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
+            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               Indian food delivery is just scratching the
               <span className="ml-3 inline-block bg-green px-2 leading-none">surface.</span>
             </h2>
@@ -273,7 +273,7 @@ function Index() {
               <div className="mt-6 meta uppercase tracking-[0.16em] text-ink/55">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[72px]">
+              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[56px] lg:text-[72px]">
                 That's where Masters' Union Food Lab comes in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
@@ -329,7 +329,7 @@ function Index() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 From our kitchen
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[80px]">
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[60px] lg:text-[80px]">
                 Brands already
                 <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
               </h2>
@@ -367,7 +367,7 @@ function Index() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             <div className="md:col-span-7">
               <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[76px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[56px] lg:text-[76px]">
                 Learn from operators who built food businesses
                 <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
               </h2>
@@ -419,7 +419,7 @@ function Index() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 Not just cloud kitchens
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[56px] lg:text-[78px]">
                 Think bigger. We're building for
                 <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
               </h2>
@@ -470,7 +470,7 @@ function Index() {
           </div>
           <div className="bg-green p-6 sm:p-8 md:p-14">
             <div className="meta uppercase tracking-[0.18em]">Apply by 31 Oct, 21:00</div>
-            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] sm:text-[56px] sm:leading-[0.86] md:text-[120px]">
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] break-words sm:text-[56px] sm:leading-[0.86] md:text-[72px] lg:text-[120px]">
               Build your<br/>food brand.
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed">
@@ -510,7 +510,7 @@ function Index() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">{WORDMARK}</span>
+          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">{WORDMARK}</span>
           <div className="flex flex-col items-end gap-3">
             <img src={muLogo} alt="Masters' Union" className="h-8 w-auto md:h-10" />
             <span className="meta uppercase tracking-[0.14em] text-ink/60">© Masters' Union {new Date().getFullYear()}</span>
