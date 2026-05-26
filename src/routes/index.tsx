@@ -273,7 +273,7 @@ function Index() {
               <div className="mt-6 meta uppercase tracking-[0.16em] text-ink/55">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[72px]">
+              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[56px] lg:text-[72px]">
                 That's where Masters' Union Food Lab comes in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
