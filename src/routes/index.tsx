@@ -411,6 +411,52 @@ function Index() {
         </div>
       </section>
 
+      {/* ============== NOT JUST CLOUD KITCHENS ============== */}
+      <section id="scope" className="border-b border-ink bg-ink text-paper">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
+              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+                Not just cloud kitchens
+              </span>
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
+                Think bigger. We're building for
+                <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
+              </h2>
+            </div>
+            <p className="md:col-span-5 self-end text-[14.5px] leading-relaxed text-paper/75">
+              Cloud kitchens are where we start — but Food Lab is designed to incubate any food &amp; beverage brand. Packaged snacks, beverages, health foods, ready-to-eat, condiments — if it's food and it can scale, we want to hear about it.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 gap-px bg-paper/15 md:mt-14 md:grid-cols-5">
+            {[
+              ["01", "Cloud kitchens"],
+              ["02", "Delivery-first brands"],
+              ["03", "Packaged foods / FMCG"],
+              ["04", "Beverages"],
+              ["05", "Ready-to-eat"],
+            ].map(([n, label]) => (
+              <div key={n} className="flex flex-col justify-between bg-ink p-5 md:p-6">
+                <div className="text-[10.5px] font-mono uppercase tracking-[0.16em] text-paper/55">{n}</div>
+                <div className="mt-8 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em] md:text-[24px]">
+                  {label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <a
+              href={APPLY_URL}
+              className="inline-flex items-center justify-center gap-2 bg-green px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-paper"
+            >
+              Register your interest <span aria-hidden>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ============== APPLY POSTER ============== */}
       <section id="apply" className="border-b border-ink">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
