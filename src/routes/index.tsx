@@ -165,12 +165,22 @@ function Index() {
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="border-b border-ink pb-6">
             <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Food Landscape
+              The Opportunity
             </span>
           </div>
 
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
+              Indian food delivery is just scratching the
+              <span className="ml-3 inline-block bg-green px-2 leading-none">surface.</span>
+            </h2>
+            <p className="md:col-span-5 self-end text-[14.5px] leading-relaxed text-ink/70">
+              India's food economy is decades behind the West and China. The next decade belongs to whoever shows up first.
+            </p>
+          </div>
+
           {/* 4-column numbered breakdown */}
-          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:mt-14 md:grid-cols-4 md:gap-8">
             {[
               {
                 n: "01",
