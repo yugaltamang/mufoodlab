@@ -103,7 +103,7 @@ function Index() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Challenge
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
+              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[58px] lg:text-[78px]">
                 Before you sell a single plate, the bill is already
                 <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
               </h2>
