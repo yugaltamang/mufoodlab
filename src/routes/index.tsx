@@ -274,35 +274,47 @@ function Index() {
                 Masters' Union Food Lab
               </div>
               <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[72px]">
-                Four pillars, fully wired in.
+                That's where Masters' Union Food Lab comes in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
-                Kitchen, staff, FSSAI compliance, supply chain, aggregator onboarding on
-                Zomato &amp; Swiggy, mentorship and structured tastings — all handled. You
-                bring the idea and the obsession; we get you from day 0 to a live brand
-                in 60 days.
+                Get access to everything you need to launch your food brand — kitchen, staff, compliance, supply chain, mentorship — handled.
               </p>
             </div>
 
             <div className="md:col-span-4 flex flex-col gap-4 md:items-start md:pt-2">
               <div className="meta uppercase tracking-[0.16em] text-ink/55">
-                60 days · 1 launch
+                Everything you need · handled
               </div>
               <Link
                 to="/program"
                 className="inline-flex w-full items-center justify-center gap-2 bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink sm:w-auto sm:py-2.5"
               >
-                Explore the program <span aria-hidden>→</span>
+                See full program details <span aria-hidden>→</span>
               </Link>
             </div>
           </div>
 
-          {/* Four pillars */}
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 md:mt-16 md:grid-cols-4 md:gap-4">
-            <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
-            <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
-            <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
-            <PillarPoster n="04" title="Mentorship & Feedback" img={essential07} points={["1:1 with operators", "Weekly tastings"]} />
+          {/* Eight essentials */}
+          <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-4">
+            {[
+              ["01", "Fully equipped kitchen facility"],
+              ["02", "Professional kitchen staff"],
+              ["03", "Food consultant & culinary expertise"],
+              ["04", "FSSAI licensing & compliance"],
+              ["05", "Procurement & supply chain"],
+              ["06", "Aggregator onboarding (Zomato, Swiggy)"],
+              ["07", "Mentorship from food operators"],
+              ["08", "Structured feedback & blind tastings"],
+            ].map(([n, label]) => (
+              <div key={n} className="flex flex-col justify-between bg-paper p-5 md:p-6">
+                <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
+                  {n}
+                </div>
+                <div className="mt-6 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
+                  {label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         </div>
