@@ -67,7 +67,7 @@ function Index() {
 
           {/* Headline + sub */}
           <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
-            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
+            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               For the Next Gen of Food Brands in India.
             </h1>
             <div className="md:col-span-4 self-end">
