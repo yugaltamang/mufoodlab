@@ -470,7 +470,7 @@ function Index() {
           </div>
           <div className="bg-green p-6 sm:p-8 md:p-14">
             <div className="meta uppercase tracking-[0.18em]">Apply by 31 Oct, 21:00</div>
-            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] sm:text-[56px] sm:leading-[0.86] md:text-[120px]">
+            <h2 className="mt-6 font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] break-words sm:text-[56px] sm:leading-[0.86] md:text-[72px] lg:text-[120px]">
               Build your<br/>food brand.
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed">
