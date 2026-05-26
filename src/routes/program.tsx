@@ -24,13 +24,13 @@ export const Route = createFileRoute("/program")({
       {
         name: "description",
         content:
-          "The 60-day FOODLAB program: kitchen, compliance, supply chain, aggregator onboarding, mentorship and structured tastings — end-to-end incubation for India's next food brands.",
+          "YC for food brands in India. A stage-gated incubator: Intent → Design → Proof → Profit → Scale. Kitchen, compliance, supply chain, aggregator onboarding and mentorship — handled.",
       },
       { property: "og:title", content: "The Program — FOODLAB" },
       {
         property: "og:description",
         content:
-          "60 days. 4 pillars. From day 0 to a live brand on Zomato & Swiggy.",
+          "A stage-gated incubator for India's next food brands. From idea on paper to a live, profitable brand on Zomato & Swiggy.",
       },
     ],
   }),
@@ -97,14 +97,11 @@ function ProgramPage() {
                 The Program
               </span>
               <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[88px]">
-                Sixty days. One
-                <span className="ml-3 inline-block bg-green px-2 leading-none">live brand.</span>
+                YC for food brands
+                <span className="ml-3 inline-block bg-green px-2 leading-none">in India.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-ink/75">
-                A founder-first incubator that compresses two years of food-business
-                paperwork, kitchen hunting, hiring and aggregator chasing into a single
-                60-day sprint — so you can spend your obsession on what matters: the food
-                and the brand.
+                What AI does for software engineering, we do that for starting a cloud kitchen. Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
               </p>
             </div>
             <div className="md:col-span-5">
@@ -116,175 +113,124 @@ function ProgramPage() {
                 />
               </div>
               <div className="mt-4 grid grid-cols-3 gap-px bg-ink/15 text-center">
-                <Stat n="60" label="Days" />
-                <Stat n="04" label="Pillars" />
-                <Stat n="2×" label="Aggregators" />
+                <Stat n="05" label="Stages" />
+                <Stat n="08" label="Essentials" />
+                <Stat n="5%" label="Equity" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============== WHAT'S INCLUDED — at a glance ============== */}
+      {/* ============== STAGE-GATED OVERVIEW ============== */}
       <section className="border-y border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-16">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-                What's included
+                How it works
               </span>
-              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[32px] sm:leading-[0.95] md:text-[52px]">
-                A full operating stack — pre-built.
+              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[36px] sm:leading-[0.95] md:text-[56px]">
+                A stage-gated program. Earn your way forward.
               </h2>
             </div>
-            <p className="max-w-md text-[14px] leading-relaxed text-paper/70">
-              Skip the ₹15L+ pre-launch bill. Plug into a kitchen, a compliance team,
-              vetted vendors and a live route to customers from week one.
+            <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-paper/70">
+              Once your idea gets shortlisted, you enter a stage-gated program. Each stage has clear targets and evaluation criteria. Only selected brands move forward at every stage. Speed, seriousness and quality &gt;&gt;&gt;
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-px bg-paper/15 md:grid-cols-4">
-            <IncludedTile n="01" label="Production kitchen" />
-            <IncludedTile n="02" label="Chefs on payroll" />
-            <IncludedTile n="03" label="FSSAI + GST" />
-            <IncludedTile n="04" label="Recipe & R&D" />
-            <IncludedTile n="05" label="Pre-vetted vendors" />
-            <IncludedTile n="06" label="Zomato + Swiggy onboarding" />
-            <IncludedTile n="07" label="1:1 operator mentorship" />
-            <IncludedTile n="08" label="Weekly customer tastings" />
+          <div className="mt-10 grid grid-cols-2 gap-px bg-paper/15 sm:grid-cols-3 md:mt-14 md:grid-cols-5">
+            {[
+              ["01", "Intent"],
+              ["02", "Design"],
+              ["03", "Proof"],
+              ["04", "Profit"],
+              ["05", "Scale"],
+            ].map(([n, label]) => (
+              <div key={n} className="flex flex-col justify-between bg-ink p-5 md:p-6">
+                <div className="text-[10.5px] font-mono uppercase tracking-[0.16em] text-paper/55">{n}</div>
+                <div className="mt-10 font-display text-[22px] font-extrabold leading-[1.05] tracking-[-0.02em] md:text-[28px]">
+                  {label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ============== TIMELINE ============== */}
+      {/* ============== STAGES — DETAILED ============== */}
       <section id="timeline" className="border-b border-ink bg-paper">
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-                The Timeline
+                The Stages
               </span>
               <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[68px]">
-                Day 0 to first
-                <span className="ml-3 inline-block bg-green px-2 leading-none">order.</span>
+                From paper to a
+                <span className="ml-3 inline-block bg-green px-2 leading-none">100Cr business.</span>
               </h2>
             </div>
             <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
-              A structured 60-day arc. Four phases, weekly checkpoints, and a public
-              launch on aggregator platforms.
+              Five stages. Pivots welcome. Only the brands ready for the next stage move forward.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-px bg-ink/15 md:grid-cols-4">
-            <Phase
-              days="Day 0 — 10"
-              phase="01 · Discover"
-              title="Brand, menu, math."
-              points={[
-                "Founder deep-dive & positioning",
-                "Menu architecture + pricing",
-                "Unit economics model",
-              ]}
-            />
-            <Phase
-              days="Day 11 — 25"
-              phase="02 · Build"
-              title="Kitchen + recipes locked."
-              points={[
-                "Kitchen station setup",
-                "Chef onboarding + R&D sprints",
-                "FSSAI / GST paperwork filed",
-              ]}
-            />
-            <Phase
-              days="Day 26 — 45"
-              phase="03 · Wire-in"
-              title="Supply, aggregators, ops."
-              points={[
-                "Vendor contracts + supply",
-                "Zomato + Swiggy listings live",
-                "Soft-launch tastings",
-              ]}
-            />
-            <Phase
-              days="Day 46 — 60"
-              phase="04 · Launch"
-              title="Live brand, real customers."
-              points={[
-                "Public launch on aggregators",
-                "Weekly performance reviews",
-                "Growth playbook handoff",
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ============== PILLARS — DETAILED ============== */}
-      <section
-        id="pillars"
-        className="relative overflow-hidden border-b border-ink bg-paper text-ink"
-        style={{
-          backgroundImage: [
-            "radial-gradient(60% 50% at 85% 0%, oklch(0.92 0.22 142 / 0.45), transparent 70%)",
-            "radial-gradient(50% 40% at 0% 100%, oklch(0.92 0.22 142 / 0.3), transparent 65%)",
-            "linear-gradient(to bottom, oklch(0.985 0.005 95), oklch(0.96 0.01 95))",
-          ].join(", "),
-        }}
-      >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-          }}
-        />
-        <div className="relative mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <div className="md:col-span-8">
-              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-                The Pillars
-              </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.92] md:text-[68px]">
-                Four pillars, fully wired in.
-              </h2>
-              <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
-                Each pillar is an end-to-end system, not a workshop. You walk in with an
-                idea and an obsession; you walk out with a running brand.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-2 md:gap-12">
-            <PillarRow
+          <div id="pillars" className="mt-12 flex flex-col gap-px bg-ink/15 md:mt-16">
+            <Stage
               n="01"
               img={essential01}
-              title="Kitchen & Team"
-              body="A production-grade kitchen, equipment, prep stations, and chefs on payroll. You cook on day one — no real-estate hunt, no hiring scramble."
-              points={["Cloud kitchen station", "Chefs & helpers", "Daily prep + KOT systems"]}
+              title="Fun-da-mentals!"
+              tagline="Thinking clearly before cooking anything."
+              body="This stage is about getting everything right on paper before touching the kitchen."
+              provides={["1:1 access to mentors to develop your concept on paper", "Workshops & sessions", "Visits to live cloud kitchens"]}
+              workOn={["Competitive analysis", "Brand definition (name, product, pricing)", "Ideal customer persona", "Unit economics and projected P&L", "12-month operating plan", "Go-to-market plan for first 100 customers"]}
+              assignment="Food Lab Stage 1 [Brand Name]"
+              tested="Clarity · Seriousness · Feasibility"
             />
-            <PillarRow
+            <Stage
               n="02"
-              img={essential03}
-              title="Recipe & Compliance"
-              body="In-house consultants for menu R&D, food costing and standardisation. FSSAI, GST and packaging compliance handled end-to-end."
-              points={["Recipe lab + costing", "FSSAI & GST registration", "Packaging & labelling"]}
+              img={essential02}
+              title="Pre-PMF"
+              tagline="Kitchen access + paid trials."
+              body="You move from paper into the kitchen. Real customers, real feedback, fast iteration."
+              provides={["Kitchen space", "Equipment", "Staff", "Approved supply chain"]}
+              workOn={["Conduct a target number of paid customer trials", "Document everything in the Customer Feedback Tracker", "Track and report inventory", "Periodic blind tastings vs submitted customer feedback"]}
+              assignment="Food Lab Stage 2 Paid Trials Feedback Sheet [Brand Name]"
+              tested="Speed of execution · Listening to feedback · Willingness to iterate · Operational discipline"
             />
-            <PillarRow
+            <Stage
               n="03"
-              img={essential05}
-              title="Supply & Distribution"
-              body="Pre-negotiated vendors for raw material, packaging and logistics. Onboarded onto Zomato and Swiggy with optimised listings."
-              points={["Vetted ingredient supply", "Cold-chain & last-mile", "Aggregator onboarding"]}
+              img={essential06}
+              title="Demo Day"
+              tagline="Earn your boarding pass to Zomato & Swiggy."
+              body="Brands pitch to MU leadership, food entrepreneurs and VCs. Core question: ‘Why should this brand go live on Swiggy/Zomato?’"
+              provides={["Pitch stage with food entrepreneurs, VCs and MU Food Lab leadership", "Selection driven by trial performance, feedback quality, product consistency and founder execution"]}
+              workOn={["Submit FSSAI, PAN, GST, cancelled cheque", "Submit full menu with food shots", "Selected brands move to Launch", "Others get 30 days to iterate; pivots actively supported", "Brands deemed unfit may be phased out"]}
+              assignment="Demo Day Pitch + Compliance Pack [Brand Name]"
+              tested="Product consistency · Founder execution · Customer signal"
             />
-            <PillarRow
+            <Stage
               n="04"
+              img={essential05}
+              title="Road to PMF"
+              tagline="Building a real business."
+              body="You work on reaching PMF — positive operating margins for 3 consecutive months."
+              provides={["Live aggregator presence on Zomato & Swiggy", "Operator mentorship on growth & margins", "Weekly performance reviews"]}
+              workOn={["Acquiring 1st, 10th, 100th customer", "Building in public through content", "Iterating on product", "Improving ratings and repeat rate", "Launching new products", "Tightening operations and margins"]}
+              assignment="Food Lab Stage 4 [Brand Name]"
+              tested="Repeat rate · Ratings · Operating margin · Content & brand"
+            />
+            <Stage
+              n="05"
               img={essential07}
-              title="Mentorship & Feedback"
-              body="1:1 mentorship from operators who built food businesses from zero. Weekly tastings with real customers and structured growth reviews."
-              points={["1:1 operator sessions", "Weekly customer tastings", "Growth review board"]}
+              title="Graduate"
+              tagline="Exit the lab. Keep cooking."
+              body="Graduated brands exit Food Lab and continue independently — with paying customers and operational muscle."
+              provides={["A proven product", "Paying customers", "Operational muscle", "A brand ready to scale", "Access to funding"]}
+              workOn={["Masters' Union Food Lab reserves the right to take 5% equity in your business", "We continue to be part of your journey scaling to a ₹100Cr+ business"]}
+              assignment="Graduation review & cap-table update"
+              tested="Readiness to scale independently"
             />
           </div>
         </div>
@@ -412,10 +358,12 @@ function ProgramPage() {
       {/* unused import warden */}
       {false && (
         <>
-          <img src={essential02} alt="" />
+          <img src={essential03} alt="" />
           <img src={essential04} alt="" />
-          <img src={essential06} alt="" />
           <img src={essential08} alt="" />
+          <IncludedTile n="00" label="" />
+          <Phase days="" phase="" title="" points={[]} />
+          <PillarRow n="" img={essential03} title="" body="" points={[]} />
         </>
       )}
 
@@ -554,6 +502,90 @@ function Faq({ q, a }: { q: string; a: string }) {
       </summary>
       <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-paper/70">{a}</p>
     </details>
+  );
+}
+
+function Stage({
+  n,
+  img,
+  title,
+  tagline,
+  body,
+  provides,
+  workOn,
+  assignment,
+  tested,
+}: {
+  n: string;
+  img: string;
+  title: string;
+  tagline: string;
+  body: string;
+  provides: string[];
+  workOn: string[];
+  assignment: string;
+  tested: string;
+}) {
+  return (
+    <article className="grid grid-cols-1 gap-6 bg-paper p-5 md:grid-cols-12 md:gap-8 md:p-8">
+      <div className="md:col-span-4">
+        <div className="relative aspect-[4/3] overflow-hidden border border-ink">
+          <img src={img} alt={title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+          <span className="absolute left-3 top-3 bg-green px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">
+            Stage {n}
+          </span>
+        </div>
+        <div className="mt-4 text-[10.5px] font-mono uppercase tracking-[0.16em] text-ink/55">
+          Tested on
+        </div>
+        <div className="mt-1 text-[12.5px] leading-snug text-ink/75">{tested}</div>
+      </div>
+
+      <div className="md:col-span-8">
+        <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink/55">
+          Stage {n}
+        </div>
+        <h3 className="mt-2 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[36px]">
+          {title}
+        </h3>
+        <p className="mt-2 text-[13.5px] font-semibold italic text-ink/80">{tagline}</p>
+        <p className="mt-3 text-[13.5px] leading-relaxed text-ink/70">{body}</p>
+
+        <div className="mt-6 grid grid-cols-1 gap-6 border-t border-ink/15 pt-5 md:grid-cols-2">
+          <div>
+            <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              What MU provides
+            </div>
+            <ul className="mt-3 space-y-1.5 text-[12.5px] leading-relaxed text-ink/75">
+              {provides.map((p) => (
+                <li key={p} className="flex gap-2">
+                  <span className="mt-1.5 size-1 shrink-0 rounded-full bg-green" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              You work on
+            </div>
+            <ul className="mt-3 space-y-1.5 text-[12.5px] leading-relaxed text-ink/75">
+              {workOn.map((p) => (
+                <li key={p} className="flex gap-2">
+                  <span className="mt-1.5 size-1 shrink-0 rounded-full bg-green" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-5 inline-flex max-w-full items-center gap-2 border border-ink bg-ink px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.16em] text-paper">
+          <span className="text-green">●</span>
+          <span className="truncate">Assignment — {assignment}</span>
+        </div>
+      </div>
+    </article>
   );
 }
 
