@@ -348,7 +348,8 @@ function Index() {
               name="Lexi's Gourmet Sandwiches"
               tagline="Gurgaon's highest-rated gourmet sandwich brand"
               body="What started as a passion for bold, indulgent sandwiches became Gurgaon's top-rated gourmet sandwich brand. Cult favorites: truffle mushroom ciabattas and crispy katsu sandos. Now expanding to Delhi."
-              img={brandLexis}
+              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/y11vvcni_Lexi%27s%20Gourmet%20Sandwiches.png"
+              team={brandLexis}
               follow="https://www.instagram.com/lexis_sandos/?hl=en"
             />
             <BrandCard
@@ -356,7 +357,8 @@ function Index() {
               name="Woody's Pizzeria"
               tagline="Neapolitan-inspired, made for the Indian palate"
               body="Kanav started baking pizzas in 2011. After years perfecting Neapolitan recipes, he launched Woody's — now live in Lajpat Nagar. Customers keep calling it the best pizza they've ever had."
-              img={brandWoodys}
+              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/yr5s9vfq_Woody%27s%20Pizzeria.png"
+              team={brandWoodys}
               follow="https://www.instagram.com/woodyspizzeria/?hl=en"
             />
           </div>
@@ -783,9 +785,9 @@ function CostTile({ n, label, amount, sub }: { n: string; label: string; amount:
 }
 
 function BrandCard({
-  tag, name, tagline, body, img, follow,
+  tag, name, tagline, body, img, team, follow,
 }: {
-  tag: string; name: string; tagline: string; body: string; img: string; follow: string;
+  tag: string; name: string; tagline: string; body: string; img: string; team: string; follow: string;
 }) {
   const [firstWord, ...restWords] = name.split(" ");
   const rest = restWords.join(" ");
@@ -798,6 +800,16 @@ function BrandCard({
         <span className="inline-flex items-center gap-1.5 text-ink">
           <span className="size-1.5 rounded-full bg-green" /> Live
         </span>
+      </div>
+
+      {/* Team photo */}
+      <div className="mt-6 aspect-[16/10] w-full overflow-hidden bg-ink/5">
+        <img
+          src={team}
+          alt={`${name} team`}
+          loading="lazy"
+          className="h-full w-full object-cover"
+        />
       </div>
 
       {/* Logo + headline */}
