@@ -510,7 +510,7 @@ function Index() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">{WORDMARK}</span>
+          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">{WORDMARK}</span>
           <div className="flex flex-col items-end gap-3">
             <img src={muLogo} alt="Masters' Union" className="h-8 w-auto md:h-10" />
             <span className="meta uppercase tracking-[0.14em] text-ink/60">© Masters' Union {new Date().getFullYear()}</span>
