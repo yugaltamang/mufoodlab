@@ -397,14 +397,13 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-6">
+          <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-5">
             {[
-              { name: "Ananya Sharma", role: "Founder · Cloud Kitchen" },
-              { name: "Rohan Mehta", role: "Ex-Swiggy · Operator" },
-              { name: "Priya Iyer", role: "Chef · Restaurateur" },
-              { name: "Vikram Rao", role: "Supply Chain Lead" },
-              { name: "Neha Kapoor", role: "Brand · D2C Foods" },
-              { name: "Arjun Singh", role: "Investor · F&B" },
+              { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato" },
+              { name: "Vidur Mayor", role: "Founder · FES Cafe" },
+              { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator" },
+              { name: "Naveen Balaji", role: "Co-founder · Lexi's Gourmet Sandwiches" },
+              { name: "Ankit Tiwari", role: "Head Chef · Bomba (ex Leela, Oberoi, Salad Days)" },
             ].map((m, i) => (
               <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} />
             ))}
