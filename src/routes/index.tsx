@@ -68,19 +68,18 @@ function Index() {
           {/* Headline + sub */}
           <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
             <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
-              An end-to-end incubator for India's next food brands.
+              For the Next Gen of Food Brands in India.
             </h1>
             <div className="md:col-span-4 self-end">
               <p className="text-[14px] leading-relaxed text-ink/70">
-                Kitchen, staff, compliance, supply chain, aggregator onboarding — handled.
-                You bring the idea and the obsession; we get you from day 0 to a live brand in 60 days.
+                Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
                   className="inline-flex items-center justify-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
                 >
-                  Apply to cohort 01 <span aria-hidden>→</span>
+                  Apply now <span aria-hidden>→</span>
                 </a>
                 <Link
                   to="/program"
