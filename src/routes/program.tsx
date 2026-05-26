@@ -130,7 +130,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 How it works
               </span>
-              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] sm:text-[36px] sm:leading-[0.95] md:text-[56px]">
+              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[44px] lg:text-[56px]">
                 A stage-gated program. Earn your way forward.
               </h2>
             </div>
