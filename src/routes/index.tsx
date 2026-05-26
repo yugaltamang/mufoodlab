@@ -170,7 +170,7 @@ function Index() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
+            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               Indian food delivery is just scratching the
               <span className="ml-3 inline-block bg-green px-2 leading-none">surface.</span>
             </h2>
