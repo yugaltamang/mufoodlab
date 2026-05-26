@@ -314,7 +314,7 @@ function ProgramPage() {
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
-              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[40px] sm:leading-[0.9] md:text-[80px]">
+              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[60px] lg:text-[80px]">
                 Ready to cook your
                 <span className="ml-3 inline-block bg-green px-2 leading-none">first plate?</span>
               </h2>
