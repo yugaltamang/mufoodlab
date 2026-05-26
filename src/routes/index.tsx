@@ -519,7 +519,7 @@ function Index() {
       </footer>
 
       {/* unused import warden */}
-      {false && <img src={essential08} alt="" />}
+      {false && <img src={essential08} alt="" onLoad={() => void [essential01, essential02, essential03, essential05, essential07, heroFounder, PillarPoster]} />}
 
       {/* Mobile / tablet sticky nav */}
       <MobileNav />
