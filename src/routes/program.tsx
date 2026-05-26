@@ -24,13 +24,13 @@ export const Route = createFileRoute("/program")({
       {
         name: "description",
         content:
-          "The 60-day FOODLAB program: kitchen, compliance, supply chain, aggregator onboarding, mentorship and structured tastings — end-to-end incubation for India's next food brands.",
+          "YC for food brands in India. A stage-gated incubator: Intent → Design → Proof → Profit → Scale. Kitchen, compliance, supply chain, aggregator onboarding and mentorship — handled.",
       },
       { property: "og:title", content: "The Program — FOODLAB" },
       {
         property: "og:description",
         content:
-          "60 days. 4 pillars. From day 0 to a live brand on Zomato & Swiggy.",
+          "A stage-gated incubator for India's next food brands. From idea on paper to a live, profitable brand on Zomato & Swiggy.",
       },
     ],
   }),
