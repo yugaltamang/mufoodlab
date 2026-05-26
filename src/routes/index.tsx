@@ -804,12 +804,18 @@ function BrandCard({
       </div>
 
       {/* Team photo */}
-      <div className="mt-6 aspect-[16/10] w-full overflow-hidden bg-ink/5">
+      <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden bg-ink">
         <img
           src={team}
           alt={`${name} team`}
           loading="lazy"
           className="h-full w-full object-cover"
+          style={{
+            WebkitMaskImage:
+              "radial-gradient(ellipse 90% 80% at 50% 45%, #000 55%, transparent 100%)",
+            maskImage:
+              "radial-gradient(ellipse 90% 80% at 50% 45%, #000 55%, transparent 100%)",
+          }}
         />
       </div>
 
