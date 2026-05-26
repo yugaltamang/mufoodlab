@@ -15,6 +15,7 @@ import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
 import brandLexis from "@/assets/brand-lexis.png";
 import brandWoodys from "@/assets/brand-woodys.png";
+import woodysLogo from "@/assets/woodys-logo.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -357,7 +358,7 @@ function Index() {
               name="Woody's Pizzeria"
               tagline="Neapolitan-inspired, made for the Indian palate"
               body="Kanav started baking pizzas in 2011. After years perfecting Neapolitan recipes, he launched Woody's — now live in Lajpat Nagar. Customers keep calling it the best pizza they've ever had."
-              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/yr5s9vfq_Woody%27s%20Pizzeria.png"
+              img={woodysLogo}
               team={brandWoodys}
               follow="https://www.instagram.com/woodyspizzeria/?hl=en"
             />
