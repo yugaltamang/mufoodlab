@@ -97,14 +97,11 @@ function ProgramPage() {
                 The Program
               </span>
               <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[88px]">
-                Sixty days. One
-                <span className="ml-3 inline-block bg-green px-2 leading-none">live brand.</span>
+                YC for food brands
+                <span className="ml-3 inline-block bg-green px-2 leading-none">in India.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-ink/75">
-                A founder-first incubator that compresses two years of food-business
-                paperwork, kitchen hunting, hiring and aggregator chasing into a single
-                60-day sprint — so you can spend your obsession on what matters: the food
-                and the brand.
+                What AI does for software engineering, we do that for starting a cloud kitchen. Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
               </p>
             </div>
             <div className="md:col-span-5">
@@ -116,9 +113,9 @@ function ProgramPage() {
                 />
               </div>
               <div className="mt-4 grid grid-cols-3 gap-px bg-ink/15 text-center">
-                <Stat n="60" label="Days" />
-                <Stat n="04" label="Pillars" />
-                <Stat n="2×" label="Aggregators" />
+                <Stat n="05" label="Stages" />
+                <Stat n="08" label="Essentials" />
+                <Stat n="5%" label="Equity" />
               </div>
             </div>
           </div>
