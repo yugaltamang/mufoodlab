@@ -505,5 +505,89 @@ function Faq({ q, a }: { q: string; a: string }) {
   );
 }
 
+function Stage({
+  n,
+  img,
+  title,
+  tagline,
+  body,
+  provides,
+  workOn,
+  assignment,
+  tested,
+}: {
+  n: string;
+  img: string;
+  title: string;
+  tagline: string;
+  body: string;
+  provides: string[];
+  workOn: string[];
+  assignment: string;
+  tested: string;
+}) {
+  return (
+    <article className="grid grid-cols-1 gap-6 bg-paper p-5 md:grid-cols-12 md:gap-8 md:p-8">
+      <div className="md:col-span-4">
+        <div className="relative aspect-[4/3] overflow-hidden border border-ink">
+          <img src={img} alt={title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+          <span className="absolute left-3 top-3 bg-green px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">
+            Stage {n}
+          </span>
+        </div>
+        <div className="mt-4 text-[10.5px] font-mono uppercase tracking-[0.16em] text-ink/55">
+          Tested on
+        </div>
+        <div className="mt-1 text-[12.5px] leading-snug text-ink/75">{tested}</div>
+      </div>
+
+      <div className="md:col-span-8">
+        <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink/55">
+          Stage {n}
+        </div>
+        <h3 className="mt-2 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[36px]">
+          {title}
+        </h3>
+        <p className="mt-2 text-[13.5px] font-semibold italic text-ink/80">{tagline}</p>
+        <p className="mt-3 text-[13.5px] leading-relaxed text-ink/70">{body}</p>
+
+        <div className="mt-6 grid grid-cols-1 gap-6 border-t border-ink/15 pt-5 md:grid-cols-2">
+          <div>
+            <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              What MU provides
+            </div>
+            <ul className="mt-3 space-y-1.5 text-[12.5px] leading-relaxed text-ink/75">
+              {provides.map((p) => (
+                <li key={p} className="flex gap-2">
+                  <span className="mt-1.5 size-1 shrink-0 rounded-full bg-green" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+              You work on
+            </div>
+            <ul className="mt-3 space-y-1.5 text-[12.5px] leading-relaxed text-ink/75">
+              {workOn.map((p) => (
+                <li key={p} className="flex gap-2">
+                  <span className="mt-1.5 size-1 shrink-0 rounded-full bg-green" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-5 inline-flex max-w-full items-center gap-2 border border-ink bg-ink px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.16em] text-paper">
+          <span className="text-green">●</span>
+          <span className="truncate">Assignment — {assignment}</span>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 // silence unused import warning
 void (null as ReactNode);
