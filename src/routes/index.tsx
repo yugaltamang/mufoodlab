@@ -61,7 +61,7 @@ function Index() {
             <img
               src={heroChef}
               alt="Indian food delivery market opportunity"
-              className="h-[240px] w-full object-cover sm:h-[320px] md:h-[460px]"
+              className="h-[220px] w-full object-cover sm:h-[300px] md:h-[380px] lg:h-[460px]"
             />
           </div>
 
