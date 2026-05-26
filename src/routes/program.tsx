@@ -343,7 +343,7 @@ function ProgramPage() {
       {/* ============== FOOTER ============== */}
       <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[180px]">
+          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">
             {WORDMARK}
           </span>
           <div className="flex flex-col items-end gap-3">
