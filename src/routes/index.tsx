@@ -13,6 +13,8 @@ import heroFounder from "@/assets/hero-founder.webp";
 import heroChef from "@/assets/hero-chef.webp";
 import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
+import brandLexis from "@/assets/brand-lexis.png";
+import brandWoodys from "@/assets/brand-woodys.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -346,7 +348,7 @@ function Index() {
               name="Lexi's Gourmet Sandwiches"
               tagline="Gurgaon's highest-rated gourmet sandwich brand"
               body="What started as a passion for bold, indulgent sandwiches became Gurgaon's top-rated gourmet sandwich brand. Cult favorites: truffle mushroom ciabattas and crispy katsu sandos. Now expanding to Delhi."
-              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/y11vvcni_Lexi%27s%20Gourmet%20Sandwiches.png"
+              img={brandLexis}
               follow="https://www.instagram.com/lexis_sandos/?hl=en"
             />
             <BrandCard
@@ -354,7 +356,7 @@ function Index() {
               name="Woody's Pizzeria"
               tagline="Neapolitan-inspired, made for the Indian palate"
               body="Kanav started baking pizzas in 2011. After years perfecting Neapolitan recipes, he launched Woody's — now live in Lajpat Nagar. Customers keep calling it the best pizza they've ever had."
-              img="https://customer-assets.emergentagent.com/job_food-venture-5/artifacts/yr5s9vfq_Woody%27s%20Pizzeria.png"
+              img={brandWoodys}
               follow="https://www.instagram.com/woodyspizzeria/?hl=en"
             />
           </div>
