@@ -96,7 +96,7 @@ function ProgramPage() {
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Program
               </span>
-              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[88px]">
+              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[60px] lg:text-[88px]">
                 YC for food brands
                 <span className="ml-3 inline-block bg-green px-2 leading-none">in India.</span>
               </h1>
