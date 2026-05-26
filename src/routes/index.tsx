@@ -68,19 +68,18 @@ function Index() {
           {/* Headline + sub */}
           <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
             <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
-              An end-to-end incubator for India's next food brands.
+              For the Next Gen of Food Brands in India.
             </h1>
             <div className="md:col-span-4 self-end">
               <p className="text-[14px] leading-relaxed text-ink/70">
-                Kitchen, staff, compliance, supply chain, aggregator onboarding — handled.
-                You bring the idea and the obsession; we get you from day 0 to a live brand in 60 days.
+                Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
                   className="inline-flex items-center justify-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
                 >
-                  Apply to cohort 01 <span aria-hidden>→</span>
+                  Apply now <span aria-hidden>→</span>
                 </a>
                 <Link
                   to="/program"
@@ -166,12 +165,22 @@ function Index() {
         <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
           <div className="border-b border-ink pb-6">
             <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              The Food Landscape
+              The Opportunity
             </span>
           </div>
 
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[68px]">
+              Indian food delivery is just scratching the
+              <span className="ml-3 inline-block bg-green px-2 leading-none">surface.</span>
+            </h2>
+            <p className="md:col-span-5 self-end text-[14.5px] leading-relaxed text-ink/70">
+              India's food economy is decades behind the West and China. The next decade belongs to whoever shows up first.
+            </p>
+          </div>
+
           {/* 4-column numbered breakdown */}
-          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:mt-14 md:grid-cols-4 md:gap-8">
             {[
               {
                 n: "01",
@@ -265,35 +274,47 @@ function Index() {
                 Masters' Union Food Lab
               </div>
               <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.92] md:text-[72px]">
-                Four pillars, fully wired in.
+                That's where Masters' Union Food Lab comes in.
               </h2>
               <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
-                Kitchen, staff, FSSAI compliance, supply chain, aggregator onboarding on
-                Zomato &amp; Swiggy, mentorship and structured tastings — all handled. You
-                bring the idea and the obsession; we get you from day 0 to a live brand
-                in 60 days.
+                Get access to everything you need to launch your food brand — kitchen, staff, compliance, supply chain, mentorship — handled.
               </p>
             </div>
 
             <div className="md:col-span-4 flex flex-col gap-4 md:items-start md:pt-2">
               <div className="meta uppercase tracking-[0.16em] text-ink/55">
-                60 days · 1 launch
+                Everything you need · handled
               </div>
               <Link
                 to="/program"
                 className="inline-flex w-full items-center justify-center gap-2 bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink sm:w-auto sm:py-2.5"
               >
-                Explore the program <span aria-hidden>→</span>
+                See full program details <span aria-hidden>→</span>
               </Link>
             </div>
           </div>
 
-          {/* Four pillars */}
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 md:mt-16 md:grid-cols-4 md:gap-4">
-            <PillarPoster n="01" title="Kitchen & Team" img={essential01} points={["Production kitchen", "Chefs on payroll"]} />
-            <PillarPoster n="02" title="Recipe & Compliance" img={essential03} points={["Consultants & R&D", "FSSAI handled"]} />
-            <PillarPoster n="03" title="Supply & Distribution" img={essential05} points={["Pre-vetted vendors", "Zomato + Swiggy onboarding"]} />
-            <PillarPoster n="04" title="Mentorship & Feedback" img={essential07} points={["1:1 with operators", "Weekly tastings"]} />
+          {/* Eight essentials */}
+          <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-4">
+            {[
+              ["01", "Fully equipped kitchen facility"],
+              ["02", "Professional kitchen staff"],
+              ["03", "Food consultant & culinary expertise"],
+              ["04", "FSSAI licensing & compliance"],
+              ["05", "Procurement & supply chain"],
+              ["06", "Aggregator onboarding (Zomato, Swiggy)"],
+              ["07", "Mentorship from food operators"],
+              ["08", "Structured feedback & blind tastings"],
+            ].map(([n, label]) => (
+              <div key={n} className="flex flex-col justify-between bg-paper p-5 md:p-6">
+                <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
+                  {n}
+                </div>
+                <div className="mt-6 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
+                  {label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         </div>
@@ -376,17 +397,62 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-6">
+          <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-5">
             {[
-              { name: "Ananya Sharma", role: "Founder · Cloud Kitchen" },
-              { name: "Rohan Mehta", role: "Ex-Swiggy · Operator" },
-              { name: "Priya Iyer", role: "Chef · Restaurateur" },
-              { name: "Vikram Rao", role: "Supply Chain Lead" },
-              { name: "Neha Kapoor", role: "Brand · D2C Foods" },
-              { name: "Arjun Singh", role: "Investor · F&B" },
+              { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato" },
+              { name: "Vidur Mayor", role: "Founder · FES Cafe" },
+              { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator" },
+              { name: "Naveen Balaji", role: "Co-founder · Lexi's Gourmet Sandwiches" },
+              { name: "Ankit Tiwari", role: "Head Chef · Bomba (ex Leela, Oberoi, Salad Days)" },
             ].map((m, i) => (
               <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============== NOT JUST CLOUD KITCHENS ============== */}
+      <section id="scope" className="border-b border-ink bg-ink text-paper">
+        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
+              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+                Not just cloud kitchens
+              </span>
+              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-[44px] sm:leading-[0.9] md:text-[78px]">
+                Think bigger. We're building for
+                <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
+              </h2>
+            </div>
+            <p className="md:col-span-5 self-end text-[14.5px] leading-relaxed text-paper/75">
+              Cloud kitchens are where we start — but Food Lab is designed to incubate any food &amp; beverage brand. Packaged snacks, beverages, health foods, ready-to-eat, condiments — if it's food and it can scale, we want to hear about it.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 gap-px bg-paper/15 md:mt-14 md:grid-cols-5">
+            {[
+              ["01", "Cloud kitchens"],
+              ["02", "Delivery-first brands"],
+              ["03", "Packaged foods / FMCG"],
+              ["04", "Beverages"],
+              ["05", "Ready-to-eat"],
+            ].map(([n, label]) => (
+              <div key={n} className="flex flex-col justify-between bg-ink p-5 md:p-6">
+                <div className="text-[10.5px] font-mono uppercase tracking-[0.16em] text-paper/55">{n}</div>
+                <div className="mt-8 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em] md:text-[24px]">
+                  {label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <a
+              href={APPLY_URL}
+              className="inline-flex items-center justify-center gap-2 bg-green px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-paper"
+            >
+              Register your interest <span aria-hidden>→</span>
+            </a>
           </div>
         </div>
       </section>
@@ -453,7 +519,7 @@ function Index() {
       </footer>
 
       {/* unused import warden */}
-      {false && <img src={essential08} alt="" />}
+      {false && <img src={essential08} alt="" onLoad={() => void [essential01, essential02, essential03, essential05, essential07, heroFounder, PillarPoster]} />}
 
       {/* Mobile / tablet sticky nav */}
       <MobileNav />
