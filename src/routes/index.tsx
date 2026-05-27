@@ -413,9 +413,9 @@ function Index() {
               { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
               { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
               { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
-              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex },
+              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
             ].map((m, i) => (
-              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} />
+              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} imgPosition={m.imgPosition} />
             ))}
           </div>
         </div>
