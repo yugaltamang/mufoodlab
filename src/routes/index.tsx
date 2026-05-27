@@ -405,10 +405,10 @@ function Index() {
           <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-5">
             {[
               { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato" },
-              { name: "Vidur Mayor", role: "Founder · FES Cafe" },
+              { name: "Abhijeet Joshi", role: "AVP · Zomato" },
+              { name: "Anshul Aggarwal", role: "Customer Retention · Nando's" },
               { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator" },
-              { name: "Naveen Balaji", role: "Co-founder · Lexi's Gourmet Sandwiches" },
-              { name: "Ankit Tiwari", role: "Head Chef · Bomba (ex Leela, Oberoi, Salad Days)" },
+              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches" },
             ].map((m, i) => (
               <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} />
             ))}
