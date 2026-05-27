@@ -413,9 +413,9 @@ function Index() {
               { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
               { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
               { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
-              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex },
+              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
             ].map((m, i) => (
-              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} />
+              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} imgPosition={m.imgPosition} />
             ))}
           </div>
         </div>
@@ -741,12 +741,12 @@ function PillarPoster({
   );
 }
 
-function MentorCircle({ n, name, role, img }: { n: string; name: string; role: string; img?: string }) {
+function MentorCircle({ n, name, role, img, imgPosition }: { n: string; name: string; role: string; img?: string; imgPosition?: string }) {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-full border border-ink/20 bg-ink/5">
         {img ? (
-          <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover" />
+          <img src={img} alt={name} className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: imgPosition ?? "center" }} />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="font-display text-[28px] font-extrabold tracking-[-0.02em] text-ink/30">
