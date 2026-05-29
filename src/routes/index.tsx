@@ -509,11 +509,6 @@ function Index() {
             Sector 67, Gurugram<br/>Haryana 122102, India<br/>
             <a href="mailto:foodlab@mastersunion.org" className="underline-link">foodlab@mastersunion.org</a>
           </address>
-          <div className="text-[14px] leading-relaxed">
-            <div className="font-semibold">Visit the kitchen</div>
-            By appointment only<br/>Mon — Sat · 11:00 — 19:00<br/>
-            <a href={APPLY_URL} onClick={handleApplyClick} className="underline-link">Book a tour →</a>
-          </div>
           <form onSubmit={(e) => e.preventDefault()} className="text-[14px]">
             <label className="font-semibold">Subscribe to the kitchen brief</label>
             <div className="mt-3 flex items-center border-b border-ink pb-2">
