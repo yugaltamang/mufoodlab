@@ -22,6 +22,11 @@ import mentorAbhijeet from "@/assets/mentor-abhijeet.png";
 import mentorAnshul from "@/assets/mentor-anshul.png";
 import mentorKabir from "@/assets/mentor-kabir.jpeg";
 import mentorAlex from "@/assets/mentor-alex.jpg";
+import mentorSwarup from "@/assets/mentor-swarup.png";
+import mentorAnshu from "@/assets/mentor-anshu.jpeg";
+import mentorSumit from "@/assets/mentor-sumit.jpeg";
+import mentorSaksham from "@/assets/mentor-saksham.jpeg";
+import mentorNaveen from "@/assets/mentor-naveen.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -410,16 +415,27 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:mt-16 md:grid-cols-5">
-            {[
-              { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato", img: mentorDaniel },
-              { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
-              { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
-              { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
-              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
-            ].map((m, i) => (
-              <MentorCircle key={i} n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} imgPosition={m.imgPosition} />
-            ))}
+          <div className="mt-12 -mx-4 sm:-mx-6 md:-mx-10 md:mt-16">
+            <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:thin]">
+              <div className="flex gap-6 px-4 pb-4 sm:px-6 md:gap-8 md:px-10">
+                {[
+                  { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato", img: mentorDaniel },
+                  { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
+                  { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
+                  { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
+                  { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
+                  { name: "Swarup Potta", role: "Ex ISRO, Urban Company · IIT Madras", img: mentorSwarup, imgPosition: "center 20%" },
+                  { name: "Anshu Mehta", role: "Finance · CFA Charterholder · Ex-Futures First", img: mentorAnshu },
+                  { name: "Sumit Vijapure", role: "EIR · Masters' Union", img: mentorSumit },
+                  { name: "Saksham Kotiya", role: "Head of Entrepreneurship & Investments · Masters' Union", img: mentorSaksham },
+                  { name: "Naveen Balaji", role: "6 years at Zomato", img: mentorNaveen, imgPosition: "center 20%" },
+                ].map((m, i) => (
+                  <div key={i} className="w-[180px] shrink-0 snap-start sm:w-[200px] md:w-[220px]">
+                    <MentorCircle n={String(i + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} imgPosition={m.imgPosition} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
