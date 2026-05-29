@@ -202,8 +202,8 @@ function Index() {
               {
                 n: "02",
                 eyebrow: "Number of Restaurants",
-                title: "5 L vs 1.7 Cr",
-                body: "India has ~5 lakh restaurants vs China's 1.7 crore. China is 34× India's market today.",
+                title: "8 L vs 1.2 Cr",
+                body: "India has ~8 lakh restaurants vs China's 1.2 crore. China is 15× India's market today.",
               },
               {
                 n: "03",
