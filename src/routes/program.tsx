@@ -220,7 +220,7 @@ function ProgramPage() {
             />
             <Expect
               n="02"
-              title="In Delhi NCR for the cohort"
+              title="In Gurugram for the cohort"
               body="The kitchen is in Sector 67, Gurugram. You'll be on the floor most weeks."
             />
             <Expect
