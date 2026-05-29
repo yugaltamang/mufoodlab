@@ -163,7 +163,7 @@ function ProgramPage() {
               tagline="Earn your boarding pass to Zomato & Swiggy."
               body="Brands pitch to MU leadership, food entrepreneurs and VCs. Core question: ‘Why should this brand go live on Swiggy/Zomato?’"
               provides={["Pitch stage with food entrepreneurs, VCs and MU Food Lab leadership", "Selection driven by trial performance, feedback quality, product consistency and founder execution"]}
-              workOn={["Submit FSSAI, PAN, GST, cancelled cheque", "Submit full menu with food shots", "Selected brands move to Launch", "Others get 30 days to iterate; pivots actively supported", "Brands deemed unfit may be phased out"]}
+              workOn={["Selected brands move to Launch", "Others get 30 days to iterate and reach launch-readiness", "Pivoting is allowed and actively supported", "Brands deemed unfit may be phased out"]}
               assignment="Demo Day Pitch + Compliance Pack [Brand Name]"
               tested="Product consistency · Founder execution · Customer signal"
             />
