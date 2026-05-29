@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ArrowUpRight, Home, Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "@tanstack/react-router";
+import { handleApplyClick } from "@/lib/apply-widget";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
 
@@ -134,8 +135,7 @@ export default function MobileNav() {
 
           <a
             href={APPLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={handleApplyClick}
             className="inline-flex min-h-10 items-center gap-1.5 bg-green px-4 text-[11px] font-bold uppercase tracking-[0.16em] text-ink transition hover:bg-paper active:scale-95"
           >
             Apply Now <ArrowUpRight size={13} />
