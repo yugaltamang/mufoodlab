@@ -134,3 +134,15 @@
     mix-blend-mode: multiply;
   }
 }
+
+@keyframes mentor-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-mentor-marquee {
+  animation: mentor-marquee 50s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-mentor-marquee { animation: none; }
+}
