@@ -538,10 +538,6 @@ function Stage({
           </div>
         </div>
 
-        <div className="mt-5 inline-flex max-w-full items-center gap-2 border border-ink bg-ink px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.16em] text-paper">
-          <span className="text-green">●</span>
-          <span className="truncate">Assignment — {assignment}</span>
-        </div>
       </div>
     </article>
   );
