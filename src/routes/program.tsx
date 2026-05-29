@@ -152,7 +152,7 @@ function ProgramPage() {
               tagline="Kitchen access + paid trials."
               body="You move from paper into the kitchen. Real customers, real feedback, fast iteration."
               provides={["Kitchen space", "Equipment", "Staff", "Approved supply chain"]}
-              workOn={["Conduct a target number of paid customer trials", "Document everything in the Customer Feedback Tracker", "Track and report inventory", "Periodic blind tastings vs submitted customer feedback"]}
+              workOn={["Conducting a target number of paid customer trials", "Documenting the Customer Feedback Tracker", "Track and report Inventory"]}
               assignment="Food Lab Stage 2 Paid Trials Feedback Sheet [Brand Name]"
               tested="Speed of execution · Listening to feedback · Willingness to iterate · Operational discipline"
             />
