@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import MobileNav from "@/components/MobileNav";
+import { handleApplyClick } from "@/lib/apply-widget";
 
 import essential01 from "@/assets/essential-01-kitchen.webp";
 import essential02 from "@/assets/essential-02-staff.webp";
@@ -69,6 +70,7 @@ function ProgramPage() {
           </nav>
           <a
             href={APPLY_URL}
+            onClick={handleApplyClick}
             className="hidden items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink lg:inline-flex"
           >
             Apply <span aria-hidden>→</span>
@@ -325,6 +327,7 @@ function ProgramPage() {
             <div className="md:col-span-4 flex flex-col items-stretch justify-end gap-4 md:items-start">
               <a
                 href={APPLY_URL}
+                onClick={handleApplyClick}
                 className="inline-flex items-center justify-center gap-2 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
               >
                 Apply to cohort 01 <span aria-hidden>→</span>

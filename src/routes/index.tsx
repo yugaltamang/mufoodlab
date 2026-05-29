@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
 
 import MobileNav from "@/components/MobileNav";
+import { handleApplyClick } from "@/lib/apply-widget";
 
 import essential01 from "@/assets/essential-01-kitchen.webp";
 import essential02 from "@/assets/essential-02-staff.webp";
@@ -49,6 +50,7 @@ function Index() {
           </nav>
           <a
             href={APPLY_URL}
+            onClick={handleApplyClick}
             className="hidden items-center gap-2 bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink lg:inline-flex"
           >
             Apply <span aria-hidden>→</span>
@@ -85,6 +87,7 @@ function Index() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
+                  onClick={handleApplyClick}
                   className="inline-flex items-center justify-center gap-2 bg-ink px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-green hover:text-ink"
                 >
                   Apply now <span aria-hidden>→</span>
@@ -459,6 +462,7 @@ function Index() {
           <div className="mt-10">
             <a
               href={APPLY_URL}
+              onClick={handleApplyClick}
               className="inline-flex items-center justify-center gap-2 bg-green px-5 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-ink hover:bg-paper"
             >
               Register your interest <span aria-hidden>→</span>
@@ -486,7 +490,7 @@ function Index() {
             <p className="mt-6 max-w-md text-[15px] leading-relaxed">
               Cohort 01 · 2025–2026 · New Delhi. Real kitchens. Real customers. Real founders.
             </p>
-            <a href={APPLY_URL} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
+            <a href={APPLY_URL} onClick={handleApplyClick} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
               Start application <span aria-hidden>→</span>
             </a>
           </div>
@@ -508,7 +512,7 @@ function Index() {
           <div className="text-[14px] leading-relaxed">
             <div className="font-semibold">Visit the kitchen</div>
             By appointment only<br/>Mon — Sat · 11:00 — 19:00<br/>
-            <a href={APPLY_URL} className="underline-link">Book a tour →</a>
+            <a href={APPLY_URL} onClick={handleApplyClick} className="underline-link">Book a tour →</a>
           </div>
           <form onSubmit={(e) => e.preventDefault()} className="text-[14px]">
             <label className="font-semibold">Subscribe to the kitchen brief</label>
