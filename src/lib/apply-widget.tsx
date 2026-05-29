@@ -77,7 +77,7 @@ export function ApplyWidgetModal() {
       aria-modal="true"
     >
       <div
-        className="relative w-full max-w-3xl h-[90vh] bg-paper shadow-2xl overflow-hidden"
+        className="relative w-full max-w-3xl bg-paper shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -92,7 +92,9 @@ export function ApplyWidgetModal() {
           ref={iframeRef}
           id={WIDGET_ID}
           title="Apply to Masters' Union Food Lab"
-          className="h-full w-full border-0"
+          width="100%"
+          height="640px"
+          className="block border-0"
         />
       </div>
     </div>
