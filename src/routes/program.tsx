@@ -78,51 +78,6 @@ function ProgramPage() {
         </div>
       </header>
 
-      {/* ============== HERO ============== */}
-      <section className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
-          <div className="flex items-center justify-between">
-            <Link
-              to="/"
-              className="meta uppercase tracking-[0.16em] text-ink/60 hover:text-ink"
-            >
-              ← Back to home
-            </Link>
-            <span className="meta uppercase tracking-[0.16em] text-ink/60">
-              Cohort 01 · 2025–2026
-            </span>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
-            <div className="md:col-span-7">
-              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-                The Program
-              </span>
-              <h1 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[60px] lg:text-[88px]">
-                YC for food brands
-                <span className="ml-3 inline-block bg-green px-2 leading-none">in India.</span>
-              </h1>
-              <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-ink/75">
-                What AI does for software engineering, we do that for starting a cloud kitchen. Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
-              </p>
-            </div>
-            <div className="md:col-span-5">
-              <div className="relative overflow-hidden border border-ink">
-                <img
-                  src={heroChef}
-                  alt="Founder in a working kitchen"
-                  className="h-[220px] w-full object-cover sm:h-[260px] md:h-[340px]"
-                />
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-px bg-ink/15 text-center">
-                <Stat n="05" label="Stages" />
-                <Stat n="08" label="Essentials" />
-                <Stat n="5%" label="Equity" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============== STAGE-GATED OVERVIEW ============== */}
       <section className="border-y border-ink bg-ink text-paper">
