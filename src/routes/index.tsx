@@ -249,8 +249,8 @@ function Index() {
         className="relative overflow-hidden border-b border-ink bg-paper text-ink"
         style={{
           backgroundImage: [
-            "radial-gradient(60% 50% at 85% 0%, oklch(0.92 0.22 142 / 0.55), transparent 70%)",
-            "radial-gradient(50% 40% at 0% 100%, oklch(0.92 0.22 142 / 0.35), transparent 65%)",
+            "radial-gradient(60% 50% at 85% 0%, rgba(247, 213, 68, 0.55), transparent 70%)",
+            "radial-gradient(50% 40% at 0% 100%, rgba(247, 213, 68, 0.35), transparent 65%)",
             "linear-gradient(to bottom, oklch(0.985 0.005 95), oklch(0.96 0.01 95))",
           ].join(", "),
         }}
