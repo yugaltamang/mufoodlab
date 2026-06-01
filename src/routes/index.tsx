@@ -440,7 +440,7 @@ function Index() {
 
           {(() => {
             const mentors = [
-              { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato", img: mentorDaniel },
+              { name: "Ankit Tiwari", role: "Ex Leela, Oberoi, Salad Days", img: mentorAnkit.url },
               { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
               { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
               { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
