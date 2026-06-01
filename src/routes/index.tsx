@@ -11,7 +11,7 @@ import essential05 from "@/assets/essential-05-supply.webp";
 import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroFounder from "@/assets/hero-founder.webp";
-import heroChef from "@/assets/hero-chef.webp";
+import heroPage from "@/assets/hero-page.png.asset.json";
 import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
 import brandLexis from "@/assets/brand-lexis.png";
@@ -74,7 +74,7 @@ function Index() {
           {/* Hero image */}
           <div className="relative overflow-hidden border border-ink">
             <img
-              src={heroChef}
+              src={heroPage.url}
               alt="Indian food delivery market opportunity"
               className="h-[220px] w-full object-cover sm:h-[300px] md:h-[380px] lg:h-[460px]"
             />
