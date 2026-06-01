@@ -46,11 +46,11 @@
   --paper:   oklch(0.985 0 0);             /* off-white poster paper */
   --ink:     oklch(0.18 0 0);              /* hard near-black ink */
   --rule:    oklch(0.18 0 0 / 14%);        /* hairline grid */
-  --green:   oklch(0.86 0.27 142);         /* signature Welltec neon green */
-  --yellow:  oklch(0.86 0.27 142);         /* alias to green — single accent system */
-  --pink:    oklch(0.86 0.27 142);
-  --magenta: oklch(0.86 0.27 142);
-  --teal:    oklch(0.86 0.27 142);
+  --green:   #F7D544;                      /* signature Welltec neon green */
+  --yellow:  #F7D544;                      /* alias to green — single accent system */
+  --pink:    #F7D544;
+  --magenta: #F7D544;
+  --teal:    #F7D544;
   --blue:    oklch(0.18 0 0);
   --navy:    oklch(0.18 0 0);
 
