@@ -329,18 +329,26 @@ function Index() {
           {/* Six essentials */}
           <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
             {[
-              ["01", "Fully equipped kitchen facility"],
-              ["02", "Culinary expert & professional kitchen staff"],
-              ["03", "Procurement & supply chain"],
-              ["04", "FSSAI licensing & compliance"],
-              ["05", "Aggregator onboarding (Zomato, Swiggy)"],
-              ["06", "Mentorship from food operators"],
-            ].map(([n, label]) => (
-              <div key={n} className="flex flex-col justify-between bg-paper p-5 md:p-6">
+              ["01", "Fully equipped kitchen facility", solution01.url],
+              ["02", "Culinary expert & professional kitchen staff", solution02.url],
+              ["03", "Procurement & supply chain", solution03.url],
+              ["04", "FSSAI licensing & compliance", solution04.url],
+              ["05", "Aggregator onboarding (Zomato, Swiggy)", solution05.url],
+              ["06", "Mentorship from food operators", solution06.url],
+            ].map(([n, label, img]) => (
+              <div key={n} className="flex flex-col bg-paper p-5 md:p-6">
                 <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
                   {n}
                 </div>
-                <div className="mt-6 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
+                <div className="mt-4 flex h-28 items-center justify-center md:h-32">
+                  <img
+                    src={img}
+                    alt={label}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain mix-blend-multiply"
+                  />
+                </div>
+                <div className="mt-4 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
                   {label}
                 </div>
               </div>
