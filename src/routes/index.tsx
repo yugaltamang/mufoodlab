@@ -339,7 +339,7 @@ function Index() {
               ].map(([n, label, image]) => (
                 <div
                   key={n}
-                  className="group flex min-h-[420px] flex-col overflow-hidden rounded-[6px] border border-paper/10 bg-[#171717] p-5 text-paper transition-transform duration-300 hover:-translate-y-0.5 md:min-h-[470px] md:p-6"
+                  className="group flex min-h-[420px] flex-col overflow-hidden rounded-[6px] border border-paper/10 bg-ink p-5 text-paper transition-transform duration-300 hover:-translate-y-0.5 md:min-h-[470px] md:p-6"
                 >
                   <div className="flex justify-end font-mono text-[14px] font-semibold tracking-[0.14em] text-green/65">
                     {n}
