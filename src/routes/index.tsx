@@ -136,28 +136,6 @@ function Index() {
                 <span className="border border-paper/25 px-2.5 py-1">Cash-burn before sale 1</span>
               </div>
 
-              {/* Cost breakdown grid */}
-              <div className="mt-10 grid grid-cols-2 gap-px bg-paper/15">
-                <CostTile n="01" label="Kitchen rent + setup" amount="₹6L" sub="Lease, equipment, fit-out" />
-                <CostTile n="02" label="R&D + chef consultant" amount="₹3L" sub="Recipes, trials, tastings" />
-                <CostTile n="03" label="Compliance + onboarding" amount="₹1.5L+" sub="FSSAI, GST, Zomato/Swiggy" />
-                <CostTile n="04" label="Working capital" amount="₹6L" sub="Staff, raw material, runway" />
-              </div>
-
-              {/* Total damage bar */}
-              <div className="mt-px bg-ink px-5 py-6 ring-1 ring-paper/15 sm:px-6 sm:py-7 md:px-8">
-                <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-paper/55">
-                  Total damage before customer #1
-                </div>
-                <div className="mt-2 flex flex-wrap items-end gap-3 sm:gap-4">
-                  <div className="font-display text-[48px] font-extrabold leading-none tracking-[-0.03em] sm:text-[64px] md:text-[72px] lg:text-[88px]">
-                    ₹15L+
-                  </div>
-                  <div className="pb-2 text-[11px] font-mono uppercase tracking-[0.14em] text-paper/55 sm:text-[12px]">
-                    + 60 days <br/> + ★★★★★ luck
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* RIGHT — editorial receipt */}
