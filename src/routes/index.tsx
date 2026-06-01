@@ -28,6 +28,12 @@ import mentorSwarup from "@/assets/mentor-swarup.png";
 import mentorAnshu from "@/assets/mentor-anshu.jpeg";
 import mentorSumit from "@/assets/mentor-sumit.jpeg";
 import mentorSaksham from "@/assets/mentor-saksham.jpeg";
+import solution01 from "@/assets/solution-01.png.asset.json";
+import solution02 from "@/assets/solution-02.png.asset.json";
+import solution03 from "@/assets/solution-03.png.asset.json";
+import solution04 from "@/assets/solution-04.png.asset.json";
+import solution05 from "@/assets/solution-05.png.asset.json";
+import solution06 from "@/assets/solution-06.png.asset.json";
 import mentorNaveen from "@/assets/mentor-naveen.jpg";
 
 export const Route = createFileRoute("/")({
