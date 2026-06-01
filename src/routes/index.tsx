@@ -295,25 +295,25 @@ function Index() {
           <path d="M30 40 L210 40" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 6" />
         </svg>
         <div className="relative">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
           {/* Header row */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8">
             <div className="md:col-span-8">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Solution
               </span>
-              <div className="mt-6 meta uppercase tracking-[0.16em] text-ink/55">
+              <div className="mt-4 meta uppercase tracking-[0.16em] text-ink/55">
                 Masters' Union Food Lab
               </div>
-              <h2 className="mt-3 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[56px] lg:text-[72px]">
+              <h2 className="mt-2 font-display text-[28px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[36px] sm:leading-[0.92] md:text-[44px] lg:text-[52px]">
                 That's where Masters' Union Food Lab comes in.
               </h2>
-              <p className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-ink/75">
+              <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-ink/75">
                 Get access to everything you need to launch your food brand — kitchen, staff, compliance, supply chain, mentorship — handled.
               </p>
             </div>
 
-            <div className="md:col-span-4 flex flex-col gap-4 md:items-start md:pt-2">
+            <div className="md:col-span-4 flex flex-col gap-3 md:items-start md:pt-2">
               <div className="meta uppercase tracking-[0.16em] text-ink/55">
                 Everything you need · handled
               </div>
@@ -327,7 +327,7 @@ function Index() {
           </div>
 
           {/* Six essentials */}
-          <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-px bg-ink/15 sm:mt-8 sm:grid-cols-2 md:grid-cols-3">
             {[
               ["01", "Fully equipped kitchen facility", solution01.url],
               ["02", "Culinary expert & professional kitchen staff", solution02.url],
@@ -336,25 +336,26 @@ function Index() {
               ["05", "Aggregator onboarding (Zomato, Swiggy)", solution05.url],
               ["06", "Mentorship from food operators", solution06.url],
             ].map(([n, label, img]) => (
-              <div key={n} className="relative flex flex-col bg-paper p-5 md:p-6">
-                <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
+              <div key={n} className="relative flex flex-col bg-paper p-3 md:p-4">
+                <div className="font-display text-[28px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[34px]">
                   {n}
                 </div>
-                <div className="-mt-6 flex flex-1 items-center justify-center md:-mt-8">
+                <div className="-mt-4 flex flex-1 items-center justify-center md:-mt-5">
                   <img
                     src={img}
                     alt={label}
                     loading="lazy"
-                    className="h-40 w-full object-contain mix-blend-multiply md:h-48"
+                    className="h-24 w-full object-contain mix-blend-multiply md:h-28"
                   />
                 </div>
-                <div className="mt-2 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
+                <div className="mt-1 border-t border-ink/15 pt-2 text-[12.5px] font-semibold leading-snug">
                   {label}
                 </div>
               </div>
             ))}
           </div>
         </div>
+
         </div>
       </section>
 
