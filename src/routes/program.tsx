@@ -15,6 +15,7 @@ import essential08 from "@/assets/essential-08-tasting.webp";
 import heroChef from "@/assets/hero-chef.webp";
 import stage1Img from "@/assets/stage-1.png.asset.json";
 import stage2Img from "@/assets/stage-2.png.asset.json";
+import stage3Img from "@/assets/stage-3.png.asset.json";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
@@ -160,7 +161,7 @@ function ProgramPage() {
             />
             <Stage
               n="03"
-              img={essential06}
+              img={stage3Img.url}
               title="Demo Day"
               tagline="Earn your boarding pass to Zomato & Swiggy."
               body="Brands pitch to MU leadership, food entrepreneurs and VCs. Core question: ‘Why should this brand go live on Swiggy/Zomato?’"
