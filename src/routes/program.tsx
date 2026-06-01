@@ -16,6 +16,7 @@ import heroChef from "@/assets/hero-chef.webp";
 import stage1Img from "@/assets/stage-1.png.asset.json";
 import stage2Img from "@/assets/stage-2.png.asset.json";
 import stage3Img from "@/assets/stage-3.png.asset.json";
+import stage4Img from "@/assets/stage-4.png.asset.json";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
@@ -172,7 +173,7 @@ function ProgramPage() {
             />
             <Stage
               n="04"
-              img={essential05}
+              img={stage4Img.url}
               title="Road to PMF"
               tagline="Building a real business."
               body="You work on reaching PMF — positive operating margins for 3 consecutive months."
