@@ -486,15 +486,24 @@ function Index() {
 
           <div className="mt-12 grid grid-cols-2 gap-px bg-paper/15 md:mt-14 md:grid-cols-5">
             {[
-              ["01", "Cloud kitchens"],
-              ["02", "Delivery-first brands"],
-              ["03", "Packaged foods"],
-              ["04", "Beverages"],
-              ["05", "Ready-to-eat"],
-            ].map(([n, label]) => (
-              <div key={n} className="flex flex-col justify-between bg-ink p-5 md:p-6">
-                <div className="text-[10.5px] font-mono uppercase tracking-[0.16em] text-paper/55">{n}</div>
-                <div className="mt-8 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em] md:text-[24px]">
+              ["01", "Cloud Kitchens", true],
+              ["02", "D2C Food Brands", false],
+              ["03", "Beverages", false],
+              ["04", "Restaurant", false],
+              ["05", "Food Tech", false],
+            ].map(([n, label, live]) => (
+              <div key={n as string} className="relative flex flex-col justify-between bg-ink p-5 md:p-6">
+                <div className="flex items-center justify-between">
+                  <div className={`text-[10.5px] font-mono uppercase tracking-[0.16em] ${live ? "text-paper/55" : "text-paper/30"}`}>{n}</div>
+                  {live ? (
+                    <span className="inline-flex items-center gap-1.5 bg-green px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.16em] text-ink">
+                      <span className="h-1.5 w-1.5 rounded-full bg-ink animate-pulse" /> Live
+                    </span>
+                  ) : (
+                    <span className="text-[9px] font-mono uppercase tracking-[0.16em] text-paper/40">Soon</span>
+                  )}
+                </div>
+                <div className={`mt-8 font-display text-[20px] font-extrabold leading-[1.05] tracking-[-0.02em] md:text-[24px] ${live ? "text-paper" : "text-paper/35"}`}>
                   {label}
                 </div>
               </div>
