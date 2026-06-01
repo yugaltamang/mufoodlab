@@ -19,7 +19,7 @@ import muLogo from "@/assets/masters-union-logo.svg";
 import brandLexis from "@/assets/brand-lexis.png";
 import brandWoodys from "@/assets/brand-woodys.png";
 import woodysLogo from "@/assets/woodys-logo.jpeg";
-import mentorDaniel from "@/assets/mentor-daniel.png";
+import mentorAnkit from "@/assets/mentor-ankit.png.asset.json";
 import mentorAbhijeet from "@/assets/mentor-abhijeet.png";
 import mentorAnshul from "@/assets/mentor-anshul.png";
 import mentorKabir from "@/assets/mentor-kabir.jpeg";
@@ -440,7 +440,7 @@ function Index() {
 
           {(() => {
             const mentors = [
-              { name: "Daniel Menezes", role: "Head of Key Accounts · Zomato", img: mentorDaniel },
+              { name: "Ankit Tiwari", role: "Ex Leela, Oberoi, Salad Days", img: mentorAnkit.url },
               { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
               { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
               { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
