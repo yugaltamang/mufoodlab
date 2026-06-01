@@ -320,17 +320,15 @@ function Index() {
             </div>
           </div>
 
-          {/* Eight essentials */}
-          <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-4">
+          {/* Six essentials */}
+          <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
             {[
               ["01", "Fully equipped kitchen facility"],
-              ["02", "Professional kitchen staff"],
-              ["03", "Food consultant & culinary expertise"],
+              ["02", "Culinary expert & professional kitchen staff"],
+              ["03", "Procurement & supply chain"],
               ["04", "FSSAI licensing & compliance"],
-              ["05", "Procurement & supply chain"],
-              ["06", "Aggregator onboarding (Zomato, Swiggy)"],
-              ["07", "Mentorship from food operators"],
-              ["08", "Structured feedback & blind tastings"],
+              ["05", "Aggregator onboarding (Zomato, Swiggy)"],
+              ["06", "Mentorship from food operators"],
             ].map(([n, label]) => (
               <div key={n} className="flex flex-col justify-between bg-paper p-5 md:p-6">
                 <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
