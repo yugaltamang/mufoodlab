@@ -17,6 +17,7 @@ import stage1Img from "@/assets/stage-1.png.asset.json";
 import stage2Img from "@/assets/stage-2.png.asset.json";
 import stage3Img from "@/assets/stage-3.png.asset.json";
 import stage4Img from "@/assets/stage-4.png.asset.json";
+import stage5Img from "@/assets/stage-5.png.asset.json";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
@@ -184,7 +185,7 @@ function ProgramPage() {
             />
             <Stage
               n="05"
-              img={essential07}
+              img={stage5Img.url}
               title="Graduate"
               tagline="Exit the lab. Keep cooking."
               body="Graduated brands exit Food Lab and continue independently — with paying customers and operational muscle."
