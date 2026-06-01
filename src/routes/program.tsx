@@ -13,6 +13,7 @@ import essential06 from "@/assets/essential-06-aggregator.webp";
 import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroChef from "@/assets/hero-chef.webp";
+import stage1Img from "@/assets/stage-1.png.asset.json";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
@@ -136,7 +137,7 @@ function ProgramPage() {
           <div id="pillars" className="mt-12 flex flex-col gap-px bg-ink/15 md:mt-16">
             <Stage
               n="01"
-              img={essential01}
+              img={stage1Img.url}
               title="Fun-da-mentals!"
               tagline="Thinking clearly before cooking anything."
               body="This stage is about getting everything right on paper before touching the kitchen."
