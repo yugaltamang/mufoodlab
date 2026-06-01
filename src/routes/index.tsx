@@ -336,19 +336,19 @@ function Index() {
               ["05", "Aggregator onboarding (Zomato, Swiggy)", solution05.url],
               ["06", "Mentorship from food operators", solution06.url],
             ].map(([n, label, img]) => (
-              <div key={n} className="flex flex-col bg-paper p-5 md:p-6">
+              <div key={n} className="relative flex flex-col bg-paper p-5 md:p-6">
                 <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
                   {n}
                 </div>
-                <div className="mt-4 flex h-28 items-center justify-center md:h-32">
+                <div className="-mt-6 flex flex-1 items-center justify-center md:-mt-8">
                   <img
                     src={img}
                     alt={label}
                     loading="lazy"
-                    className="max-h-full max-w-full object-contain mix-blend-multiply"
+                    className="h-40 w-full object-contain mix-blend-multiply md:h-48"
                   />
                 </div>
-                <div className="mt-4 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
+                <div className="mt-2 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
                   {label}
                 </div>
               </div>
