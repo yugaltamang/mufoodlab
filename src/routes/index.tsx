@@ -489,7 +489,7 @@ function Index() {
               ["01", "Cloud Kitchens", true],
               ["02", "D2C Food Brands", false],
               ["03", "Beverages", false],
-              ["04", "Restaurant", false],
+              ["04", "Restaurants", false],
               ["05", "Food Tech", false],
             ].map(([n, label, live]) => (
               <div key={n as string} className="relative flex flex-col justify-between bg-ink p-5 md:p-6">
