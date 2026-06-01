@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
+import { motion } from "framer-motion";
 
 import MobileNav from "@/components/MobileNav";
 import { handleApplyClick } from "@/lib/apply-widget";
