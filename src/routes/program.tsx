@@ -14,6 +14,7 @@ import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroChef from "@/assets/hero-chef.webp";
 import stage1Img from "@/assets/stage-1.png.asset.json";
+import stage2Img from "@/assets/stage-2.png.asset.json";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
@@ -148,7 +149,7 @@ function ProgramPage() {
             />
             <Stage
               n="02"
-              img={essential02}
+              img={stage2Img.url}
               title="Pre-PMF"
               tagline="Kitchen access + paid trials."
               body="You move from paper into the kitchen. Real customers, real feedback, fast iteration."
