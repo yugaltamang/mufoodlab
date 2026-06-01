@@ -12,6 +12,7 @@ import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroFounder from "@/assets/hero-founder.webp";
 import heroPage from "@/assets/hero-page.png.asset.json";
+import admissionsOpen from "@/assets/admissions-open.png.asset.json";
 import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
 import brandLexis from "@/assets/brand-lexis.png";
@@ -494,8 +495,8 @@ function Index() {
       <section id="apply" className="border-b border-ink">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
           <div className="relative aspect-[4/5] overflow-hidden bg-ink md:aspect-auto">
-            <img src={heroWok} alt="Hands at work in a working kitchen" className="absolute inset-0 h-full w-full object-cover grayscale" />
-            <div className="absolute inset-0 bg-ink/30" />
+            <img src={admissionsOpen.url} alt="Founder at a working kitchen" className="absolute inset-0 h-full w-full object-cover" />
+
             <div className="absolute left-6 top-6 inline-flex items-center gap-2 bg-paper px-2 py-1 meta uppercase tracking-[0.14em]">
               <span className="size-1.5 rounded-full bg-green" /> Admissions open
             </div>
