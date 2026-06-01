@@ -14,6 +14,12 @@ import essential08 from "@/assets/essential-08-tasting.webp";
 import heroFounder from "@/assets/hero-founder.webp";
 import heroPage from "@/assets/hero-page.png.asset.json";
 import admissionsOpen from "@/assets/admissions-open.png.asset.json";
+import solution01Kitchen from "@/assets/solution-01-kitchen.png.asset.json";
+import solution02Staff from "@/assets/solution-02-staff.png.asset.json";
+import solution03Supply from "@/assets/solution-03-supply.png.asset.json";
+import solution04Fssai from "@/assets/solution-04-fssai.png.asset.json";
+import solution05Aggregator from "@/assets/solution-05-aggregator.png.asset.json";
+import solution06Mentor from "@/assets/solution-06-mentor.png.asset.json";
 import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
 import brandLexis from "@/assets/brand-lexis.png";
@@ -321,24 +327,37 @@ function Index() {
           </div>
 
           {/* Six essentials */}
-          <div className="mt-10 grid grid-cols-1 gap-px bg-ink/15 sm:mt-12 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
-            {[
-              ["01", "Fully equipped kitchen facility"],
-              ["02", "Culinary expert & professional kitchen staff"],
-              ["03", "Procurement & supply chain"],
-              ["04", "FSSAI licensing & compliance"],
-              ["05", "Aggregator onboarding (Zomato, Swiggy)"],
-              ["06", "Mentorship from food operators"],
-            ].map(([n, label]) => (
-              <div key={n} className="flex flex-col justify-between bg-paper p-5 md:p-6">
-                <div className="font-display text-[40px] font-extrabold leading-none tracking-[-0.03em] text-ink/90 md:text-[52px]">
-                  {n}
+          <div className="mt-10 rounded-[8px] border border-ink bg-ink p-1.5 sm:mt-12 md:mt-16">
+            <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3">
+              {[
+                ["01", "Fully equipped kitchen facility", solution01Kitchen.url],
+                ["02", "Culinary expert & professional kitchen staff", solution02Staff.url],
+                ["03", "Procurement & supply chain", solution03Supply.url],
+                ["04", "FSSAI licensing & compliance", solution04Fssai.url],
+                ["05", "Aggregator onboarding (Zomato, Swiggy)", solution05Aggregator.url],
+                ["06", "Mentorship from food operators", solution06Mentor.url],
+              ].map(([n, label, image]) => (
+                <div
+                  key={n}
+                  className="group flex min-h-[420px] flex-col overflow-hidden rounded-[6px] border border-paper/10 bg-[#171717] p-5 text-paper transition-transform duration-300 hover:-translate-y-0.5 md:min-h-[470px] md:p-6"
+                >
+                  <div className="flex justify-end font-mono text-[14px] font-semibold tracking-[0.14em] text-green/65">
+                    {n}
+                  </div>
+                  <div className="mt-2 flex flex-1 items-center justify-center overflow-hidden px-3 py-4 md:px-4 md:py-5">
+                    <img
+                      src={image}
+                      alt={label}
+                      loading="lazy"
+                      className="max-h-[210px] w-full object-contain object-center drop-shadow-[0_18px_35px_rgba(0,0,0,0.28)] transition-transform duration-500 group-hover:scale-[1.03] md:max-h-[250px]"
+                    />
+                  </div>
+                  <div className="mt-6 border-t border-paper/12 pt-5 text-[24px] font-medium leading-[1.25] tracking-[-0.03em] text-paper md:text-[26px]">
+                    {label}
+                  </div>
                 </div>
-                <div className="mt-6 border-t border-ink/15 pt-3 text-[13.5px] font-semibold leading-snug">
-                  {label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
         </div>
