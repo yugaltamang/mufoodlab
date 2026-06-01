@@ -804,6 +804,192 @@ function CostTile({ n, label, amount, sub }: { n: string; label: string; amount:
   );
 }
 
+function Receipt() {
+  const items: [string, string, string][] = [
+    ["01", "Kitchen rent + setup", "₹6,00,000"],
+    ["02", "R&D + chef consultant", "₹3,00,000"],
+    ["03", "Compliance + onboarding", "₹1,50,000+"],
+    ["04", "Working capital", "₹6,00,000"],
+  ];
+  const dots = ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40, rotate: -1.5 }}
+      whileInView={{ opacity: 1, y: 0, rotate: -1 }}
+      whileHover={{ rotate: 0, y: -4 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="relative mx-auto max-w-[520px]"
+      style={{ transformOrigin: "top center" }}
+    >
+      {/* Drop shadow / paper stack */}
+      <div className="absolute inset-0 translate-x-2 translate-y-3 bg-paper/10" aria-hidden />
+      <div className="absolute inset-0 translate-x-1 translate-y-1.5 bg-paper/20" aria-hidden />
+
+      {/* Receipt paper */}
+      <div
+        className="relative bg-paper text-ink shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg, rgba(0,0,0,0.018) 0px, rgba(0,0,0,0.018) 1px, transparent 1px, transparent 3px)",
+        }}
+      >
+        {/* Top perforation */}
+        <div
+          className="h-3 w-full bg-ink"
+          style={{
+            WebkitMaskImage:
+              "radial-gradient(circle 5px at 10px 0, transparent 98%, black 100%)",
+            WebkitMaskSize: "20px 12px",
+            WebkitMaskRepeat: "repeat-x",
+            maskImage:
+              "radial-gradient(circle 5px at 10px 0, transparent 98%, black 100%)",
+            maskSize: "20px 12px",
+            maskRepeat: "repeat-x",
+            backgroundColor: "var(--paper)",
+          }}
+          aria-hidden
+        />
+
+        <div className="px-7 pt-7 pb-8 font-mono text-[12.5px] leading-relaxed text-ink/90 sm:px-9 sm:text-[13px]">
+          {/* Header */}
+          <div className="text-center">
+            <div className="font-bold uppercase tracking-[0.22em] text-ink">Masters' Union Food Lab</div>
+            <div className="mt-1.5 uppercase tracking-[0.16em] text-ink/70">Pre-Launch Bill · Founder Edition</div>
+            <div className="mt-1 uppercase tracking-[0.14em] text-ink/55">Invoice #0001 · Day 0 of 60</div>
+          </div>
+
+          <Dashed />
+
+          {/* Line items + UNPAID stamp */}
+          <div className="relative">
+            {items.map(([n, label, amount], i) => (
+              <motion.div
+                key={n}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ delay: 0.4 + i * 0.12, duration: 0.45 }}
+                className="flex items-baseline gap-3 py-1.5"
+              >
+                <span className="w-6 shrink-0 text-ink/55">{n}</span>
+                <span className="shrink-0 text-ink">{label}</span>
+                <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/30">{dots}</span>
+                <span className="shrink-0 font-semibold text-ink">{amount}</span>
+              </motion.div>
+            ))}
+
+            {/* UNPAID stamp */}
+            <motion.div
+              initial={{ opacity: 0, scale: 1.4, rotate: -25 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: -14 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ delay: 1.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="pointer-events-none absolute -top-2 right-2 select-none border-[2.5px] border-red-600 px-3 py-1 font-mono text-[15px] font-extrabold uppercase tracking-[0.22em] text-red-600 sm:right-6"
+              style={{ opacity: 0.85, mixBlendMode: "multiply" }}
+            >
+              Unpaid
+            </motion.div>
+          </div>
+
+          <Dashed />
+
+          {/* Subtotal */}
+          <div className="flex items-baseline gap-3 py-1">
+            <span className="shrink-0 uppercase tracking-[0.16em] text-ink/70">Subtotal</span>
+            <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/30">{dots}</span>
+            <span className="shrink-0 font-semibold text-ink">₹15,00,000</span>
+          </div>
+
+          {/* Hidden costs */}
+          <div className="mt-4 text-ink/70">+ Hidden costs</div>
+          <div className="mt-1 flex items-baseline gap-3 py-1">
+            <span className="shrink-0 text-ink">Your time</span>
+            <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/30">{dots}</span>
+            <span className="shrink-0 font-semibold text-ink">~60 days</span>
+          </div>
+          <div className="flex items-baseline gap-3 py-1">
+            <span className="shrink-0 text-ink">Luck required</span>
+            <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/30">{dots}</span>
+            <span className="shrink-0 font-semibold text-ink">★★★★★</span>
+          </div>
+        </div>
+
+        {/* TOTAL DUE — dark block */}
+        <div className="bg-ink px-7 py-5 text-paper sm:px-9">
+          <div className="flex items-end justify-between gap-3">
+            <div className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-green">
+              Total Due
+            </div>
+            <div className="font-display text-[44px] font-extrabold leading-none tracking-[-0.03em] text-green sm:text-[56px]">
+              ₹15L+
+            </div>
+          </div>
+          <div className="mt-2 font-mono text-[10.5px] uppercase tracking-[0.18em] text-paper/55">
+            Before a single customer order
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="px-7 pt-5 pb-2 font-mono text-[11.5px] uppercase tracking-[0.14em] text-ink/70 sm:px-9">
+          <div className="flex items-baseline gap-3 py-1">
+            <span className="shrink-0">Paid by</span>
+            <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/25">{dots}</span>
+            <span className="shrink-0 font-semibold text-ink">You</span>
+          </div>
+          <div className="flex items-baseline gap-3 py-1">
+            <span className="shrink-0">Customers served</span>
+            <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/25">{dots}</span>
+            <span className="shrink-0 font-semibold text-ink">0</span>
+          </div>
+          <div className="flex items-baseline gap-3 py-1">
+            <span className="shrink-0">Status</span>
+            <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/25">{dots}</span>
+            <span className="shrink-0 font-bold text-red-600">Unpaid</span>
+          </div>
+          <div className="mt-3 pb-1 text-center text-[10.5px] tracking-[0.18em] text-ink/45">
+            ~ Thank you for playing ~
+          </div>
+        </div>
+
+        {/* Bottom perforated zig-zag edge */}
+        <div
+          className="h-3 w-full bg-ink"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(135deg, var(--paper) 25%, transparent 25%), linear-gradient(225deg, var(--paper) 25%, transparent 25%)",
+            WebkitMaskSize: "14px 14px",
+            WebkitMaskPosition: "0 0, 7px 0",
+            maskImage:
+              "linear-gradient(135deg, var(--paper) 25%, transparent 25%), linear-gradient(225deg, var(--paper) 25%, transparent 25%)",
+            maskSize: "14px 14px",
+            maskPosition: "0 0, 7px 0",
+            backgroundColor: "var(--paper)",
+          }}
+          aria-hidden
+        />
+      </div>
+    </motion.div>
+  );
+}
+
+function Dashed() {
+  return (
+    <div
+      className="my-3 h-px w-full"
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, currentColor 50%, transparent 0)",
+        backgroundSize: "6px 1px",
+        backgroundRepeat: "repeat-x",
+        color: "rgba(0,0,0,0.35)",
+      }}
+      aria-hidden
+    />
+  );
+}
+
+
 function BrandCard({
   tag, name, tagline, body, img, team, follow,
 }: {
