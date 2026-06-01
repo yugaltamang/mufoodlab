@@ -128,12 +128,62 @@ function Index() {
               <p className="mt-6 max-w-[58ch] text-[15px] leading-relaxed text-paper/75">
                 For India's next generation of food brands, most founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking — and most great food ideas die right here.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-paper/70">
-                <span className="border border-paper/25 px-2.5 py-1">FSSAI maze</span>
-                <span className="border border-paper/25 px-2.5 py-1">No kitchen</span>
-                <span className="border border-paper/25 px-2.5 py-1">Hiring chefs</span>
-                <span className="border border-paper/25 px-2.5 py-1">Aggregator gatekeeping</span>
-                <span className="border border-paper/25 px-2.5 py-1">Cash-burn before sale 1</span>
+              {/* Challenge blocks */}
+              <div className="mt-8">
+                {/* 01–04 grid */}
+                <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
+                  {/* 01 NO KITCHEN */}
+                  <div className="border-t border-paper/15 py-5 sm:border-r sm:pr-6 sm:py-6">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/50">01</span>
+                    <h3 className="mt-2 font-display text-[17px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-paper sm:text-[19px]">
+                      No Kitchen
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-paper/65">
+                      You can't test a food business from your home kitchen. Before your first trial, you need access to a commercial kitchen.
+                    </p>
+                  </div>
+                  {/* 02 CULINARY SKILLS */}
+                  <div className="border-t border-paper/15 py-5 sm:pl-6 sm:py-6">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/50">02</span>
+                    <h3 className="mt-2 font-display text-[17px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-paper sm:text-[19px]">
+                      Culinary Skills
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-paper/65">
+                      Great food isn't built on guesswork. Either become the chef or find someone who already is.
+                    </p>
+                  </div>
+                  {/* 03 NO EQUIPMENT */}
+                  <div className="border-t border-paper/15 py-5 sm:border-r sm:border-t-0 sm:pr-6 sm:py-6">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/50">03</span>
+                    <h3 className="mt-2 font-display text-[17px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-paper sm:text-[19px]">
+                      No Equipment
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-paper/65">
+                      If your product needs a deep fryer, oven, blast chiller, or dough mixer, you need the real thing. A home setup won't cut it.
+                    </p>
+                  </div>
+                  {/* 04 COMPLIANCE MAZE */}
+                  <div className="border-t border-paper/15 py-5 sm:border-t-0 sm:pl-6 sm:py-6">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/50">04</span>
+                    <h3 className="mt-2 font-display text-[17px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-paper sm:text-[19px]">
+                      Compliance Maze
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-paper/65">
+                      FSSAI, GST, company registration, bank accounts, vendor onboarding. The paperwork starts long before the customers do.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 05 THE BIGGEST CHALLENGE */}
+                <div className="mt-2 border-t-2 border-green pt-5 sm:pt-6">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-green">05</span>
+                  <h3 className="mt-2 font-display text-[19px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-paper sm:text-[22px]">
+                    The Biggest Challenge
+                  </h3>
+                  <p className="mt-2 max-w-[65ch] text-[13.5px] leading-relaxed text-paper/75">
+                    Before you've served a single customer, generated a single rupee of revenue, or proven that anyone wants what you're building, you must commit your time, money and energy to the idea. Most founders never make it past this point.
+                  </p>
+                </div>
               </div>
 
             </div>
