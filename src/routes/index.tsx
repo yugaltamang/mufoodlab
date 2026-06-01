@@ -174,16 +174,6 @@ function Index() {
                   </div>
                 </div>
 
-                {/* 05 THE BIGGEST CHALLENGE */}
-                <div className="mt-2 border-t-2 border-green pt-5 sm:pt-6">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-green">05</span>
-                  <h3 className="mt-2 font-display text-[19px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-paper sm:text-[22px]">
-                    The Biggest Challenge
-                  </h3>
-                  <p className="mt-2 max-w-[65ch] text-[13.5px] leading-relaxed text-paper/75">
-                    Before you've served a single customer, generated a single rupee of revenue, or proven that anyone wants what you're building, you must commit your time, money and energy to the idea. Most founders never make it past this point.
-                  </p>
-                </div>
               </div>
 
             </div>
