@@ -34,8 +34,8 @@
   --color-blue: var(--blue);
   --color-navy: var(--navy);
 
-  --font-display: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-sans: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
