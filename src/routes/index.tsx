@@ -361,25 +361,25 @@ function Index() {
 
       {/* ============== BRANDS ============== */}
       <section id="brands" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
+        <div className="mx-auto max-w-[1500px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
           {/* Header */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <div className="md:col-span-7">
-              <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-8">
+            <div className="md:col-span-8">
+              <span className="inline-block bg-green px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-ink">
                 From our kitchen
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[60px] lg:text-[80px]">
+              <h2 className="mt-3 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[38px] sm:leading-[0.9] md:text-[44px] lg:text-[52px]">
                 Brands already
                 <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
               </h2>
             </div>
-            <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
+            <p className="md:col-span-4 self-end text-[13px] leading-relaxed text-ink/70">
               Built by MU students. Serving real customers. Growing every week.
             </p>
           </div>
 
           {/* Brand list */}
-          <div className="mt-12 grid grid-cols-1 gap-px bg-ink/10 md:mt-14 md:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-px bg-ink/10 md:mt-8 md:grid-cols-2">
             <BrandCard
               tag="Delhi · Gurgaon"
               name="Lexi's Gourmet Sandwiches"
