@@ -894,7 +894,7 @@ function Receipt() {
         <div className="px-7 pt-7 pb-8 font-mono text-[12.5px] leading-relaxed text-ink/90 sm:px-9 sm:text-[13px]">
           {/* Header */}
           <div className="text-center">
-            <div className="font-bold uppercase tracking-[0.22em] text-ink">Masters' Union Food Lab</div>
+            <div className="font-bold uppercase tracking-[0.22em] text-ink">Without Masters' Union Food Lab</div>
             <div className="mt-1.5 uppercase tracking-[0.16em] text-ink/70">Pre-Launch Bill · Founder Edition</div>
             <div className="mt-1 uppercase tracking-[0.14em] text-ink/55">Invoice #0001 · Day 0 of 60</div>
           </div>
