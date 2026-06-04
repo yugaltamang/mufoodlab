@@ -1,25 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const WIDGET_ID = "12ca09b3-69b2-4aaa-94ce-ad2807002b8e";
-const SCRIPT_SRC = "https://cdn.mastersunion.org/widget/iframe.js";
+const WIDGET_BASE = `https://widget.mastersunion.org/widget/${WIDGET_ID}/`;
 
-let scriptPromise: Promise<void> | null = null;
 let openSetter: ((open: boolean) => void) | null = null;
-
-function loadScript(): Promise<void> {
-  if (typeof window === "undefined") return Promise.resolve();
-  if ((window as any).LoadWidget) return Promise.resolve();
-  if (scriptPromise) return scriptPromise;
-  scriptPromise = new Promise<void>((resolve, reject) => {
-    const s = document.createElement("script");
-    s.src = SCRIPT_SRC;
-    s.async = true;
-    s.onload = () => resolve();
-    s.onerror = () => reject(new Error("widget script failed"));
-    document.head.appendChild(s);
-  });
-  return scriptPromise;
-}
 
 export function openApplyWidget() {
   if (openSetter) openSetter(true);
@@ -32,7 +16,6 @@ export function handleApplyClick(e: { preventDefault: () => void }) {
 
 export function ApplyWidgetModal() {
   const [open, setOpen] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     openSetter = setOpen;
@@ -43,28 +26,38 @@ export function ApplyWidgetModal() {
 
   useEffect(() => {
     if (!open) return;
+    const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    let cancelled = false;
-    loadScript()
-      .then(() => {
-        if (cancelled) return;
-        const LoadWidget = (window as any).LoadWidget;
-        if (typeof LoadWidget === "function") {
-          // small delay to ensure iframe is in DOM
-          requestAnimationFrame(() => {
-            try {
-              new LoadWidget(WIDGET_ID);
-            } catch (err) {
-              console.error(err);
-            }
-          });
-        }
-      })
-      .catch((err) => console.error(err));
+
+    // Listen for resize/redirect/download messages from the widget,
+    // mirroring the official widget script's handler.
+    function onMessage(e: MessageEvent) {
+      const allowed = [
+        "https://mastersunion.org",
+        "https://widget.mastersunion.org",
+        "https://mittalschoolofbusiness.com",
+      ];
+      if (!allowed.includes(e.origin)) return;
+      const data: any = e.data || {};
+      if (data.type === "REDIRECT" && data.url) window.location.href = data.url;
+      if ((data.type === "DOWNLOAD" || data.type === "OPEN_URL") && data.url) {
+        window.open(data.url, "_blank");
+      }
+    }
+    window.addEventListener("message", onMessage);
+
     return () => {
-      cancelled = true;
-      document.body.style.overflow = "";
+      window.removeEventListener("message", onMessage);
+      document.body.style.overflow = prev;
     };
+  }, [open]);
+
+  const src = useMemo(() => {
+    if (typeof window === "undefined") return WIDGET_BASE;
+    const params = new URLSearchParams(window.location.search);
+    params.set("widgetHostURL", window.location.href);
+    params.set("parentReferrer", document.referrer || window.location.href);
+    return `${WIDGET_BASE}?${params.toString()}`;
   }, [open]);
 
   if (!open) return null;
@@ -89,12 +82,15 @@ export function ApplyWidgetModal() {
           ×
         </button>
         <iframe
-          ref={iframeRef}
           id={WIDGET_ID}
           title="Apply to Masters' Union Food Lab"
+          src={src}
           width="100%"
-          height="640px"
-          className="block border-0"
+          height="640"
+          frameBorder={0}
+          allow="autoplay; camera; microphone; fullscreen; display-capture"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-downloads"
+          className="block border-0 w-full h-[640px]"
         />
       </div>
     </div>
