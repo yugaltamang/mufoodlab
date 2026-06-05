@@ -122,18 +122,18 @@ function ProgramPage() {
 
       {/* ============== STAGES — DETAILED ============== */}
       <section id="timeline" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Stages
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[68px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[36px] sm:leading-[0.9] md:text-[48px] lg:text-[64px]">
                 From paper to a
-                <span className="ml-3 inline-block bg-green px-2 leading-none">100Cr business.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none">100Cr business.</span>
               </h2>
             </div>
-            <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
+            <p className="md:col-span-4 md:col-start-9 self-end text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
               Five stages. Pivots welcome. Only the brands ready for the next stage move forward.
             </p>
           </div>
