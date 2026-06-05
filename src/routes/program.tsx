@@ -490,18 +490,18 @@ function Stage({
   tested: string;
 }) {
   return (
-    <article className="grid grid-cols-1 gap-6 bg-paper p-5 md:grid-cols-12 md:gap-8 md:p-8">
+    <article className="grid grid-cols-1 gap-5 bg-paper p-4 sm:p-5 md:grid-cols-12 md:gap-8 md:p-8">
       <div className="md:col-span-4">
-        <div className="relative aspect-[4/3] overflow-hidden border border-ink">
+        <div className="relative aspect-[16/10] overflow-hidden border border-ink sm:aspect-[4/3]">
           <img src={img} alt={title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           <span className="absolute left-3 top-3 bg-green px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">
             Stage {n}
           </span>
         </div>
-        <div className="mt-4 text-[10.5px] font-mono uppercase tracking-[0.16em] text-ink/55">
+        <div className="mt-3 text-[10.5px] font-mono uppercase tracking-[0.16em] text-ink/55 sm:mt-4">
           Tested on
         </div>
-        <div className="mt-1 text-[12.5px] leading-snug text-ink/75">{tested}</div>
+        <div className="mt-1 text-[12px] leading-snug text-ink/75 sm:text-[12.5px]">{tested}</div>
       </div>
 
       <div className="md:col-span-8">
