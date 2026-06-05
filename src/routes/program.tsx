@@ -239,13 +239,13 @@ function ProgramPage() {
 
       {/* ============== FAQ ============== */}
       <section id="faq" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-5">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 FAQ
               </span>
-              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[42px] lg:text-[56px]">
+              <h2 className="mt-5 font-display text-[26px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[32px] sm:leading-[0.95] md:text-[38px] lg:text-[52px]">
                 Quick answers, no fluff.
               </h2>
             </div>
