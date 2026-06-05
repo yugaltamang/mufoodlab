@@ -86,17 +86,17 @@ function ProgramPage() {
 
       {/* ============== STAGE-GATED OVERVIEW ============== */}
       <section className="border-y border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-14 lg:py-16">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 How it works
               </span>
-              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[44px] lg:text-[56px]">
+              <h2 className="mt-4 font-display text-[26px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[34px] sm:leading-[0.95] md:text-[40px] lg:text-[52px]">
                 A stage-gated program. Earn your way forward.
               </h2>
             </div>
-            <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-paper/70">
+            <p className="md:col-span-5 self-end text-[13.5px] leading-relaxed text-paper/70 sm:text-[14px]">
               Once your idea gets shortlisted, you enter a stage-gated program. Each stage has clear targets and evaluation criteria. Only selected brands move forward at every stage. Speed, seriousness and quality &gt;&gt;&gt;
             </p>
           </div>
@@ -122,18 +122,18 @@ function ProgramPage() {
 
       {/* ============== STAGES — DETAILED ============== */}
       <section id="timeline" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Stages
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[68px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[36px] sm:leading-[0.9] md:text-[48px] lg:text-[64px]">
                 From paper to a
-                <span className="ml-3 inline-block bg-green px-2 leading-none">100Cr business.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none">100Cr business.</span>
               </h2>
             </div>
-            <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
+            <p className="md:col-span-4 md:col-start-9 self-end text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
               Five stages. Pivots welcome. Only the brands ready for the next stage move forward.
             </p>
           </div>
@@ -200,24 +200,24 @@ function ProgramPage() {
 
       {/* ============== WHAT WE EXPECT ============== */}
       <section id="expect" className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 What we expect
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[68px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[36px] sm:leading-[0.9] md:text-[48px] lg:text-[64px]">
                 You bring the
-                <span className="ml-3 inline-block bg-green px-2 leading-none">obsession.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none">obsession.</span>
               </h2>
             </div>
-            <p className="md:col-span-4 md:col-start-9 self-end text-[14.5px] leading-relaxed text-ink/70">
+            <p className="md:col-span-4 md:col-start-9 self-end text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
               Founders who finish the program have one thing in common — they were in the
               kitchen, every week, for sixty days.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-px bg-ink/15 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-px bg-ink/15 md:mt-12 md:grid-cols-3">
             <Expect
               n="01"
               title="Full-time founders only"
@@ -239,13 +239,13 @@ function ProgramPage() {
 
       {/* ============== FAQ ============== */}
       <section id="faq" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-5">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 FAQ
               </span>
-              <h2 className="mt-6 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[42px] lg:text-[56px]">
+              <h2 className="mt-5 font-display text-[26px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[32px] sm:leading-[0.95] md:text-[38px] lg:text-[52px]">
                 Quick answers, no fluff.
               </h2>
             </div>
@@ -273,14 +273,14 @@ function ProgramPage() {
 
       {/* ============== CTA ============== */}
       <section className="border-b border-ink bg-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-8">
-              <h2 className="font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[60px] lg:text-[80px]">
+              <h2 className="font-display text-[30px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Ready to cook your
-                <span className="ml-3 inline-block bg-green px-2 leading-none">first plate?</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none">first plate?</span>
               </h2>
-              <p className="mt-6 max-w-2xl text-[14.5px] leading-relaxed text-ink/70">
+              <p className="mt-5 max-w-2xl text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
                 Cohort 01 closes 31 October. We review applications on a rolling basis.
               </p>
             </div>
@@ -304,13 +304,13 @@ function ProgramPage() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">
+      <footer className="mx-auto max-w-[1500px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-14">
+        <div className="flex flex-wrap items-end justify-between gap-4 sm:gap-6">
+          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">
             {WORDMARK}
           </span>
-          <div className="flex flex-col items-end gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto md:h-10" />
+          <div className="flex flex-col items-end gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-7 w-auto sm:h-8 md:h-10" />
             <span className="meta uppercase tracking-[0.14em] text-ink/60">
               © Masters' Union {new Date().getFullYear()}
             </span>
@@ -490,29 +490,29 @@ function Stage({
   tested: string;
 }) {
   return (
-    <article className="grid grid-cols-1 gap-6 bg-paper p-5 md:grid-cols-12 md:gap-8 md:p-8">
+    <article className="grid grid-cols-1 gap-5 bg-paper p-4 sm:p-5 md:grid-cols-12 md:gap-8 md:p-8">
       <div className="md:col-span-4">
-        <div className="relative aspect-[4/3] overflow-hidden border border-ink">
+        <div className="relative aspect-[16/10] overflow-hidden border border-ink sm:aspect-[4/3]">
           <img src={img} alt={title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           <span className="absolute left-3 top-3 bg-green px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">
             Stage {n}
           </span>
         </div>
-        <div className="mt-4 text-[10.5px] font-mono uppercase tracking-[0.16em] text-ink/55">
+        <div className="mt-3 text-[10.5px] font-mono uppercase tracking-[0.16em] text-ink/55 sm:mt-4">
           Tested on
         </div>
-        <div className="mt-1 text-[12.5px] leading-snug text-ink/75">{tested}</div>
+        <div className="mt-1 text-[12px] leading-snug text-ink/75 sm:text-[12.5px]">{tested}</div>
       </div>
 
       <div className="md:col-span-8">
         <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink/55">
           Stage {n}
         </div>
-        <h3 className="mt-2 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[36px]">
+        <h3 className="mt-2 font-display text-[22px] font-extrabold leading-[0.96] tracking-[-0.03em] sm:text-[26px] md:text-[32px] lg:text-[36px]">
           {title}
         </h3>
-        <p className="mt-2 text-[13.5px] font-semibold italic text-ink/80">{tagline}</p>
-        <p className="mt-3 text-[13.5px] leading-relaxed text-ink/70">{body}</p>
+        <p className="mt-2 text-[13px] font-semibold italic text-ink/80 sm:text-[13.5px]">{tagline}</p>
+        <p className="mt-3 text-[13px] leading-relaxed text-ink/70 sm:text-[13.5px]">{body}</p>
 
         <div className="mt-6 grid grid-cols-1 gap-6 border-t border-ink/15 pt-5 md:grid-cols-2">
           <div>

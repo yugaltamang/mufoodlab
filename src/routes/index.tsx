@@ -73,9 +73,9 @@ function Index() {
 
       {/* ============== HERO ============== */}
       <section id="program" className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
+        <div className="mx-auto max-w-[1500px] px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-8 md:px-10 md:pb-20 md:pt-12">
           {/* Eyebrow */}
-          <div className="mb-5 flex items-center justify-end sm:mb-6">
+          <div className="mb-4 flex items-center justify-end sm:mb-6">
             <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
           </div>
 
@@ -84,20 +84,20 @@ function Index() {
             <img
               src={heroPage.url}
               alt="Indian food delivery market opportunity"
-              className="h-[220px] w-full object-cover sm:h-[300px] md:h-[380px] lg:h-[460px]"
+              className="h-[180px] w-full object-cover sm:h-[260px] md:h-[360px] lg:h-[460px]"
             />
           </div>
 
           {/* Headline + sub */}
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
-            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-8 sm:gap-7 md:mt-10 md:grid-cols-12 md:gap-10">
+            <h1 className="md:col-span-8 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               For the Next Gen of Food Brands in India.
             </h1>
             <div className="md:col-span-4 self-end">
-              <p className="text-[14px] leading-relaxed text-ink/70">
+              <p className="text-[13.5px] leading-relaxed text-ink/70 sm:text-[14px]">
                 Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
               </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
                   onClick={handleApplyClick}
@@ -120,25 +120,25 @@ function Index() {
 
       {/* ============== THE FOOD LANDSCAPE ============== */}
       <section id="opportunity" className="border-b border-ink bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="border-b border-ink pb-6">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="border-b border-ink pb-5 sm:pb-6">
             <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
               The Opportunity
             </span>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
-            <h2 className="md:col-span-7 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 md:grid-cols-12 md:gap-10">
+            <h2 className="md:col-span-7 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.92] md:text-[48px] lg:text-[64px]">
               Indian food delivery is just scratching the
-              <span className="ml-3 inline-block bg-green px-2 leading-none">surface.</span>
+              <span className="ml-2 inline-block bg-green px-2 leading-none">surface.</span>
             </h2>
-            <p className="md:col-span-5 self-end text-[14.5px] leading-relaxed text-ink/70">
+            <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
               India's food economy is decades behind the West and China. The next decade belongs to whoever shows up first.
             </p>
           </div>
 
           {/* 4-column numbered breakdown */}
-          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:mt-14 md:grid-cols-4 md:gap-8">
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 md:mt-12 md:grid-cols-4 md:gap-8">
             {[
               {
                 n: "01",
@@ -186,18 +186,18 @@ function Index() {
 
       {/* ============== CHALLENGE ============== */}
       <section id="challenge" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
             {/* LEFT — narrative + cost breakdown */}
             <div className="lg:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Challenge
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[58px] lg:text-[68px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[64px]">
                 Before you sell a single plate, the bill is already
-                <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none text-ink">due.</span>
               </h2>
-              <p className="mt-6 max-w-[58ch] text-[15px] leading-relaxed text-paper/75">
+              <p className="mt-5 max-w-[58ch] text-[14px] leading-relaxed text-paper/75 sm:text-[15px]">
                 For India's next generation of food brands, most founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking — and most great food ideas die right here.
               </p>
               {/* Challenge blocks */}
@@ -404,13 +404,13 @@ function Index() {
 
       {/* ============== MENTORS ============== */}
       <section id="mentors" className="border-b border-ink">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8">
             <div className="md:col-span-7">
               <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[56px] lg:text-[76px]">
+              <h2 className="mt-4 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Learn from operators who built businesses
-                <span className="ml-3 inline-block bg-green px-2 leading-none">from zero.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none">from zero.</span>
               </h2>
             </div>
             <div className="md:col-span-4 md:col-start-9 self-end">
@@ -452,10 +452,10 @@ function Index() {
               { name: "Naveen Balaji", role: "6 years at Zomato", img: mentorNaveen, imgPosition: "center 20%" },
             ];
             return (
-              <div className="mt-12 -mx-4 overflow-hidden sm:-mx-6 md:-mx-10 md:mt-16 group">
-                <div className="flex w-max gap-6 md:gap-8 animate-mentor-marquee group-hover:[animation-play-state:paused]">
+              <div className="mt-8 -mx-4 overflow-hidden sm:-mx-6 md:-mx-10 md:mt-12 group">
+                <div className="flex w-max gap-4 sm:gap-6 md:gap-8 animate-mentor-marquee group-hover:[animation-play-state:paused]">
                   {[...mentors, ...mentors].map((m, i) => (
-                    <div key={i} className="w-[180px] shrink-0 sm:w-[200px] md:w-[220px]" aria-hidden={i >= mentors.length ? true : undefined}>
+                    <div key={i} className="w-[140px] shrink-0 sm:w-[180px] md:w-[220px]" aria-hidden={i >= mentors.length ? true : undefined}>
                       <MentorCircle n={String((i % mentors.length) + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} imgPosition={m.imgPosition} />
                     </div>
                   ))}
@@ -468,18 +468,18 @@ function Index() {
 
       {/* ============== NOT JUST CLOUD KITCHENS ============== */}
       <section id="scope" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 Not just cloud kitchens
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[56px] lg:text-[78px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Think bigger. We're building for
-                <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
               </h2>
             </div>
-            <p className="md:col-span-5 self-end text-[14.5px] leading-relaxed text-paper/75">
+            <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-paper/75 sm:text-[14.5px]">
               Cloud kitchens are where we start — but Food Lab is designed to incubate any food &amp; beverage brand. Packaged snacks, beverages, health foods, ready-to-eat, condiments — if it's food and it can scale, we want to hear about it.
             </p>
           </div>
@@ -525,22 +525,22 @@ function Index() {
       {/* ============== APPLY POSTER ============== */}
       <section id="apply" className="border-b border-ink">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
-          <div className="relative aspect-[4/5] overflow-hidden bg-ink md:aspect-auto">
+          <div className="relative aspect-[5/4] overflow-hidden bg-ink sm:aspect-[4/3] md:aspect-auto">
             <img src={admissionsOpen.url} alt="Founder at a working kitchen" className="absolute inset-0 h-full w-full object-cover" />
 
-            <div className="absolute left-6 top-6 inline-flex items-center gap-2 bg-paper px-2 py-1 meta uppercase tracking-[0.14em]">
+            <div className="absolute left-4 top-4 inline-flex items-center gap-2 bg-paper px-2 py-1 meta uppercase tracking-[0.14em] sm:left-6 sm:top-6">
               <span className="size-1.5 rounded-full bg-green" /> Admissions open
             </div>
-            <div className="absolute bottom-6 right-6 meta uppercase tracking-[0.14em] text-paper">{WORDMARK}</div>
+            <div className="absolute bottom-4 right-4 meta uppercase tracking-[0.14em] text-paper sm:bottom-6 sm:right-6">{WORDMARK}</div>
           </div>
-          <div className="bg-green p-6 sm:p-8 md:p-14">
-            <h2 className="font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] break-words sm:text-[56px] sm:leading-[0.86] md:text-[72px] lg:text-[120px]">
+          <div className="bg-green p-5 sm:p-8 md:p-12 lg:p-14">
+            <h2 className="font-display text-[36px] font-extrabold leading-[0.92] tracking-[-0.04em] break-words sm:text-[52px] sm:leading-[0.86] md:text-[64px] lg:text-[110px]">
               Build your<br/>food brand.
             </h2>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed">
+            <p className="mt-5 max-w-md text-[14px] leading-relaxed sm:text-[15px]">
               Gurugram. Real kitchens. Real customers. Real founders.
             </p>
-            <a href={APPLY_URL} onClick={handleApplyClick} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
+            <a href={APPLY_URL} onClick={handleApplyClick} className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-8 sm:w-auto">
               Start application <span aria-hidden>→</span>
             </a>
           </div>
@@ -548,8 +548,8 @@ function Index() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
-        <div className="grid grid-cols-1 gap-10 border-b border-ink pb-12 md:grid-cols-4">
+      <footer className="mx-auto max-w-[1500px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-14">
+        <div className="grid grid-cols-1 gap-8 border-b border-ink pb-10 sm:gap-10 md:grid-cols-4 md:pb-12">
           <div className="meta uppercase tracking-[0.14em]">
             Cohort 01<br/>2025 — 2026
             <div className="mt-2 text-ink/60">Apply by 31 October</div>
@@ -557,21 +557,21 @@ function Index() {
           <address className="not-italic text-[14px] leading-relaxed">
             <div className="font-semibold">Masters' Union Food Lab</div>
             Sector 67, Gurugram<br/>Haryana 122102, India<br/>
-            <a href="mailto:foodlab@mastersunion.org" className="underline-link">foodlab@mastersunion.org</a>
+            <a href="mailto:foodlab@mastersunion.org" className="underline-link break-all">foodlab@mastersunion.org</a>
           </address>
-          <form onSubmit={(e) => e.preventDefault()} className="text-[14px]">
+          <form onSubmit={(e) => e.preventDefault()} className="text-[14px] md:col-span-2">
             <label className="font-semibold">Subscribe to the kitchen brief</label>
-            <div className="mt-3 flex items-center border-b border-ink pb-2">
-              <input type="email" placeholder="Email" className="flex-1 bg-transparent text-[14px] placeholder:text-ink/50 focus:outline-none" />
-              <button className="text-[12px] font-bold uppercase tracking-[0.14em]">Subscribe ›</button>
+            <div className="mt-3 flex items-center gap-2 border-b border-ink pb-2">
+              <input type="email" placeholder="Email" className="min-w-0 flex-1 bg-transparent text-[14px] placeholder:text-ink/50 focus:outline-none" />
+              <button className="shrink-0 text-[12px] font-bold uppercase tracking-[0.14em]">Subscribe ›</button>
             </div>
           </form>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">{WORDMARK}</span>
-          <div className="flex flex-col items-end gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto md:h-10" />
+        <div className="mt-8 flex flex-wrap items-end justify-between gap-4 sm:mt-10 sm:gap-6">
+          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">{WORDMARK}</span>
+          <div className="flex flex-col items-end gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-7 w-auto sm:h-8 md:h-10" />
             <span className="meta uppercase tracking-[0.14em] text-ink/60">© Masters' Union {new Date().getFullYear()}</span>
           </div>
         </div>
@@ -890,7 +890,7 @@ function Receipt() {
           aria-hidden
         />
 
-        <div className="px-7 pt-7 pb-8 font-mono text-[12.5px] leading-relaxed text-ink/90 sm:px-9 sm:text-[13px]">
+        <div className="px-5 pt-6 pb-7 font-mono text-[11.5px] leading-relaxed text-ink/90 sm:px-9 sm:pt-7 sm:pb-8 sm:text-[13px]">
           {/* Header */}
           <div className="text-center">
             <div className="font-bold uppercase tracking-[0.22em] text-ink">Without Masters' Union Food Lab</div>
@@ -955,12 +955,12 @@ function Receipt() {
         </div>
 
         {/* TOTAL DUE — dark block */}
-        <div className="bg-ink px-7 py-5 text-paper sm:px-9">
+        <div className="bg-ink px-5 py-4 text-paper sm:px-9 sm:py-5">
           <div className="flex items-end justify-between gap-3">
             <div className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-green">
               Total Due
             </div>
-            <div className="font-display text-[44px] font-extrabold leading-none tracking-[-0.03em] text-green sm:text-[56px]">
+            <div className="font-display text-[36px] font-extrabold leading-none tracking-[-0.03em] text-green sm:text-[56px]">
               ₹15L+
             </div>
           </div>
@@ -970,7 +970,7 @@ function Receipt() {
         </div>
 
         {/* Footer */}
-        <div className="px-7 pt-5 pb-2 font-mono text-[11.5px] uppercase tracking-[0.14em] text-ink/70 sm:px-9">
+        <div className="px-5 pt-4 pb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink/70 sm:px-9 sm:pt-5 sm:text-[11.5px]">
           <div className="flex items-baseline gap-3 py-1">
             <span className="shrink-0">Paid by</span>
             <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/25">{dots}</span>
