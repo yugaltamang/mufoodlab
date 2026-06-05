@@ -217,7 +217,7 @@ function ProgramPage() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-px bg-ink/15 sm:grid-cols-3 md:mt-12">
+          <div className="mt-8 grid grid-cols-1 gap-px bg-ink/15 md:mt-12 md:grid-cols-3">
             <Expect
               n="01"
               title="Full-time founders only"
