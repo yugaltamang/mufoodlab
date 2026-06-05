@@ -960,7 +960,7 @@ function Receipt() {
             <div className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-green">
               Total Due
             </div>
-            <div className="font-display text-[44px] font-extrabold leading-none tracking-[-0.03em] text-green sm:text-[56px]">
+            <div className="font-display text-[36px] font-extrabold leading-none tracking-[-0.03em] text-green sm:text-[56px]">
               ₹15L+
             </div>
           </div>
