@@ -304,13 +304,13 @@ function ProgramPage() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">
+      <footer className="mx-auto max-w-[1500px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-14">
+        <div className="flex flex-wrap items-end justify-between gap-4 sm:gap-6">
+          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">
             {WORDMARK}
           </span>
-          <div className="flex flex-col items-end gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto md:h-10" />
+          <div className="flex flex-col items-end gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-7 w-auto sm:h-8 md:h-10" />
             <span className="meta uppercase tracking-[0.14em] text-ink/60">
               © Masters' Union {new Date().getFullYear()}
             </span>
