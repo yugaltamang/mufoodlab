@@ -955,7 +955,7 @@ function Receipt() {
         </div>
 
         {/* TOTAL DUE — dark block */}
-        <div className="bg-ink px-7 py-5 text-paper sm:px-9">
+        <div className="bg-ink px-5 py-4 text-paper sm:px-9 sm:py-5">
           <div className="flex items-end justify-between gap-3">
             <div className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-green">
               Total Due
