@@ -186,18 +186,18 @@ function Index() {
 
       {/* ============== CHALLENGE ============== */}
       <section id="challenge" className="border-b border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
             {/* LEFT — narrative + cost breakdown */}
             <div className="lg:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 The Challenge
               </span>
-              <h2 className="mt-6 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.9] md:text-[58px] lg:text-[68px]">
+              <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[64px]">
                 Before you sell a single plate, the bill is already
-                <span className="ml-3 inline-block bg-green px-2 leading-none text-ink">due.</span>
+                <span className="ml-2 inline-block bg-green px-2 leading-none text-ink">due.</span>
               </h2>
-              <p className="mt-6 max-w-[58ch] text-[15px] leading-relaxed text-paper/75">
+              <p className="mt-5 max-w-[58ch] text-[14px] leading-relaxed text-paper/75 sm:text-[15px]">
                 For India's next generation of food brands, most founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking — and most great food ideas die right here.
               </p>
               {/* Challenge blocks */}
