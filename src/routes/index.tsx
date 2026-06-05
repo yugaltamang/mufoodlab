@@ -525,22 +525,22 @@ function Index() {
       {/* ============== APPLY POSTER ============== */}
       <section id="apply" className="border-b border-ink">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 md:grid-cols-2">
-          <div className="relative aspect-[4/5] overflow-hidden bg-ink md:aspect-auto">
+          <div className="relative aspect-[5/4] overflow-hidden bg-ink sm:aspect-[4/3] md:aspect-auto">
             <img src={admissionsOpen.url} alt="Founder at a working kitchen" className="absolute inset-0 h-full w-full object-cover" />
 
-            <div className="absolute left-6 top-6 inline-flex items-center gap-2 bg-paper px-2 py-1 meta uppercase tracking-[0.14em]">
+            <div className="absolute left-4 top-4 inline-flex items-center gap-2 bg-paper px-2 py-1 meta uppercase tracking-[0.14em] sm:left-6 sm:top-6">
               <span className="size-1.5 rounded-full bg-green" /> Admissions open
             </div>
-            <div className="absolute bottom-6 right-6 meta uppercase tracking-[0.14em] text-paper">{WORDMARK}</div>
+            <div className="absolute bottom-4 right-4 meta uppercase tracking-[0.14em] text-paper sm:bottom-6 sm:right-6">{WORDMARK}</div>
           </div>
-          <div className="bg-green p-6 sm:p-8 md:p-14">
-            <h2 className="font-display text-[44px] font-extrabold leading-[0.92] tracking-[-0.04em] break-words sm:text-[56px] sm:leading-[0.86] md:text-[72px] lg:text-[120px]">
+          <div className="bg-green p-5 sm:p-8 md:p-12 lg:p-14">
+            <h2 className="font-display text-[36px] font-extrabold leading-[0.92] tracking-[-0.04em] break-words sm:text-[52px] sm:leading-[0.86] md:text-[64px] lg:text-[110px]">
               Build your<br/>food brand.
             </h2>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed">
+            <p className="mt-5 max-w-md text-[14px] leading-relaxed sm:text-[15px]">
               Gurugram. Real kitchens. Real customers. Real founders.
             </p>
-            <a href={APPLY_URL} onClick={handleApplyClick} className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-10 sm:w-auto">
+            <a href={APPLY_URL} onClick={handleApplyClick} className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-paper hover:bg-paper hover:text-ink sm:mt-8 sm:w-auto">
               Start application <span aria-hidden>→</span>
             </a>
           </div>
