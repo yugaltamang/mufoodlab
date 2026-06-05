@@ -73,9 +73,9 @@ function Index() {
 
       {/* ============== HERO ============== */}
       <section id="program" className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-10 md:pb-24 md:pt-14">
+        <div className="mx-auto max-w-[1500px] px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-8 md:px-10 md:pb-20 md:pt-12">
           {/* Eyebrow */}
-          <div className="mb-5 flex items-center justify-end sm:mb-6">
+          <div className="mb-4 flex items-center justify-end sm:mb-6">
             <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
           </div>
 
@@ -84,20 +84,20 @@ function Index() {
             <img
               src={heroPage.url}
               alt="Indian food delivery market opportunity"
-              className="h-[220px] w-full object-cover sm:h-[300px] md:h-[380px] lg:h-[460px]"
+              className="h-[180px] w-full object-cover sm:h-[260px] md:h-[360px] lg:h-[460px]"
             />
           </div>
 
           {/* Headline + sub */}
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-12 md:gap-10">
-            <h1 className="md:col-span-8 font-display text-[34px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[44px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-8 sm:gap-7 md:mt-10 md:grid-cols-12 md:gap-10">
+            <h1 className="md:col-span-8 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               For the Next Gen of Food Brands in India.
             </h1>
             <div className="md:col-span-4 self-end">
-              <p className="text-[14px] leading-relaxed text-ink/70">
+              <p className="text-[13.5px] leading-relaxed text-ink/70 sm:text-[14px]">
                 Masters' Union Food Lab is an end-to-end incubator for new-age food brands in India. Kitchen, staff, compliance, supply chain, aggregator onboarding — handled. You bring the idea and the obsession.
               </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={APPLY_URL}
                   onClick={handleApplyClick}
