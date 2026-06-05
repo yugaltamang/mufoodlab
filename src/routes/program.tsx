@@ -86,17 +86,17 @@ function ProgramPage() {
 
       {/* ============== STAGE-GATED OVERVIEW ============== */}
       <section className="border-y border-ink bg-ink text-paper">
-        <div className="mx-auto max-w-[1500px] px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+        <div className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-14 lg:py-16">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <span className="inline-block bg-green px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
                 How it works
               </span>
-              <h2 className="mt-5 font-display text-[30px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[36px] sm:leading-[0.95] md:text-[44px] lg:text-[56px]">
+              <h2 className="mt-4 font-display text-[26px] font-extrabold leading-[1.0] tracking-[-0.03em] break-words sm:text-[34px] sm:leading-[0.95] md:text-[40px] lg:text-[52px]">
                 A stage-gated program. Earn your way forward.
               </h2>
             </div>
-            <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-paper/70">
+            <p className="md:col-span-5 self-end text-[13.5px] leading-relaxed text-paper/70 sm:text-[14px]">
               Once your idea gets shortlisted, you enter a stage-gated program. Each stage has clear targets and evaluation criteria. Only selected brands move forward at every stage. Speed, seriousness and quality &gt;&gt;&gt;
             </p>
           </div>
