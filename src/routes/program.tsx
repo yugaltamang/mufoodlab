@@ -508,11 +508,11 @@ function Stage({
         <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink/55">
           Stage {n}
         </div>
-        <h3 className="mt-2 font-display text-[26px] font-extrabold leading-[0.95] tracking-[-0.03em] md:text-[36px]">
+        <h3 className="mt-2 font-display text-[22px] font-extrabold leading-[0.96] tracking-[-0.03em] sm:text-[26px] md:text-[32px] lg:text-[36px]">
           {title}
         </h3>
-        <p className="mt-2 text-[13.5px] font-semibold italic text-ink/80">{tagline}</p>
-        <p className="mt-3 text-[13.5px] leading-relaxed text-ink/70">{body}</p>
+        <p className="mt-2 text-[13px] font-semibold italic text-ink/80 sm:text-[13.5px]">{tagline}</p>
+        <p className="mt-3 text-[13px] leading-relaxed text-ink/70 sm:text-[13.5px]">{body}</p>
 
         <div className="mt-6 grid grid-cols-1 gap-6 border-t border-ink/15 pt-5 md:grid-cols-2">
           <div>
