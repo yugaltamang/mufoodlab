@@ -890,7 +890,7 @@ function Receipt() {
           aria-hidden
         />
 
-        <div className="px-7 pt-7 pb-8 font-mono text-[12.5px] leading-relaxed text-ink/90 sm:px-9 sm:text-[13px]">
+        <div className="px-5 pt-6 pb-7 font-mono text-[11.5px] leading-relaxed text-ink/90 sm:px-9 sm:pt-7 sm:pb-8 sm:text-[13px]">
           {/* Header */}
           <div className="text-center">
             <div className="font-bold uppercase tracking-[0.22em] text-ink">Without Masters' Union Food Lab</div>
