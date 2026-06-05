@@ -548,8 +548,8 @@ function Index() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="mx-auto max-w-[1500px] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-16">
-        <div className="grid grid-cols-1 gap-10 border-b border-ink pb-12 md:grid-cols-4">
+      <footer className="mx-auto max-w-[1500px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-14">
+        <div className="grid grid-cols-1 gap-8 border-b border-ink pb-10 sm:gap-10 md:grid-cols-4 md:pb-12">
           <div className="meta uppercase tracking-[0.14em]">
             Cohort 01<br/>2025 — 2026
             <div className="mt-2 text-ink/60">Apply by 31 October</div>
@@ -557,21 +557,21 @@ function Index() {
           <address className="not-italic text-[14px] leading-relaxed">
             <div className="font-semibold">Masters' Union Food Lab</div>
             Sector 67, Gurugram<br/>Haryana 122102, India<br/>
-            <a href="mailto:foodlab@mastersunion.org" className="underline-link">foodlab@mastersunion.org</a>
+            <a href="mailto:foodlab@mastersunion.org" className="underline-link break-all">foodlab@mastersunion.org</a>
           </address>
-          <form onSubmit={(e) => e.preventDefault()} className="text-[14px]">
+          <form onSubmit={(e) => e.preventDefault()} className="text-[14px] md:col-span-2">
             <label className="font-semibold">Subscribe to the kitchen brief</label>
-            <div className="mt-3 flex items-center border-b border-ink pb-2">
-              <input type="email" placeholder="Email" className="flex-1 bg-transparent text-[14px] placeholder:text-ink/50 focus:outline-none" />
-              <button className="text-[12px] font-bold uppercase tracking-[0.14em]">Subscribe ›</button>
+            <div className="mt-3 flex items-center gap-2 border-b border-ink pb-2">
+              <input type="email" placeholder="Email" className="min-w-0 flex-1 bg-transparent text-[14px] placeholder:text-ink/50 focus:outline-none" />
+              <button className="shrink-0 text-[12px] font-bold uppercase tracking-[0.14em]">Subscribe ›</button>
             </div>
           </form>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-          <span className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">{WORDMARK}</span>
-          <div className="flex flex-col items-end gap-3">
-            <img src={muLogo} alt="Masters' Union" className="h-8 w-auto md:h-10" />
+        <div className="mt-8 flex flex-wrap items-end justify-between gap-4 sm:mt-10 sm:gap-6">
+          <span className="font-display text-[14vw] font-extrabold leading-[0.85] tracking-[-0.04em] md:text-[110px] lg:text-[180px]">{WORDMARK}</span>
+          <div className="flex flex-col items-end gap-2 sm:gap-3">
+            <img src={muLogo} alt="Masters' Union" className="h-7 w-auto sm:h-8 md:h-10" />
             <span className="meta uppercase tracking-[0.14em] text-ink/60">© Masters' Union {new Date().getFullYear()}</span>
           </div>
         </div>
