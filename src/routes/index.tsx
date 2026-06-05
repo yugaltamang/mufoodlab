@@ -452,10 +452,10 @@ function Index() {
               { name: "Naveen Balaji", role: "6 years at Zomato", img: mentorNaveen, imgPosition: "center 20%" },
             ];
             return (
-              <div className="mt-12 -mx-4 overflow-hidden sm:-mx-6 md:-mx-10 md:mt-16 group">
-                <div className="flex w-max gap-6 md:gap-8 animate-mentor-marquee group-hover:[animation-play-state:paused]">
+              <div className="mt-8 -mx-4 overflow-hidden sm:-mx-6 md:-mx-10 md:mt-12 group">
+                <div className="flex w-max gap-4 sm:gap-6 md:gap-8 animate-mentor-marquee group-hover:[animation-play-state:paused]">
                   {[...mentors, ...mentors].map((m, i) => (
-                    <div key={i} className="w-[180px] shrink-0 sm:w-[200px] md:w-[220px]" aria-hidden={i >= mentors.length ? true : undefined}>
+                    <div key={i} className="w-[140px] shrink-0 sm:w-[180px] md:w-[220px]" aria-hidden={i >= mentors.length ? true : undefined}>
                       <MentorCircle n={String((i % mentors.length) + 1).padStart(2, "0")} name={m.name} role={m.role} img={m.img} imgPosition={m.imgPosition} />
                     </div>
                   ))}
