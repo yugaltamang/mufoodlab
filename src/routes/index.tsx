@@ -970,7 +970,7 @@ function Receipt() {
         </div>
 
         {/* Footer */}
-        <div className="px-7 pt-5 pb-2 font-mono text-[11.5px] uppercase tracking-[0.14em] text-ink/70 sm:px-9">
+        <div className="px-5 pt-4 pb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink/70 sm:px-9 sm:pt-5 sm:text-[11.5px]">
           <div className="flex items-baseline gap-3 py-1">
             <span className="shrink-0">Paid by</span>
             <span className="min-w-0 flex-1 overflow-hidden truncate text-ink/25">{dots}</span>
