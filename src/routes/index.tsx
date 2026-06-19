@@ -12,7 +12,7 @@ import essential05 from "@/assets/essential-05-supply.webp";
 import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroFounder from "@/assets/hero-founder.webp";
-import heroPage from "@/assets/hero-page.png.asset.json";
+import heroDitya from "@/assets/hero-ditya.jpg.asset.json";
 import admissionsOpen from "@/assets/admissions-open.png.asset.json";
 import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
@@ -82,9 +82,9 @@ function Index() {
           {/* Hero image */}
           <div className="relative overflow-hidden border border-ink">
             <img
-              src={heroPage.url}
-              alt="Indian food delivery market opportunity"
-              className="h-[180px] w-full object-cover sm:h-[260px] md:h-[360px] lg:h-[460px]"
+              src={heroDitya.url}
+              alt="Ditya — founder at The Bowl Truth, a graduate of Masters' Union Food Lab"
+              className="h-[220px] w-full object-cover object-center sm:h-[300px] md:h-[400px] lg:h-[520px]"
             />
           </div>
 
