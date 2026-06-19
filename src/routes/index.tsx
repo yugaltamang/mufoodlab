@@ -12,7 +12,7 @@ import essential05 from "@/assets/essential-05-supply.webp";
 import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroFounder from "@/assets/hero-founder.webp";
-import heroDitya from "@/assets/hero-ditya.jpg.asset.json";
+import heroDitya from "@/assets/hero-admissions.jpg.asset.json";
 import admissionsOpen from "@/assets/admissions-open.png.asset.json";
 import heroWok from "@/assets/hero-wok.webp";
 import muLogo from "@/assets/masters-union-logo.svg";
