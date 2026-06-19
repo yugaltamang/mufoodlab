@@ -190,7 +190,8 @@ function ProgramPage() {
               tagline="Exit the lab. Keep cooking."
               body="Graduated brands exit Food Lab and continue independently — with paying customers and operational muscle."
               provides={["A proven product", "Paying customers", "Operational muscle", "A brand ready to scale", "Access to funding"]}
-              workOn={["Masters' Union Food Lab reserves the right to take 5% equity in your business", "We continue to be part of your journey scaling to a ₹100Cr+ business"]}
+              workOn={["You graduate with a proven, scalable business that's entirely yours to run. Masters' Union stays invested in your journey as a long-term partner, including a minority equity stake finalised case-to-case, as you grow toward ₹100Cr+."]}
+              workOnLabel="Outcome"
               assignment="Graduation review & cap-table update"
               tested="Readiness to scale independently"
             />
@@ -476,6 +477,7 @@ function Stage({
   body,
   provides,
   workOn,
+  workOnLabel = "You work on",
   assignment,
   tested,
 }: {
@@ -486,6 +488,7 @@ function Stage({
   body: string;
   provides: string[];
   workOn: string[];
+  workOnLabel?: string;
   assignment: string;
   tested: string;
 }) {
@@ -530,7 +533,7 @@ function Stage({
           </div>
           <div>
             <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink">
-              You work on
+              {workOnLabel}
             </div>
             <ul className="mt-3 space-y-1.5 text-[12.5px] leading-relaxed text-ink/75">
               {workOn.map((p) => (
