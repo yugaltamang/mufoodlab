@@ -17,7 +17,7 @@ import stage1Img from "@/assets/stage-1-fundamentals.jpg.asset.json";
 import stage2Img from "@/assets/stage-2-pre-pmf.jpg.asset.json";
 import stage3Img from "@/assets/stage-3-demo-day.png.asset.json";
 import stage4Img from "@/assets/stage-4-road-to-pmf.jpg.asset.json";
-import stage5Img from "@/assets/stage-5.png.asset.json";
+import stage5Img from "@/assets/stage-5-graduate.jpg.asset.json";
 import muLogo from "@/assets/masters-union-logo.svg";
 
 const APPLY_URL = "https://tally.so/r/441zRr";
