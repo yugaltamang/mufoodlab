@@ -13,7 +13,7 @@ import essential06 from "@/assets/essential-06-aggregator.webp";
 import essential07 from "@/assets/essential-07-mentor.webp";
 import essential08 from "@/assets/essential-08-tasting.webp";
 import heroChef from "@/assets/hero-chef.webp";
-import stage1Img from "@/assets/stage-1.png.asset.json";
+import stage1Img from "@/assets/stage-1-market-research.jpg.asset.json";
 import stage2Img from "@/assets/stage-2.png.asset.json";
 import stage3Img from "@/assets/stage-3.png.asset.json";
 import stage4Img from "@/assets/stage-4.png.asset.json";
