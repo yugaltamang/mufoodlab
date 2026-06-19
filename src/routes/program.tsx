@@ -56,23 +56,6 @@ function ProgramPage() {
               {WORDMARK}
             </span>
           </Link>
-          <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.14em] lg:flex">
-            <Link to="/" className="hover:text-ink/60">
-              Home
-            </Link>
-            <a className="text-ink underline-offset-4 underline" href="#timeline">
-              Timeline
-            </a>
-            <a className="hover:text-ink/60" href="#pillars">
-              Pillars
-            </a>
-            <a className="hover:text-ink/60" href="#expect">
-              Expectations
-            </a>
-            <a className="hover:text-ink/60" href="#faq">
-              FAQ
-            </a>
-          </nav>
           <a
             href={APPLY_URL}
             onClick={handleApplyClick}
