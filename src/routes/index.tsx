@@ -1184,3 +1184,30 @@ function QuoteMark({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+/**
+ * Yellow highlight box used on the last line/word of headlines.
+ * Renders a preceding space so it flows naturally after prior text,
+ * and offsets its own left padding with -ml-2 so its background's
+ * left edge aligns with the text-column's left edge when it wraps
+ * onto its own line.
+ */
+function HeadlineHighlight({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <>
+      {" "}
+      <span
+        className={`-ml-2 inline-block bg-green px-2 leading-none text-ink ${className}`}
+      >
+        {children}
+      </span>
+    </>
+  );
+}
+
