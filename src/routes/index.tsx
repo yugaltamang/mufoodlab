@@ -35,6 +35,15 @@ import solution04 from "@/assets/solution-04.png.asset.json";
 import solution05 from "@/assets/solution-05.png.asset.json";
 import solution06 from "@/assets/solution-06.png.asset.json";
 import mentorNaveen from "@/assets/mentor-naveen.jpg";
+import mentorSaurabh from "@/assets/mentor-saurabh-sengupta.jpg.asset.json";
+import mentorAtika from "@/assets/mentor-atika-jain.jpeg.asset.json";
+import mentorShipra from "@/assets/mentor-shipra-bhatt.jpeg.asset.json";
+import mentorSrinivasan from "@/assets/mentor-srinivasan-satyamurthy.jpg.asset.json";
+import mentorVanshaj from "@/assets/mentor-vanshaj-agarwal.png.asset.json";
+import mentorMustafa from "@/assets/mentor-mustafa-bohra.jpeg.asset.json";
+import mentorManbir from "@/assets/mentor-manbir-wahan.jpg.asset.json";
+import mentorSouradip from "@/assets/mentor-souradip-sarkar.jpg.asset.json";
+import mentorDhanush from "@/assets/mentor-dhanush-varun.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
