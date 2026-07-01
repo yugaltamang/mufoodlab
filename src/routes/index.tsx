@@ -82,9 +82,9 @@ function Index() {
 
       {/* ============== HERO ============== */}
       <section id="program" className="relative bg-paper text-ink">
-        <div className="mx-auto max-w-[1500px] px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-8 md:px-10 md:pb-20 md:pt-12">
+        <div className="mx-auto max-w-[1500px] px-4 pb-10 pt-3 sm:px-6 sm:pb-14 sm:pt-4 md:px-10 md:pb-20 md:pt-5">
           {/* Eyebrow */}
-          <div className="mb-4 flex items-center justify-end sm:mb-6">
+          <div className="mb-2 flex items-center justify-end sm:mb-3">
             <span className="meta uppercase tracking-[0.16em] text-ink/60">Cohort 01 · 2025</span>
           </div>
 
@@ -93,12 +93,12 @@ function Index() {
             <img
               src={heroDitya.url}
               alt="Ditya — founder at The Bowl Truth, a graduate of Masters' Union Food Lab"
-              className="h-[220px] w-full object-cover object-center sm:h-[300px] md:h-[400px] lg:h-[520px]"
+              className="h-[220px] w-full object-cover object-center sm:h-[280px] md:h-[340px] lg:h-[420px]"
             />
           </div>
 
           {/* Headline + sub */}
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-8 sm:gap-7 md:mt-10 md:grid-cols-12 md:gap-10">
+          <div className="mt-4 grid grid-cols-1 gap-5 sm:mt-6 sm:gap-7 md:mt-8 md:grid-cols-12 md:gap-10">
             <h1 className="md:col-span-8 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.92] md:text-[54px] lg:text-[68px]">
               For the Next Gen of Food Brands in India.
             </h1>
