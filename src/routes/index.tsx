@@ -494,7 +494,7 @@ function Index() {
               </span>
               <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Think bigger. We're building for
-                <span className="ml-2 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
+                <HeadlineHighlight>all of food.</HeadlineHighlight>
               </h2>
             </div>
             <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-paper/75 sm:text-[14.5px]">
