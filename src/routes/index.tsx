@@ -139,7 +139,7 @@ function Index() {
           <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 md:grid-cols-12 md:gap-10">
             <h2 className="md:col-span-7 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.92] md:text-[48px] lg:text-[64px]">
               Indian food delivery is just scratching the
-              <span className="ml-2 inline-block bg-green px-2 leading-none">surface.</span>
+              <HeadlineHighlight>surface.</HeadlineHighlight>
             </h2>
             <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
               India's food economy is decades behind the West and China. The next decade belongs to whoever shows up first.
