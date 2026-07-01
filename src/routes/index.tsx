@@ -139,7 +139,7 @@ function Index() {
           <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 md:grid-cols-12 md:gap-10">
             <h2 className="md:col-span-7 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.92] md:text-[48px] lg:text-[64px]">
               Indian food delivery is just scratching the
-              <span className="ml-2 inline-block bg-green px-2 leading-none">surface.</span>
+              <HeadlineHighlight>surface.</HeadlineHighlight>
             </h2>
             <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-ink/70 sm:text-[14.5px]">
               India's food economy is decades behind the West and China. The next decade belongs to whoever shows up first.
@@ -203,8 +203,8 @@ function Index() {
                 The Challenge
               </span>
               <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[64px]">
-                Before you sell a single plate, the bill is already{" "}
-                <span className="inline-block bg-green px-2 leading-none text-ink -ml-2">due.</span>
+                Before you sell a single plate, the bill is already
+                <HeadlineHighlight>due.</HeadlineHighlight>
               </h2>
               <p className="mt-5 max-w-[58ch] text-[14px] leading-relaxed text-paper/75 sm:text-[15px]">
                 For India's next generation of food brands, most founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking — and most great food ideas die right here.
@@ -379,7 +379,7 @@ function Index() {
               </span>
               <h2 className="mt-3 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[38px] sm:leading-[0.9] md:text-[44px] lg:text-[52px]">
                 Brands already
-                <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
+                <HeadlineHighlight>cooking.</HeadlineHighlight>
               </h2>
             </div>
             <p className="md:col-span-4 self-end text-[13px] leading-relaxed text-ink/70">
@@ -419,7 +419,7 @@ function Index() {
               <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
               <h2 className="mt-4 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Learn from operators who built businesses
-                <span className="ml-2 inline-block bg-green px-2 leading-none">from zero.</span>
+                <HeadlineHighlight>from zero.</HeadlineHighlight>
               </h2>
             </div>
             <div className="md:col-span-4 md:col-start-9 self-end">
@@ -494,7 +494,7 @@ function Index() {
               </span>
               <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Think bigger. We're building for
-                <span className="ml-2 inline-block bg-green px-2 leading-none text-ink">all of food.</span>
+                <HeadlineHighlight>all of food.</HeadlineHighlight>
               </h2>
             </div>
             <p className="md:col-span-5 self-end text-[14px] leading-relaxed text-paper/75 sm:text-[14.5px]">
@@ -1184,3 +1184,30 @@ function QuoteMark({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+/**
+ * Yellow highlight box used on the last line/word of headlines.
+ * Renders a preceding space so it flows naturally after prior text,
+ * and offsets its own left padding with -ml-2 so its background's
+ * left edge aligns with the text-column's left edge when it wraps
+ * onto its own line.
+ */
+function HeadlineHighlight({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <>
+      {" "}
+      <span
+        className={`-ml-2 inline-block bg-green px-2 leading-none text-ink ${className}`}
+      >
+        {children}
+      </span>
+    </>
+  );
+}
+
