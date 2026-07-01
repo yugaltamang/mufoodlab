@@ -419,7 +419,7 @@ function Index() {
               <div className="meta uppercase tracking-[0.18em] text-ink/60">Mentors & partners</div>
               <h2 className="mt-4 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[72px]">
                 Learn from operators who built businesses
-                <span className="ml-2 inline-block bg-green px-2 leading-none">from zero.</span>
+                <HeadlineHighlight>from zero.</HeadlineHighlight>
               </h2>
             </div>
             <div className="md:col-span-4 md:col-start-9 self-end">
