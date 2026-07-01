@@ -459,6 +459,15 @@ function Index() {
               { name: "Sumit Vijapure", role: "EIR · Masters' Union", img: mentorSumit },
               { name: "Saksham Kotiya", role: "Head of Entrepreneurship & Investments · Masters' Union", img: mentorSaksham },
               { name: "Naveen Balaji", role: "6 years at Zomato", img: mentorNaveen, imgPosition: "center 20%" },
+              { name: "Saurabh Sengupta", role: "Former SVP, Sales · Zomato", img: mentorSaurabh.url },
+              { name: "Atika Jain", role: "Director · Hyperpure", img: mentorAtika.url },
+              { name: "Shipra Bhatt", role: "Former Marketing Director · KFC", img: mentorShipra.url },
+              { name: "Srinivasan Satyamurthy", role: "Head, Revenue & Growth · Swiggy", img: mentorSrinivasan.url },
+              { name: "Vanshaj Agarwal", role: "AVP · Zomato", img: mentorVanshaj.url },
+              { name: "Mustafa Bohra", role: "Associate Director, AI · Careem", img: mentorMustafa.url },
+              { name: "Manbir Wahan", role: "AVP, New Initiatives · Swiggy", img: mentorManbir.url },
+              { name: "Souradip Sarkar", role: "Head, Growth & Marketing · KFC", img: mentorSouradip.url },
+              { name: "Dhanush Varun", role: "Manager · Noon", img: mentorDhanush.url },
             ];
             return (
               <div className="mt-8 -mx-4 overflow-hidden sm:-mx-6 md:-mx-10 md:mt-12 group">
