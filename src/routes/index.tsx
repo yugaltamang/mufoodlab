@@ -203,8 +203,8 @@ function Index() {
                 The Challenge
               </span>
               <h2 className="mt-5 font-display text-[28px] font-extrabold leading-[0.96] tracking-[-0.035em] break-words sm:text-[40px] sm:leading-[0.9] md:text-[52px] lg:text-[64px]">
-                Before you sell a single plate, the bill is already
-                <span className="ml-2 inline-block bg-green px-2 leading-none text-ink">due.</span>
+                Before you sell a single plate, the bill is already{" "}
+                <span className="inline-block bg-green px-2 leading-none text-ink -ml-2">due.</span>
               </h2>
               <p className="mt-5 max-w-[58ch] text-[14px] leading-relaxed text-paper/75 sm:text-[15px]">
                 For India's next generation of food brands, most founders never get to the cooking part. They get stuck paying for everything that comes <em>before</em> the cooking — and most great food ideas die right here.
