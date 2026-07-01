@@ -24,7 +24,7 @@ import mentorAbhijeet from "@/assets/mentor-abhijeet.png";
 import mentorAnshul from "@/assets/mentor-anshul.png";
 import mentorKabir from "@/assets/mentor-kabir.jpeg";
 import mentorAlex from "@/assets/mentor-alex.jpg";
-import mentorSwarup from "@/assets/mentor-swarup.png";
+
 import mentorAnshu from "@/assets/mentor-anshu.jpeg";
 import mentorSumit from "@/assets/mentor-sumit.jpeg";
 import mentorSaksham from "@/assets/mentor-saksham.jpeg";
@@ -454,7 +454,7 @@ function Index() {
               { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
               { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
               { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
-              { name: "Swarup Potta", role: "Ex ISRO, Urban Company · IIT Madras", img: mentorSwarup, imgPosition: "center 20%" },
+              
               { name: "Anshu Mehta", role: "Finance · CFA Charterholder · Ex-Futures First", img: mentorAnshu },
               { name: "Sumit Vijapure", role: "EIR · Masters' Union", img: mentorSumit },
               { name: "Saksham Kotiya", role: "Head of Entrepreneurship & Investments · Masters' Union", img: mentorSaksham },
