@@ -449,25 +449,24 @@ function Index() {
 
           {(() => {
             const mentors = [
-              { name: "Ankit Tiwari", role: "Ex Leela, Oberoi, Salad Days", img: mentorAnkit.url },
-              { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
-              { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
-              { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
-              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
-              
-              { name: "Anshu Mehta", role: "Finance · CFA Charterholder · Ex-Futures First", img: mentorAnshu },
-              { name: "Sumit Vijapure", role: "EIR · Masters' Union", img: mentorSumit },
-              { name: "Saksham Kotiya", role: "Head of Entrepreneurship & Investments · Masters' Union", img: mentorSaksham },
-              { name: "Naveen Balaji", role: "6 years at Zomato", img: mentorNaveen, imgPosition: "center 20%" },
-              { name: "Saurabh Sengupta", role: "Former SVP, Sales · Zomato", img: mentorSaurabh.url, imgPosition: "center 25%" },
-              { name: "Atika Jain", role: "Director · Hyperpure", img: mentorAtika.url },
-              { name: "Shipra Bhatt", role: "Former Marketing Director · KFC", img: mentorShipra.url },
               { name: "Srinivasan Satyamurthy", role: "Head, Revenue & Growth · Swiggy", img: mentorSrinivasan.url },
-              { name: "Vanshaj Agarwal", role: "AVP · Zomato", img: mentorVanshaj.url, imgPosition: "center 25%" },
-              { name: "Mustafa Bohra", role: "Associate Director, AI · Careem", img: mentorMustafa.url },
-              { name: "Manbir Wahan", role: "AVP, New Initiatives · Swiggy", img: mentorManbir.url, imgPosition: "center 25%" },
+              { name: "Alex Francis", role: "Co-founder · Lexi's Gourmet Sandwiches", img: mentorAlex, imgPosition: "center 15%" },
               { name: "Souradip Sarkar", role: "Head, Growth & Marketing · KFC", img: mentorSouradip.url, imgPosition: "center 25%" },
+              { name: "Abhijeet Joshi", role: "AVP · Zomato", img: mentorAbhijeet },
+              { name: "Atika Jain", role: "Director · Hyperpure", img: mentorAtika.url },
+              { name: "Naveen Balaji", role: "6 years at Zomato", img: mentorNaveen, imgPosition: "center 20%" },
+              { name: "Ankit Tiwari", role: "Ex Leela, Oberoi, Salad Days", img: mentorAnkit.url },
+              { name: "Mustafa Bohra", role: "Associate Director, AI · Careem", img: mentorMustafa.url },
+              { name: "Saksham Kotiya", role: "Head of Entrepreneurship & Investments · Masters' Union", img: mentorSaksham },
+              { name: "Kabir Chugh", role: "Serial Food Entrepreneur & Creator", img: mentorKabir },
               { name: "Dhanush Varun", role: "Manager · Noon", img: mentorDhanush.url },
+              { name: "Shipra Bhatt", role: "Former Marketing Director · KFC", img: mentorShipra.url },
+              { name: "Anshu Mehta", role: "Finance · CFA Charterholder · Ex-Futures First", img: mentorAnshu },
+              { name: "Manbir Wahan", role: "AVP, New Initiatives · Swiggy", img: mentorManbir.url, imgPosition: "center 25%" },
+              { name: "Anshul Aggarwal", role: "Customer Retention · Nando's", img: mentorAnshul },
+              { name: "Saurabh Sengupta", role: "Former SVP, Sales · Zomato", img: mentorSaurabh.url, imgPosition: "center 25%" },
+              { name: "Vanshaj Agarwal", role: "AVP · Zomato", img: mentorVanshaj.url, imgPosition: "center 25%" },
+              { name: "Sumit Vijapure", role: "EIR · Masters' Union", img: mentorSumit },
             ];
             return (
               <div className="mt-8 -mx-4 overflow-hidden sm:-mx-6 md:-mx-10 md:mt-12 group">
