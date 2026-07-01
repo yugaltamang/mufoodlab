@@ -379,7 +379,7 @@ function Index() {
               </span>
               <h2 className="mt-3 font-display text-[32px] font-extrabold leading-[0.95] tracking-[-0.035em] break-words sm:text-[38px] sm:leading-[0.9] md:text-[44px] lg:text-[52px]">
                 Brands already
-                <span className="ml-3 inline-block bg-green px-2 leading-none">cooking.</span>
+                <HeadlineHighlight>cooking.</HeadlineHighlight>
               </h2>
             </div>
             <p className="md:col-span-4 self-end text-[13px] leading-relaxed text-ink/70">
