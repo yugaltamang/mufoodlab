@@ -1196,7 +1196,7 @@ function HeadlineHighlight({
   children,
   className = "",
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }) {
   return (
